@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>台南三天兩夜美食＆KTV之旅 | 11/21 - 11/23</title>
-  <meta name="description" content="11/21-11/23 台南三天兩夜機車自由行互動行程表：武聖夜市、賓士KTV、國華街甜點、樺哥牛肉湯、雙床房平價住宿、開銷預算試算與香港朋友省現金攻略。" />
+  <meta name="description" content="11/21-11/23 台南三天兩夜機車自由行互動行程表：入住路境行旅台南西門館、武聖夜市、賓士KTV、國華街甜點、樺哥牛肉湯、開銷預算與香港朋友省現金攻略。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -429,70 +429,65 @@
       margin-bottom: 16px;
     }
 
-    /* Hotel Cards */
-    .hotel-grid {
-      display: grid;
-      gap: 14px;
-    }
-
-    .hotel-card {
-      background: var(--card);
-      border: 1px solid var(--border);
+    /* Confirmed Hotel Card */
+    .confirmed-hotel-hero {
+      background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%);
+      color: #FFF;
       border-radius: var(--radius);
-      padding: 16px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      padding: 20px 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 24px rgba(45, 106, 79, 0.22);
     }
 
-    .hotel-badges {
-      display: flex;
-      flex-wrap: wrap;
+    .confirmed-badge {
+      display: inline-flex;
+      align-items: center;
       gap: 6px;
-      margin-bottom: 8px;
-    }
-
-    .hotel-zone {
-      display: inline-block;
-      font-size: 0.74rem;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
       font-weight: 700;
-      padding: 3px 9px;
-      border-radius: 6px;
-      background: var(--accent-soft);
-      color: #9A5B13;
-    }
-
-    .hotel-twin-badge {
-      display: inline-block;
-      font-size: 0.74rem;
-      font-weight: 700;
-      padding: 3px 9px;
-      border-radius: 6px;
-      background: var(--blue-soft);
-      color: var(--blue);
-    }
-
-    .hotel-name {
-      font-size: 1.08rem;
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-
-    .hotel-price {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--primary);
       margin-bottom: 10px;
     }
 
-    .hotel-features {
-      list-style: none;
-      font-size: 0.85rem;
-      color: var(--text);
+    .confirmed-hotel-hero h3 {
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+
+    .confirmed-price-box {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin: 12px 0;
       display: grid;
-      gap: 6px;
-      margin-bottom: 14px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .dist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .dist-item {
+      background: #FAF7F2;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.84rem;
+    }
+
+    .dist-time {
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+      font-size: 0.9rem;
     }
 
     /* Budget Section Styles */
@@ -727,7 +722,7 @@
 
     @media (min-width: 640px) {
       .hero h1 { font-size: 2rem; }
-      .hotel-grid { grid-template-columns: repeat(2, 1fr); }
+      .dist-grid { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </head>
@@ -738,10 +733,10 @@
     <div class="hero-inner">
       <div class="hero-badge">🛵 台南機車自由行 · 雙人出遊</div>
       <h1>11/21 – 11/23 台南三天兩夜美食＆KTV之旅</h1>
-      <p>台南車站租機車出發 · 11/23 傍晚搭高鐵賦歸 · 台灣＋香港學生友善攻略</p>
+      <p>台南車站租機車出發 · 入住路境行旅台南西門館 · 11/23 傍晚搭高鐵賦歸</p>
       <div class="meta-pills">
         <span class="meta-pill">📅 11/21(六) - 11/23(一)</span>
-        <span class="meta-pill">✌️ 2人同行</span>
+        <span class="meta-pill">🏨 已訂：路境行旅西門館</span>
         <span class="meta-pill">🎯 必去：武聖夜市 & KTV</span>
       </div>
       <div class="progress-bar-wrap">
@@ -761,9 +756,10 @@
       <div class="alert-card">
         <div class="alert-title">📌 排程黃金卡位（完美避開公休日！）</div>
         <ul class="alert-list">
+          <li>• <strong>已訂住宿超順路</strong>：住在<strong>「路境行旅 台南西門館」</strong>，走路 5 分鐘直接逛百珍、亞米甜甜圈、AIC 冰淇淋！</li>
           <li>• <strong>武聖夜市</strong>：每週三、五、六營業 ➔ 必排 <strong>Day 1 (週六) 晚上</strong></li>
-          <li>• <strong>碳饅堡</strong>：週日公休 ➔ 唯一機會是 <strong>Day 1 (週六) 宵夜</strong></li>
-          <li>• <strong>樺哥土產牛肉湯</strong>：週一、二公休 ➔ 必排 <strong>Day 2 (週日) 早餐</strong></li>
+          <li>• <strong>碳饅堡</strong>：週日公休 ➔ 唯一機會是 <strong>Day 1 (週六) 宵夜</strong>（吃完騎回飯店僅 3 分鐘！）</li>
+          <li>• <strong>樺哥土產牛肉湯</strong>：週一、二公休 ➔ 必排 <strong>Day 2 (週日) 早餐</strong>（從飯店騎去僅 5 分鐘！）</li>
           <li>• <strong>府東街147號蔥油餅</strong>：週日公休 ➔ 排 <strong>Day 3 (週一) 下午</strong> 順路回車站</li>
         </ul>
       </div>
@@ -779,8 +775,8 @@
       <!-- DAY 1 -->
       <div class="day-block" data-day="day1">
         <div class="day-header">
-          <h2>🛵 Day 1：11/21（六）國華街甜點 ➔ 神農街 ➔ 武聖夜市 ➔ 碳饅堡</h2>
-          <div class="day-route">動線：台南車站租車 ➔ 中西區國華街／西市場（步行可達 3 店）➔ 水仙宮＆神農街 ➔ 武聖夜市 ➔ 金華路宵夜</div>
+          <h2>🛵 Day 1：11/21（六）路境行旅放行李 ➔ 國華街甜點 ➔ 神農街 ➔ 武聖夜市 ➔ 碳饅堡</h2>
+          <div class="day-route">動線：台南車站租車 ➔ 路境行旅西門館放行李 ➔ 步行5分鐘逛西市場＆國華街 ➔ 水仙宮＆神農街 ➔ 武聖夜市 ➔ 碳饅堡</div>
         </div>
 
         <div class="timeline">
@@ -788,16 +784,17 @@
             <div class="spot-top">
               <div>
                 <span class="time-badge">11:30 – 12:15</span>
-                <div class="spot-title">🛵 台南火車站租機車 ＆ 旅店放行李</div>
+                <div class="spot-title">🛵 台南火車站租機車 ➔ 路境行旅西門館寄放行李 <span class="tag tag-card">已訂房</span></div>
               </div>
               <button class="check-btn" onclick="toggleCheck('d1-rent')">⬜ 打卡</button>
             </div>
             <div class="spot-meta">
-              <span>📍 台南火車站前站／後站租車行</span>
+              <span>📍 飯店地址：中西區西門路二段76號（路境行旅 台南西門館）</span>
             </div>
-            <div class="spot-desc">抵達台南車站後先取車，順路到旅店寄放行李，輕裝出發吃美食！</div>
+            <div class="spot-desc">在台南火車站租好機車後，騎車約 7 分鐘到<strong>路境行旅 台南西門館</strong>寄放行李。放好行李後<strong>不用騎車，直接走路 5 分鐘</strong>就能去下面 3 間店吃甜點！</div>
             <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南火車站租機車" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=路境行旅台南西門館" target="_blank" rel="noopener">🗺️ 導航至路境行旅西門館</a>
+              <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=台南火車站租機車" target="_blank" rel="noopener">🛵 車站租車行</a>
             </div>
           </div>
 
@@ -810,10 +807,10 @@
               <button class="check-btn" onclick="toggleCheck('d1-baizhen')">⬜ 打卡</button>
             </div>
             <div class="spot-meta">
-              <span>📍 中西區西門路二段151號（大菜市／西市場內）</span>
+              <span>📍 中西區西門路二段151號（大菜市／西市場內，離飯店步行僅 5 分鐘！）</span>
               <span>🕒 營業時間：約 10:00 – 18:30</span>
             </div>
-            <div class="spot-desc">隱身西市場的老字號西點店！必買超搶手的<strong>「巨無霸泡芙」</strong>與古早味檸檬蛋糕。停好車後，接下來 3 間店走路 2 分鐘內全到！</div>
+            <div class="spot-desc">從路境行旅沿著西門路走過來只要 450 公尺！必買超搶手的<strong>「巨無霸泡芙」</strong>與古早味檸檬蛋糕。</div>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南百珍西點麵包廠" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
             </div>
@@ -831,7 +828,7 @@
               <span>📍 中西區國華街三段6號</span>
               <span>🕒 營業時間：週六日 12:00 – 19:30（平日 13:00 起）</span>
             </div>
-            <div class="spot-desc">從百珍走過來只要 1 分鐘！主打脆皮鮮奶甜甜圈與 Q 彈小米甜甜圈，趁下午剛出爐口味最齊全時買最棒。</div>
+            <div class="spot-desc">從百珍穿過西市場走過來只要 1 分鐘！主打脆皮鮮奶甜甜圈與 Q 彈小米甜甜圈，趁下午剛出爐口味最齊全時買最棒。</div>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南亞米甜甜圈專賣店" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
             </div>
@@ -841,7 +838,7 @@
             <div class="spot-top">
               <div>
                 <span class="time-badge">14:15 – 15:30</span>
-                <div class="spot-title">🍦 AIC Gelato 冰淇淋 ＆ 正興街／蝸牛巷散步 <span class="tag tag-bonus">順路加碼</span></div>
+                <div class="spot-title">🍦 AIC Gelato 冰淇淋 ＆ 正興街／蝸牛巷散步 <span class="tag tag-bonus">回飯店Check-in超順</span></div>
               </div>
               <button class="check-btn" onclick="toggleCheck('d1-aic')">⬜ 打卡</button>
             </div>
@@ -849,7 +846,7 @@
               <span>📍 中西區國華街三段26號A7（淺草新天地內）</span>
               <span>🕒 營業時間：週六 11:30 – 21:30（週日 11:30–20:30，平日 12:30 起）</span>
             </div>
-            <div class="spot-desc">就在亞米甜甜圈旁幾十公尺！每天推出不同口味的義式手工冰淇淋。吃完可順路逛旁邊的<strong>正興街</strong>與<strong>蝸牛巷</strong>拍文青照。</div>
+            <div class="spot-desc">就在亞米甜甜圈旁幾十公尺！每天推出不同口味的義式手工冰淇淋。吃完順路逛<strong>正興街</strong>與<strong>蝸牛巷</strong>（就在路境行旅旁走路 3 分鐘），剛好回飯店 Check-in 進房放戰利品、吹冷氣休息一下！</div>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=AIC+Gelato+台南市中西區國華街三段26號" target="_blank" rel="noopener">🗺️ 導航至 AIC Gelato</a>
               <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=台南蝸牛巷" target="_blank" rel="noopener">🐌 蝸牛巷位置</a>
@@ -902,10 +899,10 @@
               <button class="check-btn" onclick="toggleCheck('d1-tanmanbao')">⬜ 打卡</button>
             </div>
             <div class="spot-meta">
-              <span>📍 中西區金華路三段89號</span>
+              <span>📍 中西區金華路三段89號（騎回飯店只要 3 分鐘！）</span>
               <span>🕒 營業時間：19:00 – 02:00（週日公休）</span>
             </div>
-            <div class="spot-desc">從武聖夜市回中西區順路吃！炭火現烤饅頭香氣十足，必點<strong>「冰火碳烤饅頭（夾厚片冰奶油）」</strong>或燒肉蛋起司，兩人分食一顆當完美宵夜收尾。</div>
+            <div class="spot-desc">從武聖夜市回飯店順路吃！炭火現烤饅頭香氣十足，必點<strong>「冰火碳烤饅頭（夾厚片冰奶油）」</strong>或燒肉蛋起司，吃完騎回<strong>路境行旅西門館只要 3 分鐘</strong>！</div>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南碳饅堡" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
             </div>
@@ -917,7 +914,7 @@
       <div class="day-block" data-day="day2">
         <div class="day-header">
           <h2>🛵 Day 2：11/22（日）溫體牛肉湯 ➔ 小鹿家可頌 ➔ KTV 歡唱 ➔ 裁縫師微醺</h2>
-          <div class="day-route">動線：南區早餐 ➔ 南美館／藍晒圖 ➔ 安南區買可頌 ➔ 台南 KTV 下午場 ➔ 河樂廣場 ➔ 裁縫師會館</div>
+          <div class="day-route">動線：飯店出發騎5分鐘吃樺哥牛肉湯 ➔ 南美館／藍晒圖(飯店步行6分鐘) ➔ 小鹿家可頌 ➔ KTV 下午場 ➔ 河樂廣場 ➔ 裁縫師</div>
         </div>
 
         <div class="timeline">
@@ -930,10 +927,10 @@
               <button class="check-btn" onclick="toggleCheck('d2-huage')">⬜ 打卡</button>
             </div>
             <div class="spot-meta">
-              <span>📍 南區體育路89號</span>
+              <span>📍 南區體育路89號（從路境行旅西門館騎車僅 5 分鐘！）</span>
               <span>🕒 營業時間：凌晨 02:30 – 09:30（週一、週二固定公休）</span>
             </div>
-            <div class="spot-desc">台南超人氣溫體牛肉湯！必點<strong>「上等花紋牛肉湯」</strong>搭配銷魂肉燥飯（花紋肉限量，建議 08:30 前到；吃完還可以回旅店小睡補眠一下）。</div>
+            <div class="spot-desc">從路境行旅沿著西門路往南騎 5 分鐘就到！必點<strong>「上等花紋牛肉湯」</strong>搭配銷魂肉燥飯（花紋肉限量，建議 08:30 前到；吃完回飯店補眠超近）。</div>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=體育場樺哥土產牛肉湯" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
             </div>
@@ -943,14 +940,14 @@
             <div class="spot-top">
               <div>
                 <span class="time-badge">10:30 – 12:15</span>
-                <div class="spot-title">📸 台南市美術館二館 或 藍晒圖文創園區 <span class="tag tag-bonus">推薦加碼</span></div>
+                <div class="spot-title">📸 台南市美術館二館 或 藍晒圖文創園區 <span class="tag tag-bonus">離飯店走路6分鐘</span></div>
               </div>
               <button class="check-btn" onclick="toggleCheck('d2-art')">⬜ 打卡</button>
             </div>
             <div class="spot-meta">
               <span>📍 中西區忠義路二段1號（南美館二館）</span>
             </div>
-            <div class="spot-desc">早上陽光好，去純白幾何建築的南美館二館拍美照、吹冷氣看展，或去藍晒圖逛文創小店。</div>
+            <div class="spot-desc">這兩個景點從<strong>路境行旅西門館走路都只要 6 分鐘</strong>！早上陽光好，去純白幾何建築的南美館二館拍美照、吹冷氣看展，或去藍晒圖逛文創小店。</div>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南市美術館2館" target="_blank" rel="noopener">🗺️ 導航至南美館2館</a>
               <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=藍晒圖文創園區" target="_blank" rel="noopener">🎨 藍晒圖位置</a>
@@ -984,13 +981,13 @@
               <button class="check-btn" onclick="toggleCheck('d2-ktv')">⬜ 打卡</button>
             </div>
             <div class="spot-meta">
-              <span>📍 首選：賓士 KTV 中成店（中西區中成路18號）或 府前店</span>
+              <span>📍 首選：賓士 KTV 府前店（離路境行旅騎車僅 2 分鐘！）或 中成店</span>
               <span>🕒 營業時間：24 小時（建議提前電話訂位）</span>
             </div>
-            <div class="spot-desc">避開正午大太陽唱下午場最划算！台南 KTV 的熱炒、炸物、鍋物超好吃，可直接在包廂邊唱邊吃午餐。<strong>現場結帳可刷信用卡（適合讓香港朋友刷卡分攤！）</strong></div>
+            <div class="spot-desc">避開正午大太陽唱下午場最划算！台南 KTV 的熱炒、炸物、鍋物超好吃，可直接在包廂邊唱邊吃午餐。<strong>現場結帳可刷信用卡！</strong></div>
             <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=賓士KTV中成店" target="_blank" rel="noopener">🗺️ 導航至賓士中成店</a>
-              <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=享溫馨KTV台南中華店" target="_blank" rel="noopener">🎤 享溫馨中華店</a>
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=賓士KTV台南府前店" target="_blank" rel="noopener">🗺️ 導航至賓士府前店</a>
+              <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=賓士KTV中成店" target="_blank" rel="noopener">🎤 賓士中成店</a>
             </div>
           </div>
 
@@ -1007,7 +1004,7 @@
               <span>📍 安平據點：安平區延平街122號（裁縫師深夜咖啡館）</span>
               <span>🕒 營業時間：20:00 – 02:00（週三公休）</span>
             </div>
-            <div class="spot-desc">唱完歌可先去<strong>河樂廣場</strong>吹晚風看夜景，20:00 接裁縫師會館！結合露營風天台／老宅氛圍、無菜單虹吸精品咖啡、微醺調酒與蒸籠點心（騎車的人點咖啡或無酒精特調，後座朋友可小酌）。</div>
+            <div class="spot-desc">唱完歌可先去飯店旁邊的<strong>河樂廣場（走路 5 分鐘）</strong>吹晚風看夜景，20:00 接裁縫師會館！結合露營風天台／老宅氛圍、無菜單虹吸精品咖啡、微醺調酒與蒸籠點心。</div>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=裁縫師咖啡+森參會館+台南市中西區成功路359號" target="_blank" rel="noopener">🗺️ 導航至森參會館(中西區)</a>
               <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=裁縫師深夜咖啡館+安平" target="_blank" rel="noopener">🏮 安平創始店位置</a>
@@ -1019,8 +1016,8 @@
       <!-- DAY 3 -->
       <div class="day-block" data-day="day3">
         <div class="day-header">
-          <h2>🛵 Day 3：11/23（一）伴手禮採買 ➔ 東區蔥油餅＆嫩仙草 ➔ 傍晚搭高鐵</h2>
-          <div class="day-route">動線：退房寄放行李 ➔ 邱惠美鳳梨酥 ➔ 東區府東街蔥油餅 ➔ 88嫩仙草光明店 ➔ 台南車站還車 ➔ 沙崙線轉高鐵</div>
+          <h2>🛵 Day 3：11/23（一）路境行旅退房 ➔ 伴手禮採買 ➔ 東區蔥油餅＆嫩仙草 ➔ 搭高鐵</h2>
+          <div class="day-route">動線：路境行旅退房 ➔ 邱惠美鳳梨酥 ➔ 東區府東街蔥油餅 ➔ 88嫩仙草光明店 ➔ 台南車站還車 ➔ 沙崙線轉高鐵</div>
         </div>
 
         <div class="timeline">
@@ -1036,7 +1033,7 @@
               <span>📍 東菜市總店：中西區民權路一段88號（或水仙宮店：民權路三段50號）</span>
               <span>🕒 營業時間：08:00 – 19:00</span>
             </div>
-            <div class="spot-desc">睡飽退房後（行李先寄放旅店或車站），最後一天來買伴手禮不用提三天！必買傳統古早味鳳梨酥與現烤古早味蛋糕（髒髒糕、布丁蛋糕）。</div>
+            <div class="spot-desc">睡飽從路境行旅退房後（11:00 可順逛飯店旁走路 4 分鐘的<strong>林百貨</strong>），最後一天來買伴手禮不用提三天！必買傳統古早味鳳梨酥與現烤古早味蛋糕（髒髒糕、布丁蛋糕）。</div>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=邱惠美鳳梨酥+台南市民權路一段88號" target="_blank" rel="noopener">🗺️ 導航至東菜市總店</a>
             </div>
@@ -1099,155 +1096,122 @@
 
     </section>
 
-    <!-- SECTION 2: 雙床房住宿推薦 -->
+    <!-- SECTION 2: 已訂住宿資訊 -->
     <section id="sec-hotel" class="tab-section">
-      <h2 class="section-title">🛏️ 可選「雙床房（兩小床／上下舖）」平價住宿</h2>
-      <p class="section-subtitle">特選有「兩張單人床」或「獨立上下舖」、且可在 Agoda / Booking / Trip / Klook 線上全額刷卡的旅店，一人一張床睡得舒服，也不佔用台幣現金！</p>
+      <h2 class="section-title">🏨 已確認預訂住宿資訊</h2>
+      <p class="section-subtitle">妳們訂到的「路境行旅 台南西門館」位置超級精華，幾乎在所有中西區景點的正中心！</p>
 
-      <div class="hotel-grid">
-        <div class="hotel-card">
+      <div class="confirmed-hotel-hero">
+        <div class="confirmed-badge">✅ 已完成預訂 · 11/21(六) – 11/23(一) 共 2 晚</div>
+        <h3>路境行旅 台南西門館</h3>
+        <div style="font-size:0.9rem; opacity:0.92;">Finders Hotel Tainan Ximen｜📍 700 台南市中西區西門路二段76號</div>
+
+        <div class="confirmed-price-box">
           <div>
-            <div class="hotel-badges">
-              <span class="hotel-zone">📍 國華街／友愛街核心</span>
-              <span class="hotel-twin-badge">🛏️ 有兩小床套房＆上下舖</span>
-            </div>
-            <div class="hotel-name">1. 仲青行旅 台南館 (Light Hostel)</div>
-            <div class="hotel-price">💰 上下舖約 $600–800/人｜兩小床套房約 $950–1,300/人</div>
-            <ul class="hotel-features">
-              <li>🛏️ <strong>指定雙床房型</strong>：「雙人套房 - 兩小床（獨立衛浴）」或極省預算的「經濟雙床房（上下舖・共用衛浴）」</li>
-              <li>✅ <strong>位置無敵</strong>：下樓走路 3～6 分鐘就到百珍、亞米甜甜圈、AIC 冰淇淋、碳饅堡！</li>
-              <li>✅ <strong>門禁安心</strong>：純白木質文青風、一樓超大交誼廳、電梯與門禁卡管制</li>
-            </ul>
+            <div style="font-size:0.75rem; opacity:0.85;">✌️ 兩人兩晚總價</div>
+            <div style="font-size:1.25rem; font-weight:900; color:#FFE169;">¥ 41,701 日幣</div>
+            <div style="font-size:0.76rem; opacity:0.9;">折合台幣約 NT$ 8,570</div>
           </div>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=仲青行旅台南館" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+          <div>
+            <div style="font-size:0.75rem; opacity:0.85;">👤 平均一人房費</div>
+            <div style="font-size:1.25rem; font-weight:900; color:#FFE169;">NT$ 4,285 台幣</div>
+            <div style="font-size:0.76rem; opacity:0.9;">平均每晚每人 NT$ 2,143</div>
+          </div>
         </div>
 
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-badges">
-              <span class="hotel-zone">📍 國華街／南美館核心</span>
-              <span class="hotel-twin-badge">🛏️ 有標準雙床房(兩小床)</span>
-            </div>
-            <div class="hotel-name">2. 古根嚼旅 (Roots Chew Hotel)</div>
-            <div class="hotel-price">💰 每人每晚約 NT$900 – $1,400（雙人平分）</div>
-            <ul class="hotel-features">
-              <li>🛏️ <strong>指定雙床房型</strong>：「標準雙床房（兩張單人床・獨立衛浴）」</li>
-              <li>✅ <strong>誠品般質感</strong>：溫潤木質調文青設計，房內配備免治馬桶、膠囊咖啡機、茶籽堂沐浴備品</li>
-              <li>✅ <strong>動線極佳</strong>：位於友愛街，走路 3 分鐘進國華街美食戰區與南美館二館</li>
-            </ul>
-          </div>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南古根嚼旅" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+        <div class="spot-actions" style="margin-top:12px;">
+          <a class="btn-map" style="background:#FFE169; color:#1B4332;" href="https://www.google.com/maps/search/?api=1&query=路境行旅台南西門館+台南市中西區西門路二段76號" target="_blank" rel="noopener">🗺️ 一鍵開啟 Google Maps 導航至飯店</a>
         </div>
+      </div>
 
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-badges">
-              <span class="hotel-zone">🚉 台南火車站前站步行 5 分鐘</span>
-              <span class="hotel-twin-badge">🛏️ 有光影雙床房(兩小床)</span>
-            </div>
-            <div class="hotel-name">3. 三道門建築文創旅店 (3 Door Hotel)</div>
-            <div class="hotel-price">💰 每人每晚約 NT$950 – $1,450（雙人平分）</div>
-            <ul class="hotel-features">
-              <li>🛏️ <strong>指定雙床房型</strong>：「雅致光影房（兩小床）」或「天步光影房（兩小床）」</li>
-              <li>✅ <strong>位置超神</strong>：離火車站、<strong>賓士 KTV 中成店</strong>、<strong>裁縫師森參會館</strong>全部走路 5 分鐘！</li>
-              <li>✅ <strong>貼心設施</strong>：全館無地毯木地板、免費迎賓點心吧與頂樓空中花園</li>
-            </ul>
+      <div class="tip-card">
+        <h3>🚶 從「路境行旅西門館」出發各景點距離一覽</h3>
+        <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:10px;">住在這裡最大的好處是：Day 1 下午逛國華街完全不用騎車，買完甜點泡芙走 5 分鐘就能拿回房間冰！</p>
+        <div class="dist-grid">
+          <div class="dist-item">
+            <span class="dist-time">🚶 步行 3 分鐘 (220m)</span>
+            <strong>蝸牛巷</strong>（民生路文青巷弄）
           </div>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=三道門建築文創旅店" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
-        </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-badges">
-              <span class="hotel-zone">📍 國華街／赤崁樓核心</span>
-              <span class="hotel-twin-badge">🛏️ 有豪華雙床房(兩小床)</span>
-            </div>
-            <div class="hotel-name">4. 暖時嚼旅 (Somer Chew Hotel)</div>
-            <div class="hotel-price">💰 每人每晚約 NT$900 – $1,350（雙人平分）</div>
-            <ul class="hotel-features">
-              <li>🛏️ <strong>指定雙床房型</strong>：「豪華雙床房（兩張單人床・獨立衛浴）」</li>
-              <li>✅ <strong>免費點心</strong>：大廳提供免費泡麵、古早味零食與飲品，有電梯</li>
-              <li>✅ <strong>動線順暢</strong>：走路就到國華街、水仙宮，去武聖夜市騎車僅 5 分鐘</li>
-            </ul>
+          <div class="dist-item">
+            <span class="dist-time">🚶 步行 4 分鐘 (300m)</span>
+            <strong>林百貨</strong>（復古五層樓百貨）
           </div>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南暖時嚼旅" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
-        </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-badges">
-              <span class="hotel-zone">📍 赤崁樓／水仙宮核心</span>
-              <span class="hotel-twin-badge">🛏️ 商務二小床＋包早餐宵夜</span>
-            </div>
-            <div class="hotel-name">5. 康橋商旅 赤崁樓館 (Kindness Hotel)</div>
-            <div class="hotel-price">💰 每人每晚約 NT$1,100 – $1,600（含早＋宵夜）</div>
-            <ul class="hotel-features">
-              <li>🛏️ <strong>指定雙床房型</strong>：「商務二小床房（兩張 90cm 單人床）」</li>
-              <li>✅ <strong>餐點狂魔</strong>：<strong>免費豐盛自助早餐＋免費下午茶冰淇淋＋免費宵夜吃到飽</strong>（直接省下兩天早餐宵夜費！）</li>
-              <li>✅ <strong>免費洗衣</strong>：附設免費自助洗衣烘衣機，服務與乾淨度滿分</li>
-            </ul>
+          <div class="dist-item">
+            <span class="dist-time">🚶 步行 5 分鐘 (450m)</span>
+            <strong>百珍西點、亞米甜甜圈、AIC 冰淇淋</strong>
           </div>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=康橋商旅台南赤崁樓館" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+          <div class="dist-item">
+            <span class="dist-time">🚶 步行 6 分鐘 (500m)</span>
+            <strong>南美館二館、藍晒圖、河樂廣場</strong>
+          </div>
+          <div class="dist-item">
+            <span class="dist-time">🛵 騎車 2–3 分鐘</span>
+            <strong>賓士 KTV 府前店、金華路碳饅堡</strong>
+          </div>
+          <div class="dist-item">
+            <span class="dist-time">🛵 騎車 5–7 分鐘</span>
+            <strong>樺哥牛肉湯(5分)、武聖夜市(7分)</strong>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: 開銷預算試算 (NEW TAB) -->
+    <!-- SECTION 3: 開銷預算試算 -->
     <section id="sec-budget" class="tab-section">
-      <h2 class="section-title">💰 三天兩夜台南開銷預算試算</h2>
-      <p class="section-subtitle">點選下方住宿等級，自動試算這趟旅程 2 人總花費與每人平均預算（不含各自回程高鐵票）：</p>
+      <h2 class="section-title">💰 三天兩夜台南開銷預算表</h2>
+      <p class="section-subtitle">已鎖定妳們訂好的「路境行旅西門館（每人 NT$4,285）」，可切換下方三種美食＆伴手禮消費模式試算總花費（不含各自回程高鐵票）：</p>
 
       <!-- Interactive Budget Switcher -->
       <div class="budget-summary-box">
         <div class="budget-tier-btns">
-          <button class="tier-btn" onclick="setBudgetTier('eco', this)">極省小資版<br><span style="font-weight:400;font-size:0.68rem;">青旅上下舖雙床</span></button>
-          <button class="tier-btn active" onclick="setBudgetTier('std', this)">舒適推薦版<br><span style="font-weight:400;font-size:0.68rem;">文青旅店兩小床</span></button>
-          <button class="tier-btn" onclick="setBudgetTier('plus', this)">澎湃吃飽版<br><span style="font-weight:400;font-size:0.68rem;">康橋兩小床含早宵</span></button>
+          <button class="tier-btn" onclick="setBudgetTier('eco', this)">小資精簡吃法<br><span style="font-weight:400;font-size:0.68rem;">兩人分食為主</span></button>
+          <button class="tier-btn active" onclick="setBudgetTier('std', this)">推薦標準吃法<br><span style="font-weight:400;font-size:0.68rem;">全清單吃飽喝足</span></button>
+          <button class="tier-btn" onclick="setBudgetTier('plus', this)">澎湃買滿吃法<br><span style="font-weight:400;font-size:0.68rem;">伴手禮多買幾盒</span></button>
         </div>
 
         <div class="budget-numbers">
           <div class="budget-num-card">
             <div class="budget-num-label">👤 每人平均總花費 (台幣)</div>
-            <div class="budget-num-val" id="b-per-twd">NT$ 4,550</div>
-            <div class="budget-num-sub" id="b-per-hkd">約合港幣 HK$ 1,110 / 人</div>
+            <div class="budget-num-val" id="b-per-twd">NT$ 7,235</div>
+            <div class="budget-num-sub" id="b-per-hkd">含住宿 NT$4,285 ＋ 當地開銷 NT$2,950</div>
           </div>
           <div class="budget-num-card">
             <div class="budget-num-label">✌️ 2人三天兩夜總計</div>
-            <div class="budget-num-val" id="b-tot-twd">NT$ 9,100</div>
-            <div class="budget-num-sub" id="b-tot-sub">含2晚住宿＋機車＋KTV＋全美食</div>
+            <div class="budget-num-val" id="b-tot-twd">NT$ 14,470</div>
+            <div class="budget-num-sub" id="b-tot-sub">住宿 ¥41,701(NT$8,570)＋當地 NT$5,900</div>
           </div>
         </div>
-        <div style="font-size:0.78rem; opacity:0.88;">💡 匯率以 1 HKD ≈ 4.1 TWD 估算；實際金額依現場點餐與訂房早鳥價微調。</div>
+        <div style="font-size:0.78rem; opacity:0.88;">💡 扣除已訂好的住宿（NT$4,285/人），在台南當地 3 天吃喝＋租車＋KTV <strong>一個人只需準備約 NT$ 2,600 ～ 3,300</strong>！</div>
       </div>
 
-      <!-- 1:1 Split Highlight -->
+      <!-- Split Highlight -->
       <div class="split-bar-card">
-        <div style="font-weight:800; font-size:0.96rem; color:var(--green);">✨ 發現神奇巧合：「刷卡金額」與「現金金額」剛好各佔 50%！</div>
-        <p style="font-size:0.83rem; color:var(--text-muted); margin-top:4px;">這趟不用煩惱怎麼換錢分帳！只要<strong>香港朋友刷卡付「住宿＋KTV」</strong>，<strong>台灣朋友付現出「租機車＋三天夜市小吃」</strong>，兩邊金額幾乎 1:1 完美抵銷：</p>
+        <div style="font-weight:800; font-size:0.96rem; color:var(--green);">✨ 旅伴聰明分帳建議（少換台幣現金！）</div>
+        <p style="font-size:0.83rem; color:var(--text-muted); margin-top:4px;">住宿費（2人共 ¥41,701 日幣／NT$8,570 台幣）已經是最大筆支出！到了台南當地，其他開銷這樣分配最省事：</p>
         <div class="split-grid">
           <div class="split-box split-card-pay">
             <strong>💳 可刷卡項目 (2人合計)</strong><br>
-            <span id="b-card-sum" style="font-size:1.05rem; font-weight:900;">約 NT$ 5,350</span><br>
-            <span style="font-size:0.75rem;">• 2晚雙床房住宿 (線上刷)<br>• 賓士/享溫馨 KTV (現場刷)</span>
+            <span id="b-card-sum" style="font-size:1.05rem; font-weight:900;">NT$ 9,720</span><br>
+            <span style="font-size:0.75rem;">• 路境行旅 2 晚：NT$8,570 (¥41,701)<br>• 賓士/享溫馨 KTV：約 NT$1,150</span>
           </div>
           <div class="split-box split-cash-pay">
             <strong>💵 需台幣現金 (2人合計)</strong><br>
             <span id="b-cash-sum" style="font-size:1.05rem; font-weight:900;">約 NT$ 4,750</span><br>
-            <span style="font-size:0.75rem;">• 租機車2.5天＋加油<br>• 3天所有夜市、小吃、伴手禮</span>
+            <span style="font-size:0.75rem;">• 租機車2.5天＋加油：約 NT$960<br>• 3天所有夜市、小吃、伴手禮</span>
           </div>
         </div>
       </div>
 
       <!-- Detailed Breakdown List -->
       <div class="budget-table-card">
-        <div class="budget-row">
+        <div class="budget-row" style="background:#F4F9F5;">
           <div>
-            <div class="budget-item-title">🏨 兩晚雙床房住宿 <span class="tag tag-card">可線上刷卡</span></div>
-            <div class="budget-item-desc" id="b-hotel-desc">11/21(六)＋11/22(日) 兩小床獨立套房 2 晚</div>
+            <div class="budget-item-title">🏨 路境行旅 台南西門館 (2晚) <span class="tag tag-card">已訂完成</span></div>
+            <div class="budget-item-desc" id="b-hotel-desc">兩人兩晚共 ¥41,701 日幣（平均一人 NT$4,285 台幣）</div>
           </div>
           <div class="budget-item-price">
-            <div class="price-per-person" id="b-hotel-per">NT$ 2,100 / 人</div>
-            <div class="price-total-two" id="b-hotel-tot">2人共 NT$ 4,200</div>
+            <div class="price-per-person" id="b-hotel-per">NT$ 4,285 / 人</div>
+            <div class="price-total-two" id="b-hotel-tot">2人共 NT$ 8,570 (¥41,701)</div>
           </div>
         </div>
 
@@ -1323,11 +1287,11 @@
       <p class="section-subtitle">台南夜市與小吃攤 95% 只收台幣現金，用以下 4 招就能解決換匯煩惱！</p>
 
       <div class="tip-card">
-        <h3>💳 1. 最推薦：「妳出台幣現金、她刷信用卡」1:1 互抵法</h3>
+        <h3>💳 1. 「住宿刷卡 vs 台南當地現金」互抵法</h3>
         <ul>
-          <li><strong>三大筆可刷卡開銷</strong>：<strong>住宿費、高鐵票、KTV（賓士／享溫馨現場皆可刷卡）</strong>全部可以用信用卡結帳！</li>
-          <li>請香港朋友在線上訂房（用 Trip.com 或 Klook 可直接選港幣 HKD 或用 AlipayHK／PayMe 付款，免換匯手續費）或去 KTV 唱完歌時刷她的卡。</li>
-          <li>這三天在<strong>武聖夜市、牛肉湯、米糕、蔥油餅、租機車</strong>要付的台幣現金由妳先統一出，剛好跟她刷的住宿＋KTV 金額幾乎 1:1 抵銷，她不用換多少台幣現鈔！</li>
+          <li><strong>住宿已訂好</strong>：路境行旅 台南西門館兩晚共 <strong>¥41,701 日幣（每人 NT$4,285 台幣）</strong>。</li>
+          <li><strong>如果在台南當地不想換太多台幣現鈔</strong>：若住宿是由香港朋友刷卡，那這三天在台南的<strong>租機車＋夜市小吃現金（兩人共約 NT$4,750，每人約 NT$2,375）</strong>可以由台灣朋友直接付台幣現金抵銷！</li>
+          <li>若住宿是由台灣朋友先刷卡，到了台南去 <strong>賓士 KTV（可刷卡）＋ 買高鐵票 ＋ 百貨伴手禮</strong> 可以讓香港朋友刷卡分攤。</li>
         </ul>
       </div>
 
@@ -1341,8 +1305,8 @@
       <div class="tip-card">
         <h3>🏦 3. 重要警告：週末台南市區銀行全部休息！</h3>
         <ul>
-          <li>妳們是 <strong>11/21（週六）</strong> 抵達，台灣的銀行在週六、週日不營業，台南市區週末幾乎沒有地方能用港幣現鈔換台幣（路邊銀樓匯率極差）。</li>
-          <li>若香港朋友帶港幣現鈔，請務必在<strong>抵達台灣的機場（桃園／小港機場）兆豐或臺灣銀行櫃檯</strong>先換好！</li>
+          <li>妳們是 <strong>11/21（週六）</strong> 抵達，台灣的銀行在週六、週日不營業，台南市區週末幾乎沒有地方能用外幣現鈔換台幣（路邊銀樓匯率極差）。</li>
+          <li>若香港朋友帶外幣現鈔，請務必在<strong>抵達台灣的機場（桃園／小港機場）兆豐或臺灣銀行櫃檯</strong>先換好！</li>
         </ul>
       </div>
 
@@ -1373,8 +1337,8 @@
       <span>每日行程</span>
     </button>
     <button class="nav-item" onclick="switchTab('sec-hotel', this)">
-      <span class="nav-icon">🛏️</span>
-      <span>雙床住宿</span>
+      <span class="nav-icon">🏨</span>
+      <span>已訂住宿</span>
     </button>
     <button class="nav-item" onclick="switchTab('sec-budget', this)">
       <span class="nav-icon">💰</span>
@@ -1447,8 +1411,7 @@
 
     const BUDGET_TIERS = {
       eco: {
-        hotelDesc: '11/21(六)＋11/22(日) 仲青行旅「上下舖經濟雙床房」2 晚',
-        hotelPer: 1400,
+        hotelPer: 4285,
         ktvPer: 500,
         transPer: 480,
         d1Per: 650,
@@ -1456,8 +1419,7 @@
         d3Per: 450
       },
       std: {
-        hotelDesc: '11/21(六)＋11/22(日) 文青旅店「標準兩小床套房」2 晚',
-        hotelPer: 2100,
+        hotelPer: 4285,
         ktvPer: 575,
         transPer: 480,
         d1Per: 750,
@@ -1465,13 +1427,12 @@
         d3Per: 520
       },
       plus: {
-        hotelDesc: '11/21(六)＋11/22(日) 康橋商旅「商務兩小床(含早＋宵夜)」2 晚',
-        hotelPer: 2650,
+        hotelPer: 4285,
         ktvPer: 650,
         transPer: 480,
-        d1Per: 800,
-        d2Per: 650,
-        d3Per: 570
+        d1Per: 850,
+        d2Per: 700,
+        d3Per: 700
       }
     };
 
@@ -1484,23 +1445,20 @@
       btn.classList.add('active');
 
       const t = BUDGET_TIERS[tierKey];
-      const perTotal = t.hotelPer + t.ktvPer + t.transPer + t.d1Per + t.d2Per + t.d3Per;
+      const localPer = t.ktvPer + t.transPer + t.d1Per + t.d2Per + t.d3Per;
+      const perTotal = t.hotelPer + localPer;
       const twoTotal = perTotal * 2;
-      const perHkd = Math.round(perTotal / 4.1);
 
       const cardTwo = (t.hotelPer + t.ktvPer) * 2;
       const cashTwo = (t.transPer + t.d1Per + t.d2Per + t.d3Per) * 2;
 
       document.getElementById('b-per-twd').textContent = `NT$ ${fmt(perTotal)}`;
-      document.getElementById('b-per-hkd').textContent = `約合港幣 HK$ ${fmt(perHkd)} / 人`;
+      document.getElementById('b-per-hkd').textContent = `含住宿 NT$4,285 ＋ 當地開銷 NT$${fmt(localPer)}`;
       document.getElementById('b-tot-twd').textContent = `NT$ ${fmt(twoTotal)}`;
+      document.getElementById('b-tot-sub').textContent = `住宿 ¥41,701(NT$8,570)＋當地 NT$${fmt(localPer * 2)}`;
 
-      document.getElementById('b-card-sum').textContent = `約 NT$ ${fmt(cardTwo)}`;
+      document.getElementById('b-card-sum').textContent = `NT$ ${fmt(cardTwo)}`;
       document.getElementById('b-cash-sum').textContent = `約 NT$ ${fmt(cashTwo)}`;
-
-      document.getElementById('b-hotel-desc').textContent = t.hotelDesc;
-      document.getElementById('b-hotel-per').textContent = `NT$ ${fmt(t.hotelPer)} / 人`;
-      document.getElementById('b-hotel-tot').textContent = `2人共 NT$ ${fmt(t.hotelPer * 2)}`;
 
       document.getElementById('b-ktv-per').textContent = `NT$ ${fmt(t.ktvPer)} / 人`;
       document.getElementById('b-ktv-tot').textContent = `2人共 NT$ ${fmt(t.ktvPer * 2)}`;
