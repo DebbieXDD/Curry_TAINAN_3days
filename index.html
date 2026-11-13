@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>台南三天兩夜閨蜜美食＆KTV之旅 | 11/21 - 11/23</title>
+  <meta name="description" content="11/21-11/23 台南三天兩夜機車自由行互動行程表：武聖夜市、賓士KTV、國華街甜點、樺哥牛肉湯、學生平價住宿與香港朋友省現金攻略。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAF6F0;
+      --card: #FFFFFF;
+      --primary: #C84B31;
+      --primary-dark: #A13620;
+      --primary-soft: #FDECE8;
+      --accent: #D9822B;
+      --accent-soft: #FFF4E5;
+      --green: #2D6A4F;
+      --green-soft: #E8F5E9;
+      --blue: #1D4ED8;
+      --blue-soft: #EFF6FF;
+      --text: #2B2625;
+      --text-muted: #6E6562;
+      --border: #E8DFD5;
+      --shadow: 0 4px 20px rgba(43, 38, 37, 0.07);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 88px;
+    }
+
+    /* Hero Header */
+    .hero {
+      background: linear-gradient(135deg, #B83B24 0%, #D96B27 100%);
+      color: #FFF;
+      padding: 28px 20px 24px;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+      box-shadow: 0 6px 24px rgba(184, 59, 36, 0.22);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 0.92rem;
+      opacity: 0.92;
+      margin-bottom: 16px;
+    }
+
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .meta-pill {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 5px 11px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* Progress Bar */
+    .progress-bar-wrap {
+      margin-top: 16px;
+      background: rgba(0, 0, 0, 0.18);
+      border-radius: 12px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .progress-text {
+      font-size: 0.82rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .progress-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #FFE169;
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    /* Container */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 18px 16px;
+    }
+
+    /* Section visibility */
+    .tab-section {
+      display: none;
+      animation: fadeIn 0.22s ease;
+    }
+
+    .tab-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Alert Box */
+    .alert-card {
+      background: #FFF9EC;
+      border: 1.5px solid #F5D08A;
+      border-radius: var(--radius);
+      padding: 15px 16px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .alert-title {
+      font-weight: 700;
+      color: #9A5B13;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .alert-list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: #5C4326;
+      display: grid;
+      gap: 6px;
+    }
+
+    .alert-list li strong {
+      color: var(--primary);
+    }
+
+    /* Day Selector Pills */
+    .day-switcher {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 18px;
+      position: sticky;
+      top: 10px;
+      z-index: 20;
+      background: rgba(250, 246, 240, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 6px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .day-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 9px 4px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      line-height: 1.25;
+    }
+
+    .day-btn span {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    .day-btn.active {
+      background: var(--primary);
+      color: #FFF;
+      box-shadow: 0 3px 10px rgba(200, 75, 49, 0.3);
+    }
+
+    /* Day Block */
+    .day-block {
+      margin-bottom: 26px;
+    }
+
+    .day-header {
+      background: var(--card);
+      border-left: 5px solid var(--primary);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .day-header h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .day-route {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Timeline Cards */
+    .timeline {
+      display: grid;
+      gap: 12px;
+      position: relative;
+    }
+
+    .spot-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 15px 16px;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, border-color 0.2s;
+    }
+
+    .spot-card.checked {
+      background: #F4F9F5;
+      border-color: #B7DFC5;
+    }
+
+    .spot-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .time-badge {
+      display: inline-block;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.78rem;
+      padding: 3px 9px;
+      border-radius: 8px;
+      margin-bottom: 5px;
+    }
+
+    .spot-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .tag-must {
+      background: #FEE2E2;
+      color: #B91C1C;
+    }
+
+    .tag-warn {
+      background: #FEF3C7;
+      color: #B45309;
+    }
+
+    .tag-bonus {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .tag-card {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .check-btn {
+      border: 1.5px solid var(--border);
+      background: #FFF;
+      color: var(--text-muted);
+      border-radius: 10px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .spot-card.checked .check-btn {
+      background: var(--green);
+      border-color: var(--green);
+      color: #FFF;
+    }
+
+    .spot-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      display: grid;
+      gap: 3px;
+    }
+
+    .spot-desc {
+      font-size: 0.88rem;
+      color: var(--text);
+      background: #FAF7F2;
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .spot-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .btn-map {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      background: var(--primary);
+      color: #FFF;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 7px 13px;
+      border-radius: 9px;
+      transition: background 0.15s;
+    }
+
+    .btn-map:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      background: #F1ECE4;
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 7px 12px;
+      border-radius: 9px;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 1.22rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .section-subtitle {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* Hotel Cards */
+    .hotel-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .hotel-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .hotel-zone {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      color: #9A5B13;
+      margin-bottom: 6px;
+    }
+
+    .hotel-name {
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .hotel-price {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .hotel-features {
+      list-style: none;
+      font-size: 0.86rem;
+      color: var(--text);
+      display: grid;
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+
+    /* Tips Cards */
+    .tip-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .tip-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tip-card p, .tip-card li {
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+
+    .tip-card ul {
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+
+    /* Quick Filter Bar for Spot List */
+    .filter-bar {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+
+    .filter-chip {
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .filter-chip.active {
+      background: var(--text);
+      color: #FFF;
+      border-color: var(--text);
+    }
+
+    /* Bottom Navigation Bar */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 6px calc(8px + env(safe-area-inset-bottom));
+      z-index: 100;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-item {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.74rem;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      cursor: pointer;
+      padding: 4px 12px;
+      border-radius: 10px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .nav-item .nav-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .nav-item.active {
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    @media (min-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      .hotel-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">🛵 台南機車自由行 · 閨蜜雙人團</div>
+      <h1>11/21 – 11/23 台南三天兩夜美食＆KTV之旅</h1>
+      <p>台南車站租機車出發 · 11/23 傍晚搭高鐵賦歸 · 台灣＋香港學生友善攻略</p>
+      <div class="meta-pills">
+        <span class="meta-pill">📅 11/21(六) - 11/23(一)</span>
+        <span class="meta-pill">👯‍♀️ 2位女學生</span>
+        <span class="meta-pill">🎯 必去：武聖夜市 & KTV</span>
+      </div>
+      <div class="progress-bar-wrap">
+        <span class="progress-text" id="progressText">打卡進度：0 / 15</span>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- SECTION 1: 每日行程 -->
+    <section id="sec-itinerary" class="tab-section active">
+
+      <div class="alert-card">
+        <div class="alert-title">📌 排程黃金卡位（完美避開公休日！）</div>
+        <ul class="alert-list">
+          <li>• <strong>武聖夜市</strong>：每週三、五、六營業 ➔ 必排 <strong>Day 1 (週六) 晚上</strong></li>
+          <li>• <strong>碳饅堡</strong>：週日公休 ➔ 唯一機會是 <strong>Day 1 (週六) 宵夜</strong></li>
+          <li>• <strong>樺哥土產牛肉湯</strong>：週一、二公休 ➔ 必排 <strong>Day 2 (週日) 早餐</strong></li>
+          <li>• <strong>府東街147號蔥油餅</strong>：週日公休 ➔ 排 <strong>Day 3 (週一) 下午</strong> 順路回車站</li>
+        </ul>
+      </div>
+
+      <!-- Day Switcher -->
+      <div class="day-switcher">
+        <button class="day-btn active" onclick="filterDay('all', this)">全部<span>3天總覽</span></button>
+        <button class="day-btn" onclick="filterDay('day1', this)">Day 1<span>11/21 (六)</span></button>
+        <button class="day-btn" onclick="filterDay('day2', this)">Day 2<span>11/22 (日)</span></button>
+        <button class="day-btn" onclick="filterDay('day3', this)">Day 3<span>11/23 (一)</span></button>
+      </div>
+
+      <!-- DAY 1 -->
+      <div class="day-block" data-day="day1">
+        <div class="day-header">
+          <h2>🛵 Day 1：11/21（六）國華街甜點 ➔ 神農街 ➔ 武聖夜市 ➔ 碳饅堡</h2>
+          <div class="day-route">動線：台南車站租車 ➔ 中西區國華街／西市場（步行可達 3 店）➔ 水仙宮＆神農街 ➔ 武聖夜市 ➔ 金華路宵夜</div>
+        </div>
+
+        <div class="timeline">
+          <div class="spot-card" data-id="d1-rent">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">11:30 – 12:15</span>
+                <div class="spot-title">🛵 台南火車站租機車 ＆ 旅店放行李</div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d1-rent')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 台南火車站前站／後站租車行</span>
+            </div>
+            <div class="spot-desc">抵達台南車站後先取車，順路到旅店寄放行李，輕裝出發吃美食！</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南火車站租機車" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d1-baizhen">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">12:30 – 13:30</span>
+                <div class="spot-title">🥖 百珍西點麵包廠</div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d1-baizhen')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 中西區西門路二段151號（大菜市／西市場內）</span>
+              <span>🕒 營業時間：約 10:00 – 18:30</span>
+            </div>
+            <div class="spot-desc">隱身西市場的老字號西點店！必買超搶手的<strong>「巨無霸泡芙」</strong>與古早味檸檬蛋糕。停好車後，接下來 3 間店走路 2 分鐘內全到！</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南百珍西點麵包廠" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d1-yami">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">13:30 – 14:15</span>
+                <div class="spot-title">🍩 亞米甜甜圈專賣店 <span class="tag tag-warn">售完提早收</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d1-yami')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 中西區國華街三段6號</span>
+              <span>🕒 營業時間：週六日 12:00 – 19:30（平日 13:00 起）</span>
+            </div>
+            <div class="spot-desc">從百珍走過來只要 1 分鐘！主打脆皮鮮奶甜甜圈與 Q 彈小米甜甜圈，趁下午剛出爐口味最齊全時買最棒。</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南亞米甜甜圈專賣店" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d1-aic">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">14:15 – 15:30</span>
+                <div class="spot-title">🍦 AIC Gelato 冰淇淋 ＆ 正興街／蝸牛巷散步 <span class="tag tag-bonus">順路加碼</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d1-aic')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 中西區國華街三段26號A7（淺草新天地內）</span>
+              <span>🕒 營業時間：週六 11:30 – 21:30（週日 11:30–20:30，平日 12:30 起）</span>
+            </div>
+            <div class="spot-desc">就在亞米甜甜圈旁幾十公尺！每天推出不同口味的義式手工冰淇淋。吃完可順路逛旁邊的<strong>正興街</strong>與<strong>蝸牛巷</strong>拍文青照。</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=AIC+Gelato+台南市中西區國華街三段26號" target="_blank" rel="noopener">🗺️ 導航至 AIC Gelato</a>
+              <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=台南蝸牛巷" target="_blank" rel="noopener">🐌 蝸牛巷位置</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d1-migao">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">16:00 – 17:30</span>
+                <div class="spot-title">🍙 水仙宮粽葉米糕 ＆ 神農街傍晚街景 <span class="tag tag-bonus">順路加碼</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d1-migao')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 中西區民權路三段44號（水仙宮旁）</span>
+              <span>🕒 營業時間：16:00 – 00:30</span>
+            </div>
+            <div class="spot-desc">16:00 剛開店去不用排隊！與「黃家鱔魚意麵」共用座位，兩個女生推薦合點一份米糕＋四神湯＋鱔魚意麵。吃完走到對面<strong>神農街</strong>（步行 2 分鐘），17:00 燈籠亮起超好拍！</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南水仙宮粽葉米糕" target="_blank" rel="noopener">🗺️ 導航至水仙宮米糕</a>
+              <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=台南神農街" target="_blank" rel="noopener">🏮 神農街位置</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d1-wusheng">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">18:30 – 21:30</span>
+                <div class="spot-title">🎡 武聖夜市 <span class="tag tag-must">必要景點</span> <span class="tag tag-warn">週六限定</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d1-wusheng')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 中西區武聖路69巷</span>
+              <span>🕒 營業時間：每週三、五、六 17:30 – 00:30</span>
+            </div>
+            <div class="spot-desc">三天中只有週六有開！推薦必吃：阿美嬤紅茶奶、三輪車大腸香腸、陳家阿嬤拔絲地瓜、蚵男鮮蚵、可麗餅，還能玩大面積夜市遊戲攤！</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南武聖夜市" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d1-tanmanbao">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">22:00 – 23:00</span>
+                <div class="spot-title">🍔 碳饅堡（豆漿宵夜早點） <span class="tag tag-warn">週日公休</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d1-tanmanbao')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 中西區金華路三段89號</span>
+              <span>🕒 營業時間：19:00 – 02:00（週日公休）</span>
+            </div>
+            <div class="spot-desc">從武聖夜市回中西區順路吃！炭火現烤饅頭香氣十足，必點<strong>「冰火碳烤饅頭（夾厚片冰奶油）」</strong>或燒肉蛋起司，兩人分食一顆當完美宵夜收尾。</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南碳饅堡" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-block" data-day="day2">
+        <div class="day-header">
+          <h2>🛵 Day 2：11/22（日）溫體牛肉湯 ➔ 小鹿家可頌 ➔ KTV 歡唱 ➔ 裁縫師微醺</h2>
+          <div class="day-route">動線：南區早餐 ➔ 南美館／藍晒圖 ➔ 安南區買可頌 ➔ 台南 KTV 下午場 ➔ 河樂廣場 ➔ 裁縫師會館</div>
+        </div>
+
+        <div class="timeline">
+          <div class="spot-card" data-id="d2-huage">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">08:00 – 09:00</span>
+                <div class="spot-title">🍲 體育場樺哥土產牛肉湯 <span class="tag tag-warn">週一二公休</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d2-huage')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 南區體育路89號</span>
+              <span>🕒 營業時間：凌晨 02:30 – 09:30（週一、週二固定公休）</span>
+            </div>
+            <div class="spot-desc">台南超人氣溫體牛肉湯！必點<strong>「上等花紋牛肉湯」</strong>搭配銷魂肉燥飯（花紋肉限量，建議 08:30 前到；吃完還可以回旅店小睡補眠一下）。</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=體育場樺哥土產牛肉湯" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d2-art">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">10:30 – 12:15</span>
+                <div class="spot-title">📸 台南市美術館二館 或 藍晒圖文創園區 <span class="tag tag-bonus">推薦加碼</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d2-art')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 中西區忠義路二段1號（南美館二館）</span>
+            </div>
+            <div class="spot-desc">早上陽光好，去純白幾何建築的南美館二館拍美照、吹冷氣看展，或去藍晒圖逛文創小店。</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南市美術館2館" target="_blank" rel="noopener">🗺️ 導航至南美館2館</a>
+              <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=藍晒圖文創園區" target="_blank" rel="noopener">🎨 藍晒圖位置</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d2-xiaolu">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">12:45 – 13:30</span>
+                <div class="spot-title">🥐 小鹿家麵包店 <span class="tag tag-warn">13:00開門秒殺</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d2-xiaolu')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 安南區海東七街49號</span>
+              <span>🕒 營業時間：13:00 – 18:30（週三、週四公休）</span>
+            </div>
+            <div class="spot-desc">隱身住宅區、門口滿滿綠植栽的超美麵包店！招牌千層可頌（與季節限定水果可頌）極搶手，建議 <strong>12:45–13:00 開門前抵達</strong>排隊。</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南小鹿家麵包店" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d2-ktv">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">14:00 – 18:00</span>
+                <div class="spot-title">🎤 台南在地 KTV 歡唱（賓士 KTV / 享溫馨） <span class="tag tag-must">必要景點</span> <span class="tag tag-card">可刷卡</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d2-ktv')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 首選：賓士 KTV 中成店（中西區中成路18號）或 府前店</span>
+              <span>🕒 營業時間：24 小時（建議提前電話訂位）</span>
+            </div>
+            <div class="spot-desc">避開正午大太陽唱下午場最划算！台南 KTV 的熱炒、炸物、鍋物超好吃，可直接在包廂邊唱邊吃午餐。<strong>現場結帳可刷信用卡（適合讓香港朋友刷卡分攤！）</strong></div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=賓士KTV中成店" target="_blank" rel="noopener">🗺️ 導航至賓士中成店</a>
+              <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=享溫馨KTV台南中華店" target="_blank" rel="noopener">🎤 享溫馨中華店</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d2-tailor">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">20:00 – 22:30</span>
+                <div class="spot-title">☕ 裁縫師會館（森參會館 bar / 安平深夜咖啡）</div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d2-tailor')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 中西區據點：成功路359號3樓（裁縫師咖啡｜森參會館 bar）</span>
+              <span>📍 安平據點：安平區延平街122號（裁縫師深夜咖啡館）</span>
+              <span>🕒 營業時間：20:00 – 02:00（週三公休）</span>
+            </div>
+            <div class="spot-desc">唱完歌可先去<strong>河樂廣場</strong>吹晚風看夜景，20:00 接裁縫師會館！結合露營風天台／老宅氛圍、無菜單虹吸精品咖啡、微醺調酒與蒸籠點心（騎車的人點咖啡或無酒精特調，後座朋友可小酌）。</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=裁縫師咖啡+森參會館+台南市中西區成功路359號" target="_blank" rel="noopener">🗺️ 導航至森參會館(中西區)</a>
+              <a class="btn-secondary" href="https://www.google.com/maps/search/?api=1&query=裁縫師深夜咖啡館+安平" target="_blank" rel="noopener">🏮 安平創始店位置</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-block" data-day="day3">
+        <div class="day-header">
+          <h2>🛵 Day 3：11/23（一）伴手禮採買 ➔ 東區蔥油餅＆嫩仙草 ➔ 傍晚搭高鐵</h2>
+          <div class="day-route">動線：退房寄放行李 ➔ 邱惠美鳳梨酥 ➔ 東區府東街蔥油餅 ➔ 88嫩仙草光明店 ➔ 台南車站還車 ➔ 沙崙線轉高鐵</div>
+        </div>
+
+        <div class="timeline">
+          <div class="spot-card" data-id="d3-pineapple">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">13:00 – 13:40</span>
+                <div class="spot-title">🍍 邱惠美鳳梨酥（阿美鳳梨酥）</div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d3-pineapple')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 東菜市總店：中西區民權路一段88號（或水仙宮店：民權路三段50號）</span>
+              <span>🕒 營業時間：08:00 – 19:00</span>
+            </div>
+            <div class="spot-desc">睡飽退房後（行李先寄放旅店或車站），最後一天來買伴手禮不用提三天！必買傳統古早味鳳梨酥與現烤古早味蛋糕（髒髒糕、布丁蛋糕）。</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=邱惠美鳳梨酥+台南市民權路一段88號" target="_blank" rel="noopener">🗺️ 導航至東菜市總店</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d3-scallion">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">14:00 – 15:00</span>
+                <div class="spot-title">🥞 府東街147號蔥油餅 <span class="tag tag-warn">週日公休</span></div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d3-scallion')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 東區府東街147號</span>
+              <span>🕒 營業時間：11:30 – 18:00（週日公休）</span>
+            </div>
+            <div class="spot-desc">往東區騎約 8 分鐘！超人氣銅板點心，除了現煎加蛋蔥油餅，必點現炸的<strong>「芋頭餅、甜甜圈、雙胞胎」</strong>，外酥內軟超涮嘴。</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南府東街147號蔥油餅" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d3-grassjelly">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">15:15 – 16:30</span>
+                <div class="spot-title">🍨 88嫩仙草 光明店</div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d3-grassjelly')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 東區光明街147-4號（近成大商圈）</span>
+              <span>🕒 營業時間：12:30 – 23:59</span>
+            </div>
+            <div class="spot-desc">從府東街騎過來只要 6 分鐘！點碗招牌手工嫩仙草加滿滿芋圓、淋上奶油球，在店裡舒服聊天休息。<strong>從這裡騎回台南火車站還車只要 5 分鐘！</strong></div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=88嫩仙草光明店+台南市東區光明街" target="_blank" rel="noopener">🗺️ Google Maps 導航</a>
+            </div>
+          </div>
+
+          <div class="spot-card" data-id="d3-hsr">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">16:45 – 傍晚賦歸</span>
+                <div class="spot-title">🚄 台南車站還機車 ➔ 台鐵沙崙線 ➔ 高鐵台南站</div>
+              </div>
+              <button class="check-btn" onclick="toggleCheck('d3-hsr')">⬜ 打卡</button>
+            </div>
+            <div class="spot-meta">
+              <span>📍 台南火車站 ➔ 台鐵沙崙站（高鐵台南站共構）</span>
+            </div>
+            <div class="spot-desc">建議抓<strong>高鐵發車前 60～70 分鐘</strong>回到台南車站還機車、領行李。進台南火車站搭<strong>「沙崙線」區間車</strong>（約 30 分鐘一班，車程 22 分鐘，可刷交通卡或感應信用卡），出站走連通道 2 分鐘就進高鐵站！</div>
+            <div class="spot-actions">
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南火車站" target="_blank" rel="noopener">🗺️ 導航回台南火車站</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 2: 住宿推薦 -->
+    <section id="sec-hotel" class="tab-section">
+      <h2 class="section-title">🏨 學生平價 ＆ 可線上刷卡住宿推薦</h2>
+      <p class="section-subtitle">避開只收「台灣銀行匯款＋現場付現」的小民宿！以下 4 間皆可在 Agoda / Booking / Trip / Klook 線上全額刷卡，不佔用香港朋友的台幣現金。</p>
+
+      <div class="hotel-grid">
+        <div class="hotel-card">
+          <span class="hotel-zone">📍 國華街／友愛街美食核心</span>
+          <div class="hotel-name">1. 仲青行旅 台南館 (Light Hostel)</div>
+          <div class="hotel-price">💰 每人每晚約 NT$600 – $1,300（雙人平分）</div>
+          <ul class="hotel-features">
+            <li>✅ <strong>房型選擇</strong>：有超平價「上下舖獨立雙人房（共用衛浴）」與「標準雙人套房（獨立衛浴）」</li>
+            <li>✅ <strong>位置無敵</strong>：下樓走路 3～6 分鐘就到百珍、亞米甜甜圈、AIC 冰淇淋、碳饅堡！</li>
+            <li>✅ <strong>女生安心</strong>：純白木質文青風、一樓超大交誼廳、電梯與門禁卡管制</li>
+          </ul>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=仲青行旅台南館" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+        </div>
+
+        <div class="hotel-card">
+          <span class="hotel-zone">📍 國華街／赤崁樓核心</span>
+          <div class="hotel-name">2. 暖時嚼旅 (Somer Chew Hotel)</div>
+          <div class="hotel-price">💰 每人每晚約 NT$750 – $1,200（雙人平分）</div>
+          <ul class="hotel-features">
+            <li>✅ <strong>文青質感</strong>：現代復古風格獨立雙人套房，有電梯、乾淨舒適</li>
+            <li>✅ <strong>免費點心</strong>：大廳提供免費泡麵、古早味零食與飲品</li>
+            <li>✅ <strong>動線順暢</strong>：走路就到國華街、水仙宮，離「裁縫師森參會館」步行僅 5 分鐘</li>
+          </ul>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南暖時嚼旅" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+        </div>
+
+        <div class="hotel-card">
+          <span class="hotel-zone">🚉 台南火車站前站步行 3 分鐘</span>
+          <div class="hotel-name">3. 耀西文旅 (Yoshi Hotel)</div>
+          <div class="hotel-price">💰 每人每晚約 NT$550 – $950（雙人平分）</div>
+          <ul class="hotel-features">
+            <li>✅ <strong>省力首選</strong>：出火車站走 3 分鐘就到！先放行李再去租車，完全不用載行李騎車</li>
+            <li>✅ <strong>設備新穎</strong>：老屋翻新質感佳，房內配有免治馬桶，大廳有免費零食飲料</li>
+            <li>✅ <strong>近 KTV</strong>：距離「賓士 KTV 中成店」走路只要 6 分鐘</li>
+          </ul>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南耀西文旅" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+        </div>
+
+        <div class="hotel-card">
+          <span class="hotel-zone">🚉 台南火車站後站／成大商圈</span>
+          <div class="hotel-name">4. 路徒行旅 台南成大館 (Roaders Hotel)</div>
+          <div class="hotel-price">💰 每人每晚約 NT$550 – $1,100（雙人平分）</div>
+          <ul class="hotel-features">
+            <li>✅ <strong>24H 櫃檯</strong>：知名小鹿文娛集團旗下，24 小時櫃檯人員，兩位女生入住超安心</li>
+            <li>✅ <strong>免費宵夜吧</strong>：交誼廳 24 小時提供免費零食、泡麵、飲料</li>
+            <li>✅ <strong>Day 3 超順</strong>：離東區「88嫩仙草光明店」與火車站租車行非常近</li>
+          </ul>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=路徒行旅台南成大館" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 香港朋友省現金＆交通攻略 -->
+    <section id="sec-tips" class="tab-section">
+      <h2 class="section-title">🇭🇰 香港朋友省現金 ＆ 轉乘攻略</h2>
+      <p class="section-subtitle">台南夜市與小吃攤 95% 只收台幣現金，用以下 4 招就能解決換匯煩惱！</p>
+
+      <div class="tip-card">
+        <h3>💳 1. 最推薦：「妳出台幣現金、她刷信用卡」互抵法</h3>
+        <ul>
+          <li><strong>三大筆可刷卡開銷</strong>：<strong>住宿費、高鐵票、KTV（賓士／享溫馨現場皆可刷卡）</strong>全部可以用信用卡結帳！</li>
+          <li>請香港朋友在線上訂房（用 Trip.com 或 Klook 可直接選港幣 HKD 或用 AlipayHK／PayMe 付款，免換匯手續費）或去 KTV 唱完歌時刷她的卡。</li>
+          <li>這三天在<strong>武聖夜市、牛肉湯、米糕、蔥油餅、租機車</strong>要付的台幣現金由妳先統一出，最後再算總帳互抵，她幾乎不用換多少台幣現鈔！</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <h3>🚄 2. 香港護照買高鐵票享「外籍旅客優惠」</h3>
+        <ul>
+          <li>香港朋友持香港護照／港澳居民來往內地通行證，在 <strong>Klook 或 KKday</strong> 購買「台灣高鐵外籍旅客單程票」，常有 <strong>8 折優惠或兩人同行優惠</strong>，且可直接在 App 內刷香港信用卡！</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <h3>🏦 3. 重要警告：週末台南市區銀行全部休息！</h3>
+        <ul>
+          <li>妳們是 <strong>11/21（週六）</strong> 抵達，台灣的銀行在週六、週日不營業，台南市區週末幾乎沒有地方能用港幣現鈔換台幣（路邊銀樓匯率極差）。</li>
+          <li>若香港朋友帶港幣現鈔，請務必在<strong>抵達台灣的機場（桃園／小港機場）兆豐或臺灣銀行櫃檯</strong>先換好！</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <h3>🏧 4. 現金不夠時：直接去 7-11／全家 ATM 提款</h3>
+        <ul>
+          <li>請香港朋友出發前，先在香港的銀行 App 開通提款卡的<strong>「海外提款功能」</strong>（支援銀聯 UnionPay、Plus 或 Cirrus 皆可）。</li>
+          <li>台南滿街的 <strong>7-ELEVEN、全家便利商店 ATM</strong> 都可以直接插卡領出台幣百元與千元現鈔，匯率通常比現鈔換匯更划算！</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <h3>🚆 5. 台南火車站 ⇄ 高鐵台南站 轉乘教學</h3>
+        <ul>
+          <li>高鐵台南站位於歸仁區，與<strong>台鐵「沙崙站」</strong>共構。</li>
+          <li>11/23（一）下午在東區吃完「88嫩仙草光明店」，騎車 5 分鐘回台南火車站還車、拿行李。</li>
+          <li>進台南火車站搭<strong>台鐵「沙崙線」區間車</strong>（約每 30 分鐘一班，車程 <strong>22 分鐘</strong>，刷悠遊卡／一卡通／信用卡感應即可進站），出站走二樓連通道 2 分鐘即達高鐵閘門！</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky Bottom Navigation -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" onclick="switchTab('sec-itinerary', this)">
+      <span class="nav-icon">🗓️</span>
+      <span>每日行程</span>
+    </button>
+    <button class="nav-item" onclick="switchTab('sec-hotel', this)">
+      <span class="nav-icon">🏨</span>
+      <span>平價住宿</span>
+    </button>
+    <button class="nav-item" onclick="switchTab('sec-tips', this)">
+      <span class="nav-icon">🇭🇰</span>
+      <span>省現金＆高鐵</span>
+    </button>
+  </nav>
+
+  <script>
+    const STORAGE_KEY = 'curry_tainan_checked_v1';
+    let checkedItems = {};
+
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) checkedItems = JSON.parse(saved);
+    } catch (e) {}
+
+    function updateUI() {
+      const cards = document.querySelectorAll('.spot-card');
+      let count = 0;
+      cards.forEach(card => {
+        const id = card.getAttribute('data-id');
+        const btn = card.querySelector('.check-btn');
+        if (checkedItems[id]) {
+          card.classList.add('checked');
+          if (btn) btn.textContent = '✅ 已造訪';
+          count++;
+        } else {
+          card.classList.remove('checked');
+          if (btn) btn.textContent = '⬜ 打卡';
+        }
+      });
+      const total = cards.length;
+      const pct = total > 0 ? Math.round((count / total) * 100) : 0;
+      document.getElementById('progressText').textContent = `打卡進度：${count} / ${total}`;
+      document.getElementById('progressFill').style.width = `${pct}%`;
+    }
+
+    function toggleCheck(id) {
+      checkedItems[id] = !checkedItems[id];
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(checkedItems));
+      } catch (e) {}
+      updateUI();
+    }
+
+    function filterDay(day, btn) {
+      document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.day-block').forEach(block => {
+        if (day === 'all' || block.getAttribute('data-day') === day) {
+          block.style.display = 'block';
+        } else {
+          block.style.display = 'none';
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function switchTab(secId, btn) {
+      document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+      document.getElementById(secId).classList.add('active');
+      document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    updateUI();
+  </script>
+</body>
+</html>
