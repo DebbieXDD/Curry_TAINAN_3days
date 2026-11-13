@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>台南三天兩夜美食＆KTV之旅 | 11/21 - 11/23</title>
-  <meta name="description" content="11/21-11/23 台南三天兩夜機車自由行互動行程表：入住路境行旅台南西門館、武聖夜市、賓士KTV、國華街甜點、樺哥牛肉湯、開銷預算與香港朋友省現金攻略。" />
+  <meta name="description" content="11/21-11/23 台南三天兩夜機車自由行互動行程表：入住路境行旅台南西門館、佰渡租車、武聖夜市、賓士KTV、隨手記帳分帳計算機與省現金攻略。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -395,6 +395,9 @@
       font-weight: 700;
       padding: 7px 13px;
       border-radius: 9px;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
       transition: background 0.15s;
     }
 
@@ -413,6 +416,9 @@
       font-weight: 600;
       padding: 7px 12px;
       border-radius: 9px;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
     }
 
     /* Section Headings */
@@ -646,6 +652,132 @@
       color: var(--text-muted);
     }
 
+    /* Ledger (Split Bill) Styles */
+    .settlement-hero {
+      background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+      color: #FFF;
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.2);
+    }
+
+    .settlement-result-box {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .settlement-main-text {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #FFE169;
+    }
+
+    .settlement-sub-text {
+      font-size: 0.8rem;
+      opacity: 0.92;
+      margin-top: 3px;
+    }
+
+    .form-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .form-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .form-input, .form-select {
+      padding: 9px 11px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--text);
+      background: #FFF;
+      width: 100%;
+    }
+
+    .form-input:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .quick-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .quick-chip {
+      border: 1px solid var(--border);
+      background: #FAF7F2;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .quick-chip:hover, .quick-chip:active {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    .ledger-entry {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ledger-entry:last-child {
+      border-bottom: none;
+    }
+
+    .btn-del {
+      border: none;
+      background: #FEE2E2;
+      color: #B91C1C;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 9px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
     /* Tips Cards */
     .tip-card {
       background: var(--card);
@@ -677,7 +809,7 @@
       gap: 6px;
     }
 
-    /* Bottom Navigation Bar (4 items) */
+    /* Bottom Navigation Bar (5 items) */
     .bottom-nav {
       position: fixed;
       bottom: 0;
@@ -687,8 +819,8 @@
       backdrop-filter: blur(12px);
       border-top: 1px solid var(--border);
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      padding: 7px 6px calc(7px + env(safe-area-inset-bottom));
+      grid-template-columns: repeat(5, 1fr);
+      padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
       z-index: 100;
       box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
     }
@@ -698,20 +830,20 @@
       background: transparent;
       color: var(--text-muted);
       font-family: inherit;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 700;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 2px;
       cursor: pointer;
-      padding: 5px 4px;
+      padding: 5px 2px;
       border-radius: 10px;
       transition: color 0.15s, background 0.15s;
     }
 
     .nav-item .nav-icon {
-      font-size: 1.18rem;
+      font-size: 1.15rem;
       line-height: 1.1;
     }
 
@@ -723,6 +855,7 @@
     @media (min-width: 640px) {
       .hero h1 { font-size: 2rem; }
       .dist-grid { grid-template-columns: repeat(3, 1fr); }
+      .nav-item { font-size: 0.76rem; }
     }
   </style>
 </head>
@@ -738,7 +871,7 @@
         <span class="meta-pill">📅 11/21(六) - 11/23(一)</span>
         <span class="meta-pill">🏨 路境行旅西門館</span>
         <span class="meta-pill">🛵 佰渡租車 (12:00取/16:00還)</span>
-        <span class="meta-pill">🎯 必去：武聖夜市 & KTV</span>
+        <span class="meta-pill">🧾 內建隨手分帳本</span>
       </div>
       <div class="progress-bar-wrap">
         <span class="progress-text" id="progressText">打卡進度：0 / 16</span>
@@ -1184,7 +1317,7 @@
     <!-- SECTION 3: 開銷預算試算 -->
     <section id="sec-budget" class="tab-section">
       <h2 class="section-title">💰 三天兩夜台南開銷預算表</h2>
-      <p class="section-subtitle">已鎖定妳們訂好的「路境行旅西門館（每人 NT$4,285）」，可切換下方三種美食＆伴手禮消費模式試算總花費（不含各自回程高鐵票）：</p>
+      <p class="section-subtitle">已鎖定訂好的「路境行旅（每人 NT$4,285）」與「佰渡租車（每人 NT$500）」，可切換下方三種美食消費模式試算：</p>
 
       <!-- Interactive Budget Switcher -->
       <div class="budget-summary-box">
@@ -1207,24 +1340,6 @@
           </div>
         </div>
         <div style="font-size:0.78rem; opacity:0.88;">💡 扣除已訂好的住宿（NT$4,285/人），在台南當地 3 天吃喝＋佰渡租車＋KTV <strong>一個人只需準備約 NT$ 2,730 ～ 3,480</strong>！</div>
-      </div>
-
-      <!-- Split Highlight -->
-      <div class="split-bar-card">
-        <div style="font-weight:800; font-size:0.96rem; color:var(--green);">✨ 旅伴聰明分帳建議（少換台幣現金！）</div>
-        <p style="font-size:0.83rem; color:var(--text-muted); margin-top:4px;">住宿費（2人共 ¥41,701 日幣／NT$8,570 台幣）已經是最大筆支出！到了台南當地，其他開銷這樣分配最省事：</p>
-        <div class="split-grid">
-          <div class="split-box split-card-pay">
-            <strong>💳 可刷卡項目 (2人合計)</strong><br>
-            <span id="b-card-sum" style="font-size:1.05rem; font-weight:900;">NT$ 9,720</span><br>
-            <span style="font-size:0.75rem;">• 路境行旅 2 晚：NT$8,570 (¥41,701)<br>• 賓士/享溫馨 KTV：約 NT$1,150</span>
-          </div>
-          <div class="split-box split-cash-pay">
-            <strong>💵 需台幣現金 (2人合計)</strong><br>
-            <span id="b-cash-sum" style="font-size:1.05rem; font-weight:900;">約 NT$ 4,950</span><br>
-            <span style="font-size:0.75rem;">• 佰渡租車($1,000)＋加油＋沙崙線：$1,160<br>• 3天所有夜市、小吃、伴手禮</span>
-          </div>
-        </div>
       </div>
 
       <!-- Detailed Breakdown List -->
@@ -1295,28 +1410,121 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="tip-card">
-        <h3>🚄 額外加上：11/23 傍晚回程高鐵票參考（可線上刷卡）</h3>
-        <ul>
-          <li><strong>台南 ➔ 台北</strong>：標準車廂全票 NT$1,350（大學生優惠 5 折～88 折約 <strong>NT$675 – $1,185</strong>；香港朋友在 Klook 買外籍旅客單程票約 8 折 <strong>NT$1,080</strong>）。</li>
-          <li><strong>台南 ➔ 台中</strong>：標準車廂全票 NT$650（大學生優惠約 <strong>NT$325 – $570</strong>）。</li>
-          <li><strong>台南 ➔ 高雄(左營)</strong>：標準車廂全票 NT$140（或直接搭台鐵區間車約 NT$50–$100）。</li>
-        </ul>
+    <!-- SECTION 4: 隨手記帳＆自動分帳計算機 (NEW TAB) -->
+    <section id="sec-ledger" class="tab-section">
+      <h2 class="section-title">🧾 隨手記帳 ＆ 自動分帳計算機</h2>
+      <p class="section-subtitle">誰先出了錢就順手記下來！系統會自動幫妳們相抵，算出最後誰該給誰多少錢（支援一鍵複製明細到 LINE / WhatsApp 或產生同步連結）：</p>
+
+      <!-- Live Settlement Summary Hero -->
+      <div class="settlement-hero">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <span style="font-size:0.82rem; font-weight:700; opacity:0.9;">📊 即時結算總覽</span>
+          <button onclick="editTravelerNames()" style="background:rgba(255,255,255,0.2); border:none; color:#FFF; padding:4px 10px; border-radius:8px; font-size:0.75rem; font-weight:700; cursor:pointer; font-family:inherit;">✏️ 修改兩人名字</button>
+        </div>
+
+        <div class="budget-numbers">
+          <div class="budget-num-card">
+            <div class="budget-num-label" id="l-nameA-label">👤 我 (台灣) 已先墊付</div>
+            <div class="budget-num-val" id="l-paidA-val">NT$ 0</div>
+            <div class="budget-num-sub" id="l-shareA-sub">應付分攤：NT$ 0</div>
+          </div>
+          <div class="budget-num-card">
+            <div class="budget-num-label" id="l-nameB-label">👤 朋友 (香港) 已先墊付</div>
+            <div class="budget-num-val" id="l-paidB-val">NT$ 0</div>
+            <div class="budget-num-sub" id="l-shareB-sub">應付分攤：NT$ 0</div>
+          </div>
+        </div>
+
+        <div class="settlement-result-box">
+          <div class="settlement-main-text" id="l-final-text">🎉 目前雙方互不相欠！</div>
+          <div class="settlement-sub-text" id="l-final-sub">新增下方帳目後，會自動相抵算出最終差額</div>
+        </div>
+
+        <div class="spot-actions" style="margin-top:12px; justify-content:center;">
+          <button class="btn-map" style="background:#FFE169; color:#1E3A8A;" onclick="copyLedgerSummary()">📋 複製結算明細 (貼到 LINE)</button>
+          <button class="btn-secondary" style="background:rgba(255,255,255,0.2); color:#FFF;" onclick="shareLedgerLink()">🔗 複製同步網址傳給朋友</button>
+        </div>
+      </div>
+
+      <!-- Add Expense Form -->
+      <div class="form-card">
+        <div style="font-weight:800; font-size:0.96rem; margin-bottom:8px; color:var(--primary-dark);">➕ 快速新增一筆支出（點選下方標籤可自動帶入）</div>
+
+        <div class="quick-chips">
+          <button class="quick-chip" onclick="fillPreset('🏨 路境行旅西門館(2晚)', 8570)">🏨 路境行旅 $8570</button>
+          <button class="quick-chip" onclick="fillPreset('🛵 佰渡租車(活力125)', 1000)">🛵 佰渡租車 $1000</button>
+          <button class="quick-chip" onclick="fillPreset('⛽ 機車加油', 110)">⛽ 機車加油</button>
+          <button class="quick-chip" onclick="fillPreset('🥖 百珍西點泡芙', '')">🥖 百珍泡芙</button>
+          <button class="quick-chip" onclick="fillPreset('🍩 亞米甜甜圈', '')">🍩 亞米甜甜圈</button>
+          <button class="quick-chip" onclick="fillPreset('🍦 AIC Gelato 冰淇淋', '')">🍦 AIC冰淇淋</button>
+          <button class="quick-chip" onclick="fillPreset('🍙 水仙宮米糕＆鱔魚意麵', '')">🍙 水仙宮米糕</button>
+          <button class="quick-chip" onclick="fillPreset('🎡 武聖夜市美食', '')">🎡 武聖夜市</button>
+          <button class="quick-chip" onclick="fillPreset('🍔 碳饅堡宵夜', '')">🍔 碳饅堡</button>
+          <button class="quick-chip" onclick="fillPreset('🍲 樺哥土產牛肉湯', '')">🍲 樺哥牛肉湯</button>
+          <button class="quick-chip" onclick="fillPreset('🥐 小鹿家麵包店', '')">🥐 小鹿家可頌</button>
+          <button class="quick-chip" onclick="fillPreset('🎤 KTV 歡唱＆餐點', '')">🎤 KTV歡唱</button>
+          <button class="quick-chip" onclick="fillPreset('☕ 裁縫師會館', '')">☕ 裁縫師會館</button>
+          <button class="quick-chip" onclick="fillPreset('🍍 邱惠美鳳梨酥伴手禮', '')">🍍 邱惠美伴手禮</button>
+          <button class="quick-chip" onclick="fillPreset('🥞 府東街蔥油餅', '')">🥞 府東街蔥油餅</button>
+          <button class="quick-chip" onclick="fillPreset('🍨 88嫩仙草光明店', '')">🍨 88嫩仙草</button>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">項目名稱</label>
+            <input type="text" id="in-title" class="form-input" placeholder="例如：武聖夜市、佰渡租車" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">金額 (折合台幣 NT$)</label>
+            <input type="number" id="in-amount" class="form-input" placeholder="輸入台幣金額" inputmode="decimal" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">誰先付錢？</label>
+            <select id="in-payer" class="form-select">
+              <option value="A" id="opt-payer-A">我 (台灣) 先付</option>
+              <option value="B" id="opt-payer-B">朋友 (香港) 先付</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">怎麼分攤？</label>
+            <select id="in-split" class="form-select">
+              <option value="even">兩人平分 (各 50%)</option>
+              <option value="forOther">幫對方代買 (對方付 100%)</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-map" style="width:100%; justify-content:center; padding:11px; font-size:0.92rem; margin-top:4px;" onclick="addLedgerItem()">➕ 記下一筆</button>
+      </div>
+
+      <!-- Expense History List -->
+      <div class="budget-table-card">
+        <div style="padding:12px 15px; background:#FAF7F2; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:800; font-size:0.9rem;">📝 已記錄明細 (<span id="l-count">0</span> 筆)</span>
+          <button onclick="clearAllLedger()" style="border:none; background:transparent; color:var(--text-muted); font-size:0.75rem; cursor:pointer; font-family:inherit;">🗑️ 清空重來</button>
+        </div>
+        <div id="ledger-list-container">
+          <div style="padding:24px 16px; text-align:center; color:var(--text-muted); font-size:0.86rem;">目前還沒有記帳紀錄，點上方標籤即可快速新增！</div>
+        </div>
       </div>
     </section>
 
-    <!-- SECTION 4: 香港朋友省現金＆交通攻略 -->
+    <!-- SECTION 5: 香港朋友省現金＆交通攻略 -->
     <section id="sec-tips" class="tab-section">
       <h2 class="section-title">🇭🇰 香港朋友省現金 ＆ 轉乘攻略</h2>
-      <p class="section-subtitle">台南夜市與小吃攤 95% 只收台幣現金，用以下 4 招就能解決換匯煩惱！</p>
+      <p class="section-subtitle">台南夜市與小吃攤 95% 只收台幣現金，用以下技巧就能解決換匯與分帳煩惱！</p>
 
       <div class="tip-card">
         <h3>💳 1. 「住宿刷卡 vs 台南當地現金」互抵法</h3>
         <ul>
           <li><strong>住宿已訂好</strong>：路境行旅 台南西門館兩晚共 <strong>¥41,701 日幣（每人 NT$4,285 台幣）</strong>。</li>
-          <li><strong>如果在台南當地不想換太多台幣現鈔</strong>：若住宿是由香港朋友刷卡，那這三天在台南的<strong>租機車＋夜市小吃現金（兩人共約 NT$4,750，每人約 NT$2,375）</strong>可以由台灣朋友直接付台幣現金抵銷！</li>
-          <li>若住宿是由台灣朋友先刷卡，到了台南去 <strong>賓士 KTV（可刷卡）＋ 買高鐵票 ＋ 百貨伴手禮</strong> 可以讓香港朋友刷卡分攤。</li>
+          <li><strong>如果在台南當地不想換太多台幣現鈔</strong>：若住宿是由香港朋友刷卡，那這三天在台南的<strong>佰渡租車($1,000)＋夜市小吃現金（兩人共約 NT$4,950，每人約 NT$2,475）</strong>可以由台灣朋友直接付台幣現金抵銷！</li>
+          <li>若住宿是由台灣朋友先刷卡，到了台南去 <strong>賓士 KTV（可刷卡）＋ 買高鐵票 ＋ 百貨伴手禮</strong> 可以讓香港朋友刷卡分攤，並用隔壁的<strong>「🧾 分帳」</strong>分頁隨時記錄。</li>
         </ul>
       </div>
 
@@ -1347,42 +1555,285 @@
         <h3>🚆 5. 台南火車站 ⇄ 高鐵台南站 轉乘教學</h3>
         <ul>
           <li>高鐵台南站位於歸仁區，與<strong>台鐵「沙崙站」</strong>共構。</li>
-          <li>11/23（一）下午在東區吃完「88嫩仙草光明店」，騎車 5 分鐘回台南火車站還車、拿行李。</li>
-          <li>進台南火車站搭<strong>台鐵「沙崙線」區間車</strong>（約每 30 分鐘一班，車程 <strong>22 分鐘</strong>，刷悠遊卡／一卡通／信用卡感應即可進站），出站走二樓連通道 2 分鐘即達高鐵閘門！</li>
+          <li>11/23（一）下午在東區吃完「88嫩仙草光明店」，騎車 5 分鐘於 <strong>16:00 回到佰渡租車還車</strong>。</li>
+          <li>走進旁邊台南火車站搭<strong>台鐵「沙崙線」區間車</strong>（約每 30 分鐘一班，車程 <strong>22 分鐘</strong>，刷悠遊卡／一卡通／信用卡感應即可進站），出站走二樓連通道 2 分鐘即達高鐵閘門！</li>
         </ul>
       </div>
     </section>
 
   </main>
 
-  <!-- Sticky Bottom Navigation (4 Tabs) -->
+  <!-- Sticky Bottom Navigation (5 Tabs) -->
   <nav class="bottom-nav">
-    <button class="nav-item active" onclick="switchTab('sec-itinerary', this)">
+    <button class="nav-item active" data-sec="sec-itinerary" onclick="switchTab('sec-itinerary', this)">
       <span class="nav-icon">🗓️</span>
       <span>每日行程</span>
     </button>
-    <button class="nav-item" onclick="switchTab('sec-hotel', this)">
+    <button class="nav-item" data-sec="sec-hotel" onclick="switchTab('sec-hotel', this)">
       <span class="nav-icon">🏨</span>
       <span>住宿＆租車</span>
     </button>
-    <button class="nav-item" onclick="switchTab('sec-budget', this)">
+    <button class="nav-item" data-sec="sec-budget" onclick="switchTab('sec-budget', this)">
       <span class="nav-icon">💰</span>
       <span>開銷預算</span>
     </button>
-    <button class="nav-item" onclick="switchTab('sec-tips', this)">
+    <button class="nav-item" data-sec="sec-ledger" onclick="switchTab('sec-ledger', this)">
+      <span class="nav-icon">🧾</span>
+      <span>記帳分帳</span>
+    </button>
+    <button class="nav-item" data-sec="sec-tips" onclick="switchTab('sec-tips', this)">
       <span class="nav-icon">🇭🇰</span>
-      <span>省現金＆高鐵</span>
+      <span>省現金攻略</span>
     </button>
   </nav>
 
   <script>
     const STORAGE_KEY = 'curry_tainan_checked_v1';
+    const LEDGER_KEY = 'curry_tainan_ledger_v1';
     let checkedItems = {};
+
+    let ledgerState = {
+      nameA: '我 (台灣)',
+      nameB: '朋友 (香港)',
+      items: []
+    };
 
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) checkedItems = JSON.parse(saved);
     } catch (e) {}
+
+    // Load ledger from URL hash if shared, otherwise from localStorage
+    function initLedger() {
+      try {
+        if (window.location.hash && window.location.hash.startsWith('#ledger=')) {
+          const encoded = window.location.hash.replace('#ledger=', '');
+          const decoded = JSON.parse(decodeURIComponent(escape(atob(encoded))));
+          if (decoded && Array.isArray(decoded.items)) {
+            ledgerState = decoded;
+            localStorage.setItem(LEDGER_KEY, JSON.stringify(ledgerState));
+            // Switch directly to ledger tab when opening a shared ledger link
+            const ledgerNavBtn = document.querySelector('[data-sec="sec-ledger"]');
+            if (ledgerNavBtn) switchTab('sec-ledger', ledgerNavBtn);
+          }
+        } else {
+          const savedLedger = localStorage.getItem(LEDGER_KEY);
+          if (savedLedger) {
+            ledgerState = JSON.parse(savedLedger);
+          }
+        }
+      } catch (e) {}
+      renderLedger();
+    }
+
+    function saveLedger() {
+      try {
+        localStorage.setItem(LEDGER_KEY, JSON.stringify(ledgerState));
+      } catch (e) {}
+      renderLedger();
+    }
+
+    function editTravelerNames() {
+      const nA = prompt('請輸入第一位旅伴名稱：', ledgerState.nameA);
+      if (nA && nA.trim()) ledgerState.nameA = nA.trim();
+      const nB = prompt('請輸入第二位旅伴名稱：', ledgerState.nameB);
+      if (nB && nB.trim()) ledgerState.nameB = nB.trim();
+      saveLedger();
+    }
+
+    function fillPreset(title, amount) {
+      document.getElementById('in-title').value = title;
+      const amtInput = document.getElementById('in-amount');
+      amtInput.value = amount !== '' ? amount : '';
+      amtInput.focus();
+    }
+
+    function addLedgerItem() {
+      const titleEl = document.getElementById('in-title');
+      const amountEl = document.getElementById('in-amount');
+      const payerEl = document.getElementById('in-payer');
+      const splitEl = document.getElementById('in-split');
+
+      const title = titleEl.value.trim();
+      const amount = parseFloat(amountEl.value);
+
+      if (!title) {
+        alert('請輸入項目名稱（或點選上方快速標籤）！');
+        titleEl.focus();
+        return;
+      }
+      if (isNaN(amount) || amount <= 0) {
+        alert('請輸入大於 0 的台幣金額！');
+        amountEl.focus();
+        return;
+      }
+
+      const now = new Date();
+      const timeStr = `${now.getMonth() + 1}/${now.getDate()} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+      ledgerState.items.unshift({
+        id: Date.now(),
+        title,
+        amount: Math.round(amount),
+        payer: payerEl.value,
+        split: splitEl.value,
+        time: timeStr
+      });
+
+      titleEl.value = '';
+      amountEl.value = '';
+      saveLedger();
+    }
+
+    function deleteLedgerItem(id) {
+      ledgerState.items = ledgerState.items.filter(it => it.id !== id);
+      saveLedger();
+    }
+
+    function clearAllLedger() {
+      if (!ledgerState.items.length) return;
+      if (confirm('確定要清空所有記帳紀錄嗎？')) {
+        ledgerState.items = [];
+        saveLedger();
+      }
+    }
+
+    function computeSettlement() {
+      let paidA = 0, paidB = 0;
+      let shareA = 0, shareB = 0;
+
+      ledgerState.items.forEach(it => {
+        if (it.payer === 'A') paidA += it.amount;
+        else paidB += it.amount;
+
+        if (it.split === 'even') {
+          shareA += it.amount / 2;
+          shareB += it.amount / 2;
+        } else if (it.split === 'forOther') {
+          if (it.payer === 'A') shareB += it.amount;
+          else shareA += it.amount;
+        }
+      });
+
+      // Net balance for A: paidA - shareA (if > 0, B owes A)
+      const netA = Math.round(paidA - shareA);
+      return {
+        paidA: Math.round(paidA),
+        paidB: Math.round(paidB),
+        shareA: Math.round(shareA),
+        shareB: Math.round(shareB),
+        netA
+      };
+    }
+
+    function renderLedger() {
+      const { nameA, nameB, items } = ledgerState;
+      document.getElementById('l-nameA-label').textContent = `👤 ${nameA} 已先墊付`;
+      document.getElementById('l-nameB-label').textContent = `👤 ${nameB} 已先墊付`;
+      document.getElementById('opt-payer-A').textContent = `${nameA} 先付`;
+      document.getElementById('opt-payer-B').textContent = `${nameB} 先付`;
+
+      const s = computeSettlement();
+      document.getElementById('l-paidA-val').textContent = `NT$ ${fmt(s.paidA)}`;
+      document.getElementById('l-paidB-val').textContent = `NT$ ${fmt(s.paidB)}`;
+      document.getElementById('l-shareA-sub').textContent = `應付分攤：NT$ ${fmt(s.shareA)}`;
+      document.getElementById('l-shareB-sub').textContent = `應付分攤：NT$ ${fmt(s.shareB)}`;
+
+      const finalMain = document.getElementById('l-final-text');
+      const finalSub = document.getElementById('l-final-sub');
+
+      if (s.netA === 0) {
+        finalMain.textContent = '🎉 目前雙方互不相欠！';
+        finalSub.textContent = `總支出共 NT$ ${fmt(s.paidA + s.paidB)}`;
+      } else if (s.netA > 0) {
+        const hkd = Math.round(s.netA / 4.1);
+        finalMain.textContent = `👉 【${nameB}】要給【${nameA}】NT$ ${fmt(s.netA)}`;
+        finalSub.textContent = `約合港幣 HK$ ${fmt(hkd)}（總支出共 NT$ ${fmt(s.paidA + s.paidB)}）`;
+      } else {
+        const owe = Math.abs(s.netA);
+        const hkd = Math.round(owe / 4.1);
+        finalMain.textContent = `👉 【${nameA}】要給【${nameB}】NT$ ${fmt(owe)}`;
+        finalSub.textContent = `約合港幣 HK$ ${fmt(hkd)}（總支出共 NT$ ${fmt(s.paidA + s.paidB)}）`;
+      }
+
+      document.getElementById('l-count').textContent = items.length;
+      const container = document.getElementById('ledger-list-container');
+
+      if (!items.length) {
+        container.innerHTML = '<div style="padding:24px 16px; text-align:center; color:var(--text-muted); font-size:0.86rem;">目前還沒有記帳紀錄，點上方標籤即可快速新增！</div>';
+        return;
+      }
+
+      container.innerHTML = items.map(it => {
+        const payerName = it.payer === 'A' ? nameA : nameB;
+        const splitText = it.split === 'even'
+          ? `兩人平分 (各 NT$${fmt(Math.round(it.amount / 2))})`
+          : `幫對方代墊 (對方全額)`;
+        return `
+          <div class="ledger-entry">
+            <div>
+              <div class="budget-item-title">${it.title}</div>
+              <div class="budget-item-desc">💳 由 <strong>${payerName}</strong> 先付 · ${splitText} · <span style="opacity:0.75;">${it.time || ''}</span></div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div class="budget-item-price">
+                <div class="price-per-person">NT$ ${fmt(it.amount)}</div>
+              </div>
+              <button class="btn-del" onclick="deleteLedgerItem(${it.id})">刪除</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function copyLedgerSummary() {
+      const { nameA, nameB, items } = ledgerState;
+      const s = computeSettlement();
+      let lines = [
+        `🛵 台南三天兩夜分帳明細 (11/21-11/23)`,
+        `━━━━━━━━━━━━━━`,
+        `👤 ${nameA} 先墊付總計：NT$ ${fmt(s.paidA)} (應分攤 NT$ ${fmt(s.shareA)})`,
+        `👤 ${nameB} 先墊付總計：NT$ ${fmt(s.paidB)} (應分攤 NT$ ${fmt(s.shareB)})`,
+        `━━━━━━━━━━━━━━`
+      ];
+      if (s.netA === 0) {
+        lines.push(`🎉 最終結算：雙方互不相欠！`);
+      } else if (s.netA > 0) {
+        lines.push(`👉 最終結算：【${nameB}】給【${nameA}】NT$ ${fmt(s.netA)} (約 HK$ ${fmt(Math.round(s.netA / 4.1))})`);
+      } else {
+        const owe = Math.abs(s.netA);
+        lines.push(`👉 最終結算：【${nameA}】給【${nameB}】NT$ ${fmt(owe)} (約 HK$ ${fmt(Math.round(owe / 4.1))})`);
+      }
+      if (items.length > 0) {
+        lines.push(`\n📝 支出明細 (${items.length}筆)：`);
+        items.slice().reverse().forEach((it, idx) => {
+          const pName = it.payer === 'A' ? nameA : nameB;
+          lines.push(`${idx + 1}. ${it.title}：NT$${fmt(it.amount)} (${pName}先付)`);
+        });
+      }
+      const text = lines.join('\n');
+      navigator.clipboard.writeText(text).then(() => {
+        alert('✅ 已複製結算明細！可以直接貼到 LINE 或 WhatsApp 傳給朋友囉！');
+      }).catch(() => {
+        prompt('請複製以下結算明細：', text);
+      });
+    }
+
+    function shareLedgerLink() {
+      try {
+        const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(ledgerState))));
+        const baseUrl = window.location.href.split('#')[0];
+        const shareUrl = `${baseUrl}#ledger=${encoded}`;
+        window.history.replaceState(null, '', `#ledger=${encoded}`);
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          alert('🔗 已複製「同步帳本網址」！把這個網址傳給朋友，她打開就會看到一模一樣的記帳明細囉！');
+        }).catch(() => {
+          prompt('請複製以下同步網址傳給朋友：', shareUrl);
+        });
+      } catch (e) {
+        alert('產生連結失敗，建議使用「複製結算明細」功能！');
+      }
+    }
 
     function updateUI() {
       const cards = document.querySelectorAll('.spot-card');
@@ -1474,16 +1925,10 @@
       const perTotal = t.hotelPer + localPer;
       const twoTotal = perTotal * 2;
 
-      const cardTwo = (t.hotelPer + t.ktvPer) * 2;
-      const cashTwo = (t.transPer + t.d1Per + t.d2Per + t.d3Per) * 2;
-
       document.getElementById('b-per-twd').textContent = `NT$ ${fmt(perTotal)}`;
       document.getElementById('b-per-hkd').textContent = `含住宿 NT$4,285 ＋ 當地開銷 NT$${fmt(localPer)}`;
       document.getElementById('b-tot-twd').textContent = `NT$ ${fmt(twoTotal)}`;
       document.getElementById('b-tot-sub').textContent = `住宿 ¥41,701(NT$8,570)＋當地 NT$${fmt(localPer * 2)}`;
-
-      document.getElementById('b-card-sum').textContent = `NT$ ${fmt(cardTwo)}`;
-      document.getElementById('b-cash-sum').textContent = `約 NT$ ${fmt(cashTwo)}`;
 
       document.getElementById('b-ktv-per').textContent = `NT$ ${fmt(t.ktvPer)} / 人`;
       document.getElementById('b-ktv-tot').textContent = `2人共 NT$ ${fmt(t.ktvPer * 2)}`;
@@ -1499,6 +1944,7 @@
     }
 
     updateUI();
+    initLedger();
   </script>
 </body>
 </html>

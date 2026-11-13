@@ -1,6 +1,6 @@
 # 🛵 台南三天兩夜美食＆KTV之旅 (11/21 - 11/23)
 
-🌐 **線上互動版行程網頁（支援手機／電腦瀏覽、一鍵開啟 Google Maps 導航、已訂住宿＆租車資訊 & 開銷預算試算）：**  
+🌐 **線上互動版行程網頁（支援手機／電腦瀏覽、一鍵開啟 Google Maps 導航、已訂住宿＆租車資訊、開銷預算試算 & 隨手記帳分帳計算機）：**  
 👉 **[點此開啟首頁：https://debbiexdd.github.io/Curry_TAINAN_3days/](https://debbiexdd.github.io/Curry_TAINAN_3days/)**
 
 ---
