@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>台南三天兩夜美食＆KTV之旅 | 11/21 - 11/23</title>
-  <meta name="description" content="11/21-11/23 台南三天兩夜機車自由行互動行程表：武聖夜市、賓士KTV、國華街甜點、樺哥牛肉湯、學生平價住宿與香港朋友省現金攻略。" />
+  <meta name="description" content="11/21-11/23 台南三天兩夜機車自由行互動行程表：武聖夜市、賓士KTV、國華街甜點、樺哥牛肉湯、雙床房平價住宿、開銷預算試算與香港朋友省現金攻略。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      padding-bottom: 88px;
+      padding-bottom: 92px;
     }
 
     /* Hero Header */
@@ -441,17 +441,36 @@
       border-radius: var(--radius);
       padding: 16px;
       box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hotel-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
     }
 
     .hotel-zone {
       display: inline-block;
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 700;
       padding: 3px 9px;
       border-radius: 6px;
       background: var(--accent-soft);
       color: #9A5B13;
-      margin-bottom: 6px;
+    }
+
+    .hotel-twin-badge {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--blue-soft);
+      color: var(--blue);
     }
 
     .hotel-name {
@@ -464,16 +483,172 @@
       font-size: 0.9rem;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .hotel-features {
       list-style: none;
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       color: var(--text);
       display: grid;
-      gap: 5px;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    /* Budget Section Styles */
+    .budget-summary-box {
+      background: linear-gradient(135deg, #2B2625 0%, #433A37 100%);
+      color: #FFF;
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .budget-tier-btns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-bottom: 14px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 5px;
+      border-radius: 12px;
+    }
+
+    .tier-btn {
+      border: none;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.78);
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 8px 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      line-height: 1.25;
+    }
+
+    .tier-btn.active {
+      background: var(--primary);
+      color: #FFF;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .budget-numbers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
       margin-bottom: 12px;
+    }
+
+    .budget-num-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .budget-num-label {
+      font-size: 0.75rem;
+      opacity: 0.85;
+      margin-bottom: 2px;
+    }
+
+    .budget-num-val {
+      font-size: 1.32rem;
+      font-weight: 900;
+      color: #FFE169;
+    }
+
+    .budget-num-sub {
+      font-size: 0.76rem;
+      opacity: 0.9;
+    }
+
+    .split-bar-card {
+      background: var(--card);
+      border: 1.5px solid #B7DFC5;
+      border-radius: var(--radius);
+      padding: 15px 16px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .split-box {
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 0.83rem;
+    }
+
+    .split-card-pay {
+      background: var(--green-soft);
+      color: #1B4332;
+    }
+
+    .split-cash-pay {
+      background: var(--accent-soft);
+      color: #7C4209;
+    }
+
+    .budget-table-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .budget-row {
+      padding: 13px 15px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .budget-row:last-child {
+      border-bottom: none;
+    }
+
+    .budget-item-title {
+      font-weight: 800;
+      font-size: 0.94rem;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .budget-item-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .budget-item-price {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .price-per-person {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+    }
+
+    .price-total-two {
+      font-size: 0.75rem;
+      color: var(--text-muted);
     }
 
     /* Tips Cards */
@@ -507,46 +682,18 @@
       gap: 6px;
     }
 
-    /* Quick Filter Bar for Spot List */
-    .filter-bar {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
-      padding-bottom: 8px;
-      margin-bottom: 14px;
-    }
-
-    .filter-chip {
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text-muted);
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      white-space: nowrap;
-      cursor: pointer;
-      font-family: inherit;
-    }
-
-    .filter-chip.active {
-      background: var(--text);
-      color: #FFF;
-      border-color: var(--text);
-    }
-
-    /* Bottom Navigation Bar */
+    /* Bottom Navigation Bar (4 items) */
     .bottom-nav {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(12px);
       border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-around;
-      padding: 8px 6px calc(8px + env(safe-area-inset-bottom));
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 7px 6px calc(7px + env(safe-area-inset-bottom));
       z-index: 100;
       box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
     }
@@ -556,21 +703,21 @@
       background: transparent;
       color: var(--text-muted);
       font-family: inherit;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 700;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 3px;
+      gap: 2px;
       cursor: pointer;
-      padding: 4px 12px;
+      padding: 5px 4px;
       border-radius: 10px;
       transition: color 0.15s, background 0.15s;
     }
 
     .nav-item .nav-icon {
-      font-size: 1.2rem;
-      line-height: 1;
+      font-size: 1.18rem;
+      line-height: 1.1;
     }
 
     .nav-item.active {
@@ -598,7 +745,7 @@
         <span class="meta-pill">🎯 必去：武聖夜市 & KTV</span>
       </div>
       <div class="progress-bar-wrap">
-        <span class="progress-text" id="progressText">打卡進度：0 / 15</span>
+        <span class="progress-text" id="progressText">打卡進度：0 / 16</span>
         <div class="progress-track">
           <div class="progress-fill" id="progressFill"></div>
         </div>
@@ -952,73 +1099,235 @@
 
     </section>
 
-    <!-- SECTION 2: 住宿推薦 -->
+    <!-- SECTION 2: 雙床房住宿推薦 -->
     <section id="sec-hotel" class="tab-section">
-      <h2 class="section-title">🏨 學生平價 ＆ 可線上刷卡住宿推薦</h2>
-      <p class="section-subtitle">避開只收「台灣銀行匯款＋現場付現」的小民宿！以下 4 間皆可在 Agoda / Booking / Trip / Klook 線上全額刷卡，不佔用香港朋友的台幣現金。</p>
+      <h2 class="section-title">🛏️ 可選「雙床房（兩小床／上下舖）」平價住宿</h2>
+      <p class="section-subtitle">特選有「兩張單人床」或「獨立上下舖」、且可在 Agoda / Booking / Trip / Klook 線上全額刷卡的旅店，一人一張床睡得舒服，也不佔用台幣現金！</p>
 
       <div class="hotel-grid">
         <div class="hotel-card">
-          <span class="hotel-zone">📍 國華街／友愛街美食核心</span>
-          <div class="hotel-name">1. 仲青行旅 台南館 (Light Hostel)</div>
-          <div class="hotel-price">💰 每人每晚約 NT$600 – $1,300（雙人平分）</div>
-          <ul class="hotel-features">
-            <li>✅ <strong>房型選擇</strong>：有超平價「上下舖獨立雙人房（共用衛浴）」與「標準雙人套房（獨立衛浴）」</li>
-            <li>✅ <strong>位置無敵</strong>：下樓走路 3～6 分鐘就到百珍、亞米甜甜圈、AIC 冰淇淋、碳饅堡！</li>
-            <li>✅ <strong>門禁安心</strong>：純白木質文青風、一樓超大交誼廳、電梯與門禁卡管制</li>
-          </ul>
+          <div>
+            <div class="hotel-badges">
+              <span class="hotel-zone">📍 國華街／友愛街核心</span>
+              <span class="hotel-twin-badge">🛏️ 有兩小床套房＆上下舖</span>
+            </div>
+            <div class="hotel-name">1. 仲青行旅 台南館 (Light Hostel)</div>
+            <div class="hotel-price">💰 上下舖約 $600–800/人｜兩小床套房約 $950–1,300/人</div>
+            <ul class="hotel-features">
+              <li>🛏️ <strong>指定雙床房型</strong>：「雙人套房 - 兩小床（獨立衛浴）」或極省預算的「經濟雙床房（上下舖・共用衛浴）」</li>
+              <li>✅ <strong>位置無敵</strong>：下樓走路 3～6 分鐘就到百珍、亞米甜甜圈、AIC 冰淇淋、碳饅堡！</li>
+              <li>✅ <strong>門禁安心</strong>：純白木質文青風、一樓超大交誼廳、電梯與門禁卡管制</li>
+            </ul>
+          </div>
           <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=仲青行旅台南館" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
         </div>
 
         <div class="hotel-card">
-          <span class="hotel-zone">📍 國華街／赤崁樓核心</span>
-          <div class="hotel-name">2. 暖時嚼旅 (Somer Chew Hotel)</div>
-          <div class="hotel-price">💰 每人每晚約 NT$750 – $1,200（雙人平分）</div>
-          <ul class="hotel-features">
-            <li>✅ <strong>文青質感</strong>：現代復古風格獨立雙人套房，有電梯、乾淨舒適</li>
-            <li>✅ <strong>免費點心</strong>：大廳提供免費泡麵、古早味零食與飲品</li>
-            <li>✅ <strong>動線順暢</strong>：走路就到國華街、水仙宮，離「裁縫師森參會館」步行僅 5 分鐘</li>
-          </ul>
+          <div>
+            <div class="hotel-badges">
+              <span class="hotel-zone">📍 國華街／南美館核心</span>
+              <span class="hotel-twin-badge">🛏️ 有標準雙床房(兩小床)</span>
+            </div>
+            <div class="hotel-name">2. 古根嚼旅 (Roots Chew Hotel)</div>
+            <div class="hotel-price">💰 每人每晚約 NT$900 – $1,400（雙人平分）</div>
+            <ul class="hotel-features">
+              <li>🛏️ <strong>指定雙床房型</strong>：「標準雙床房（兩張單人床・獨立衛浴）」</li>
+              <li>✅ <strong>誠品般質感</strong>：溫潤木質調文青設計，房內配備免治馬桶、膠囊咖啡機、茶籽堂沐浴備品</li>
+              <li>✅ <strong>動線極佳</strong>：位於友愛街，走路 3 分鐘進國華街美食戰區與南美館二館</li>
+            </ul>
+          </div>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南古根嚼旅" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-badges">
+              <span class="hotel-zone">🚉 台南火車站前站步行 5 分鐘</span>
+              <span class="hotel-twin-badge">🛏️ 有光影雙床房(兩小床)</span>
+            </div>
+            <div class="hotel-name">3. 三道門建築文創旅店 (3 Door Hotel)</div>
+            <div class="hotel-price">💰 每人每晚約 NT$950 – $1,450（雙人平分）</div>
+            <ul class="hotel-features">
+              <li>🛏️ <strong>指定雙床房型</strong>：「雅致光影房（兩小床）」或「天步光影房（兩小床）」</li>
+              <li>✅ <strong>位置超神</strong>：離火車站、<strong>賓士 KTV 中成店</strong>、<strong>裁縫師森參會館</strong>全部走路 5 分鐘！</li>
+              <li>✅ <strong>貼心設施</strong>：全館無地毯木地板、免費迎賓點心吧與頂樓空中花園</li>
+            </ul>
+          </div>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=三道門建築文創旅店" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-badges">
+              <span class="hotel-zone">📍 國華街／赤崁樓核心</span>
+              <span class="hotel-twin-badge">🛏️ 有豪華雙床房(兩小床)</span>
+            </div>
+            <div class="hotel-name">4. 暖時嚼旅 (Somer Chew Hotel)</div>
+            <div class="hotel-price">💰 每人每晚約 NT$900 – $1,350（雙人平分）</div>
+            <ul class="hotel-features">
+              <li>🛏️ <strong>指定雙床房型</strong>：「豪華雙床房（兩張單人床・獨立衛浴）」</li>
+              <li>✅ <strong>免費點心</strong>：大廳提供免費泡麵、古早味零食與飲品，有電梯</li>
+              <li>✅ <strong>動線順暢</strong>：走路就到國華街、水仙宮，去武聖夜市騎車僅 5 分鐘</li>
+            </ul>
+          </div>
           <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南暖時嚼旅" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
         </div>
 
         <div class="hotel-card">
-          <span class="hotel-zone">🚉 台南火車站前站步行 3 分鐘</span>
-          <div class="hotel-name">3. 耀西文旅 (Yoshi Hotel)</div>
-          <div class="hotel-price">💰 每人每晚約 NT$550 – $950（雙人平分）</div>
-          <ul class="hotel-features">
-            <li>✅ <strong>省力首選</strong>：出火車站走 3 分鐘就到！先放行李再去租車，完全不用載行李騎車</li>
-            <li>✅ <strong>設備新穎</strong>：老屋翻新質感佳，房內配有免治馬桶，大廳有免費零食飲料</li>
-            <li>✅ <strong>近 KTV</strong>：距離「賓士 KTV 中成店」走路只要 6 分鐘</li>
-          </ul>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南耀西文旅" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
-        </div>
-
-        <div class="hotel-card">
-          <span class="hotel-zone">🚉 台南火車站後站／成大商圈</span>
-          <div class="hotel-name">4. 路徒行旅 台南成大館 (Roaders Hotel)</div>
-          <div class="hotel-price">💰 每人每晚約 NT$550 – $1,100（雙人平分）</div>
-          <ul class="hotel-features">
-            <li>✅ <strong>24H 櫃檯</strong>：知名小鹿文娛集團旗下，24 小時櫃檯人員，入住與寄放行李超方便</li>
-            <li>✅ <strong>免費宵夜吧</strong>：交誼廳 24 小時提供免費零食、泡麵、飲料</li>
-            <li>✅ <strong>Day 3 超順</strong>：離東區「88嫩仙草光明店」與火車站租車行非常近</li>
-          </ul>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=路徒行旅台南成大館" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
+          <div>
+            <div class="hotel-badges">
+              <span class="hotel-zone">📍 赤崁樓／水仙宮核心</span>
+              <span class="hotel-twin-badge">🛏️ 商務二小床＋包早餐宵夜</span>
+            </div>
+            <div class="hotel-name">5. 康橋商旅 赤崁樓館 (Kindness Hotel)</div>
+            <div class="hotel-price">💰 每人每晚約 NT$1,100 – $1,600（含早＋宵夜）</div>
+            <ul class="hotel-features">
+              <li>🛏️ <strong>指定雙床房型</strong>：「商務二小床房（兩張 90cm 單人床）」</li>
+              <li>✅ <strong>餐點狂魔</strong>：<strong>免費豐盛自助早餐＋免費下午茶冰淇淋＋免費宵夜吃到飽</strong>（直接省下兩天早餐宵夜費！）</li>
+              <li>✅ <strong>免費洗衣</strong>：附設免費自助洗衣烘衣機，服務與乾淨度滿分</li>
+            </ul>
+          </div>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=康橋商旅台南赤崁樓館" target="_blank" rel="noopener">🗺️ 查看地圖位置</a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: 香港朋友省現金＆交通攻略 -->
+    <!-- SECTION 3: 開銷預算試算 (NEW TAB) -->
+    <section id="sec-budget" class="tab-section">
+      <h2 class="section-title">💰 三天兩夜台南開銷預算試算</h2>
+      <p class="section-subtitle">點選下方住宿等級，自動試算這趟旅程 2 人總花費與每人平均預算（不含各自回程高鐵票）：</p>
+
+      <!-- Interactive Budget Switcher -->
+      <div class="budget-summary-box">
+        <div class="budget-tier-btns">
+          <button class="tier-btn" onclick="setBudgetTier('eco', this)">極省小資版<br><span style="font-weight:400;font-size:0.68rem;">青旅上下舖雙床</span></button>
+          <button class="tier-btn active" onclick="setBudgetTier('std', this)">舒適推薦版<br><span style="font-weight:400;font-size:0.68rem;">文青旅店兩小床</span></button>
+          <button class="tier-btn" onclick="setBudgetTier('plus', this)">澎湃吃飽版<br><span style="font-weight:400;font-size:0.68rem;">康橋兩小床含早宵</span></button>
+        </div>
+
+        <div class="budget-numbers">
+          <div class="budget-num-card">
+            <div class="budget-num-label">👤 每人平均總花費 (台幣)</div>
+            <div class="budget-num-val" id="b-per-twd">NT$ 4,550</div>
+            <div class="budget-num-sub" id="b-per-hkd">約合港幣 HK$ 1,110 / 人</div>
+          </div>
+          <div class="budget-num-card">
+            <div class="budget-num-label">✌️ 2人三天兩夜總計</div>
+            <div class="budget-num-val" id="b-tot-twd">NT$ 9,100</div>
+            <div class="budget-num-sub" id="b-tot-sub">含2晚住宿＋機車＋KTV＋全美食</div>
+          </div>
+        </div>
+        <div style="font-size:0.78rem; opacity:0.88;">💡 匯率以 1 HKD ≈ 4.1 TWD 估算；實際金額依現場點餐與訂房早鳥價微調。</div>
+      </div>
+
+      <!-- 1:1 Split Highlight -->
+      <div class="split-bar-card">
+        <div style="font-weight:800; font-size:0.96rem; color:var(--green);">✨ 發現神奇巧合：「刷卡金額」與「現金金額」剛好各佔 50%！</div>
+        <p style="font-size:0.83rem; color:var(--text-muted); margin-top:4px;">這趟不用煩惱怎麼換錢分帳！只要<strong>香港朋友刷卡付「住宿＋KTV」</strong>，<strong>台灣朋友付現出「租機車＋三天夜市小吃」</strong>，兩邊金額幾乎 1:1 完美抵銷：</p>
+        <div class="split-grid">
+          <div class="split-box split-card-pay">
+            <strong>💳 可刷卡項目 (2人合計)</strong><br>
+            <span id="b-card-sum" style="font-size:1.05rem; font-weight:900;">約 NT$ 5,350</span><br>
+            <span style="font-size:0.75rem;">• 2晚雙床房住宿 (線上刷)<br>• 賓士/享溫馨 KTV (現場刷)</span>
+          </div>
+          <div class="split-box split-cash-pay">
+            <strong>💵 需台幣現金 (2人合計)</strong><br>
+            <span id="b-cash-sum" style="font-size:1.05rem; font-weight:900;">約 NT$ 4,750</span><br>
+            <span style="font-size:0.75rem;">• 租機車2.5天＋加油<br>• 3天所有夜市、小吃、伴手禮</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Breakdown List -->
+      <div class="budget-table-card">
+        <div class="budget-row">
+          <div>
+            <div class="budget-item-title">🏨 兩晚雙床房住宿 <span class="tag tag-card">可線上刷卡</span></div>
+            <div class="budget-item-desc" id="b-hotel-desc">11/21(六)＋11/22(日) 兩小床獨立套房 2 晚</div>
+          </div>
+          <div class="budget-item-price">
+            <div class="price-per-person" id="b-hotel-per">NT$ 2,100 / 人</div>
+            <div class="price-total-two" id="b-hotel-tot">2人共 NT$ 4,200</div>
+          </div>
+        </div>
+
+        <div class="budget-row">
+          <div>
+            <div class="budget-item-title">🎤 KTV 下午場歡唱 <span class="tag tag-card">現場可刷卡</span></div>
+            <div class="budget-item-desc">賓士 / 享溫馨歡唱 3–4 小時（含熱炒炸物午餐低消）</div>
+          </div>
+          <div class="budget-item-price">
+            <div class="price-per-person" id="b-ktv-per">NT$ 575 / 人</div>
+            <div class="price-total-two" id="b-ktv-tot">2人共 NT$ 1,150</div>
+          </div>
+        </div>
+
+        <div class="budget-row">
+          <div>
+            <div class="budget-item-title">🛵 台南租機車＋加油＋沙崙線 <span class="tag tag-warn">現金為主</span></div>
+            <div class="budget-item-desc">125cc 機車租 2.5 天 ($800) ＋ 加油 ($110) ＋ 台鐵沙崙線 ($25/人)</div>
+          </div>
+          <div class="budget-item-price">
+            <div class="price-per-person">NT$ 480 / 人</div>
+            <div class="price-total-two">2人共 NT$ 960</div>
+          </div>
+        </div>
+
+        <div class="budget-row">
+          <div>
+            <div class="budget-item-title">🎡 Day 1 美食＆武聖夜市 <span class="tag tag-warn">現金</span></div>
+            <div class="budget-item-desc">百珍泡芙＋亞米甜甜圈＋AIC冰淇淋＋水仙宮米糕＆鱔魚意麵＋武聖夜市＋碳饅堡</div>
+          </div>
+          <div class="budget-item-price">
+            <div class="price-per-person" id="b-d1-per">NT$ 750 / 人</div>
+            <div class="price-total-two" id="b-d1-tot">2人共 NT$ 1,500</div>
+          </div>
+        </div>
+
+        <div class="budget-row">
+          <div>
+            <div class="budget-item-title">🍲 Day 2 牛肉湯＆甜點＆深夜咖啡 <span class="tag tag-warn">現金為主</span></div>
+            <div class="budget-item-desc">樺哥花紋牛肉湯＋小鹿家可頌 2 顆＋裁縫師會館虹吸咖啡／特調</div>
+          </div>
+          <div class="budget-item-price">
+            <div class="price-per-person" id="b-d2-per">NT$ 625 / 人</div>
+            <div class="price-total-two" id="b-d2-tot">2人共 NT$ 1,250</div>
+          </div>
+        </div>
+
+        <div class="budget-row">
+          <div>
+            <div class="budget-item-title">🍍 Day 3 東區點心＆伴手禮 <span class="tag tag-warn">現金</span></div>
+            <div class="budget-item-desc">早午餐＋府東街蔥油餅＆芋頭餅＋88嫩仙草＋邱惠美鳳梨酥＆古早味蛋糕</div>
+          </div>
+          <div class="budget-item-price">
+            <div class="price-per-person" id="b-d3-per">NT$ 520 / 人</div>
+            <div class="price-total-two" id="b-d3-tot">2人共 NT$ 1,040</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <h3>🚄 額外加上：11/23 傍晚回程高鐵票參考（可線上刷卡）</h3>
+        <ul>
+          <li><strong>台南 ➔ 台北</strong>：標準車廂全票 NT$1,350（大學生優惠 5 折～88 折約 <strong>NT$675 – $1,185</strong>；香港朋友在 Klook 買外籍旅客單程票約 8 折 <strong>NT$1,080</strong>）。</li>
+          <li><strong>台南 ➔ 台中</strong>：標準車廂全票 NT$650（大學生優惠約 <strong>NT$325 – $570</strong>）。</li>
+          <li><strong>台南 ➔ 高雄(左營)</strong>：標準車廂全票 NT$140（或直接搭台鐵區間車約 NT$50–$100）。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 4: 香港朋友省現金＆交通攻略 -->
     <section id="sec-tips" class="tab-section">
       <h2 class="section-title">🇭🇰 香港朋友省現金 ＆ 轉乘攻略</h2>
       <p class="section-subtitle">台南夜市與小吃攤 95% 只收台幣現金，用以下 4 招就能解決換匯煩惱！</p>
 
       <div class="tip-card">
-        <h3>💳 1. 最推薦：「妳出台幣現金、她刷信用卡」互抵法</h3>
+        <h3>💳 1. 最推薦：「妳出台幣現金、她刷信用卡」1:1 互抵法</h3>
         <ul>
           <li><strong>三大筆可刷卡開銷</strong>：<strong>住宿費、高鐵票、KTV（賓士／享溫馨現場皆可刷卡）</strong>全部可以用信用卡結帳！</li>
           <li>請香港朋友在線上訂房（用 Trip.com 或 Klook 可直接選港幣 HKD 或用 AlipayHK／PayMe 付款，免換匯手續費）或去 KTV 唱完歌時刷她的卡。</li>
-          <li>這三天在<strong>武聖夜市、牛肉湯、米糕、蔥油餅、租機車</strong>要付的台幣現金由妳先統一出，最後再算總帳互抵，她幾乎不用換多少台幣現鈔！</li>
+          <li>這三天在<strong>武聖夜市、牛肉湯、米糕、蔥油餅、租機車</strong>要付的台幣現金由妳先統一出，剛好跟她刷的住宿＋KTV 金額幾乎 1:1 抵銷，她不用換多少台幣現鈔！</li>
         </ul>
       </div>
 
@@ -1057,15 +1366,19 @@
 
   </main>
 
-  <!-- Sticky Bottom Navigation -->
+  <!-- Sticky Bottom Navigation (4 Tabs) -->
   <nav class="bottom-nav">
     <button class="nav-item active" onclick="switchTab('sec-itinerary', this)">
       <span class="nav-icon">🗓️</span>
       <span>每日行程</span>
     </button>
     <button class="nav-item" onclick="switchTab('sec-hotel', this)">
-      <span class="nav-icon">🏨</span>
-      <span>平價住宿</span>
+      <span class="nav-icon">🛏️</span>
+      <span>雙床住宿</span>
+    </button>
+    <button class="nav-item" onclick="switchTab('sec-budget', this)">
+      <span class="nav-icon">💰</span>
+      <span>開銷預算</span>
     </button>
     <button class="nav-item" onclick="switchTab('sec-tips', this)">
       <span class="nav-icon">🇭🇰</span>
@@ -1130,6 +1443,76 @@
       document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const BUDGET_TIERS = {
+      eco: {
+        hotelDesc: '11/21(六)＋11/22(日) 仲青行旅「上下舖經濟雙床房」2 晚',
+        hotelPer: 1400,
+        ktvPer: 500,
+        transPer: 480,
+        d1Per: 650,
+        d2Per: 550,
+        d3Per: 450
+      },
+      std: {
+        hotelDesc: '11/21(六)＋11/22(日) 文青旅店「標準兩小床套房」2 晚',
+        hotelPer: 2100,
+        ktvPer: 575,
+        transPer: 480,
+        d1Per: 750,
+        d2Per: 625,
+        d3Per: 520
+      },
+      plus: {
+        hotelDesc: '11/21(六)＋11/22(日) 康橋商旅「商務兩小床(含早＋宵夜)」2 晚',
+        hotelPer: 2650,
+        ktvPer: 650,
+        transPer: 480,
+        d1Per: 800,
+        d2Per: 650,
+        d3Per: 570
+      }
+    };
+
+    function fmt(n) {
+      return n.toLocaleString('en-US');
+    }
+
+    function setBudgetTier(tierKey, btn) {
+      document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const t = BUDGET_TIERS[tierKey];
+      const perTotal = t.hotelPer + t.ktvPer + t.transPer + t.d1Per + t.d2Per + t.d3Per;
+      const twoTotal = perTotal * 2;
+      const perHkd = Math.round(perTotal / 4.1);
+
+      const cardTwo = (t.hotelPer + t.ktvPer) * 2;
+      const cashTwo = (t.transPer + t.d1Per + t.d2Per + t.d3Per) * 2;
+
+      document.getElementById('b-per-twd').textContent = `NT$ ${fmt(perTotal)}`;
+      document.getElementById('b-per-hkd').textContent = `約合港幣 HK$ ${fmt(perHkd)} / 人`;
+      document.getElementById('b-tot-twd').textContent = `NT$ ${fmt(twoTotal)}`;
+
+      document.getElementById('b-card-sum').textContent = `約 NT$ ${fmt(cardTwo)}`;
+      document.getElementById('b-cash-sum').textContent = `約 NT$ ${fmt(cashTwo)}`;
+
+      document.getElementById('b-hotel-desc').textContent = t.hotelDesc;
+      document.getElementById('b-hotel-per').textContent = `NT$ ${fmt(t.hotelPer)} / 人`;
+      document.getElementById('b-hotel-tot').textContent = `2人共 NT$ ${fmt(t.hotelPer * 2)}`;
+
+      document.getElementById('b-ktv-per').textContent = `NT$ ${fmt(t.ktvPer)} / 人`;
+      document.getElementById('b-ktv-tot').textContent = `2人共 NT$ ${fmt(t.ktvPer * 2)}`;
+
+      document.getElementById('b-d1-per').textContent = `NT$ ${fmt(t.d1Per)} / 人`;
+      document.getElementById('b-d1-tot').textContent = `2人共 NT$ ${fmt(t.d1Per * 2)}`;
+
+      document.getElementById('b-d2-per').textContent = `NT$ ${fmt(t.d2Per)} / 人`;
+      document.getElementById('b-d2-tot').textContent = `2人共 NT$ ${fmt(t.d2Per * 2)}`;
+
+      document.getElementById('b-d3-per').textContent = `NT$ ${fmt(t.d3Per)} / 人`;
+      document.getElementById('b-d3-tot').textContent = `2人共 NT$ ${fmt(t.d3Per * 2)}`;
     }
 
     updateUI();
