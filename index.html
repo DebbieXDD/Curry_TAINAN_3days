@@ -20,6 +20,10 @@
       --purple-light: #f3effa;
       --blue: #1d4ed8;
       --blue-light: #eff6ff;
+      --gold-bg: #fffbeb;
+      --gold-grad: linear-gradient(135deg, #fffdf4 0%, #fef3c7 100%);
+      --gold-border: #d97706;
+      --gold-dark: #92400e;
       --bg: #faf7f2;
       --card: #ffffff;
       --text: #2b2623;
@@ -188,7 +192,7 @@
       border: 1.5px solid #f2cab6;
       border-radius: 14px;
       padding: 12px 14px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       flex-wrap: wrap;
     }
 
@@ -229,6 +233,182 @@
 
     .version-banner.local-ver .btn-switch-ver {
       background: var(--primary);
+    }
+
+    /* ==================== OVERLAP LEGEND & HIGHLIGHT STYLES ==================== */
+    .overlap-legend-box {
+      background: linear-gradient(135deg, #fffdf5 0%, #fef3c7 100%);
+      border: 2px solid #f59e0b;
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.14);
+    }
+
+    .overlap-legend-title {
+      font-size: 0.9rem;
+      font-weight: 900;
+      color: #92400e;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .overlap-chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.77rem;
+    }
+
+    .overlap-chip-gold {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #fff;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 6px rgba(217, 119, 6, 0.3);
+    }
+
+    .overlap-chip-zone {
+      background: #fff;
+      color: #92400e;
+      border: 1.5px solid #f59e0b;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Inline text highlight for overlapping stores/spots */
+    mark.overlap-store {
+      background: linear-gradient(120deg, #fde68a 0%, #fcd34d 100%);
+      color: #78350f;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1.5px solid #f59e0b;
+      box-shadow: 0 1px 4px rgba(245, 158, 11, 0.25);
+      display: inline-block;
+      margin: 1px 2px;
+    }
+
+    mark.overlap-zone {
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 900;
+      padding: 1px 6px;
+      border-radius: 5px;
+      border-bottom: 2px solid #f59e0b;
+    }
+
+    /* Special Card Backgrounds for Overlapping High-Value Spots */
+    .spot-card.overlap-gold-card {
+      background: linear-gradient(145deg, #fffef7 0%, #fef3c7 100%) !important;
+      border: 2.5px solid #d97706 !important;
+      box-shadow: 0 6px 20px rgba(217, 119, 6, 0.16);
+    }
+
+    .spot-card.overlap-gold-card::before {
+      background: #d97706 !important;
+      box-shadow: 0 0 0 2px #d97706 !important;
+    }
+
+    .spot-card.overlap-zone-card {
+      background: linear-gradient(145deg, #ffffff 0%, #fffbeb 100%);
+      border: 2px solid #f59e0b;
+    }
+
+    .spot-card.overlap-zone-card::before {
+      background: #f59e0b;
+      box-shadow: 0 0 0 1px #f59e0b;
+    }
+
+    .badge-high-value {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      color: #fff;
+      font-size: 0.74rem;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 5px;
+      margin-left: 4px;
+      box-shadow: 0 2px 6px rgba(180, 83, 9, 0.28);
+    }
+
+    .badge-zone-value {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #fef3c7;
+      color: #92400e;
+      border: 1.5px solid #f59e0b;
+      font-size: 0.73rem;
+      font-weight: 900;
+      padding: 2px 9px;
+      border-radius: 999px;
+      margin-bottom: 5px;
+      margin-left: 4px;
+    }
+
+    .badge-safe-daytime {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #dcfce7;
+      color: #166534;
+      border: 1.5px solid #22c55e;
+      font-size: 0.73rem;
+      font-weight: 900;
+      padding: 2px 9px;
+      border-radius: 999px;
+      margin-bottom: 5px;
+      margin-left: 4px;
+    }
+
+    /* Backup Box inside Spot Card */
+    .backup-box {
+      background: #f4fbf9;
+      border: 1.5px solid #99d5c9;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      font-size: 0.83rem;
+    }
+
+    .backup-box-title {
+      font-weight: 900;
+      color: #1b4d44;
+      font-size: 0.88rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .backup-list {
+      margin-left: 16px;
+      color: var(--text);
+    }
+
+    .backup-list li {
+      margin-bottom: 7px;
+      line-height: 1.5;
+    }
+
+    .backup-list li:last-child {
+      margin-bottom: 0;
     }
 
     /* Confirmed Booking Banner */
@@ -452,8 +632,8 @@
     }
 
     .spot-card.checked {
-      opacity: 0.62;
-      background: #f6f3ee;
+      opacity: 0.58 !important;
+      background: #f6f3ee !important;
     }
 
     .spot-card.checked .spot-title {
@@ -509,7 +689,7 @@
       font-size: 1.05rem;
       font-weight: 900;
       color: var(--text);
-      line-height: 1.35;
+      line-height: 1.4;
     }
 
     .check-label {
@@ -520,7 +700,7 @@
       color: var(--text-muted);
       cursor: pointer;
       user-select: none;
-      background: #f3eee8;
+      background: rgba(243, 238, 232, 0.9);
       padding: 5px 10px;
       border-radius: 8px;
       white-space: nowrap;
@@ -583,7 +763,7 @@
     }
 
     .sub-spots-list {
-      background: #faf6f0;
+      background: rgba(255, 255, 255, 0.75);
       border: 1px dashed #dfcfc0;
       border-radius: 10px;
       padding: 10px 12px;
@@ -593,7 +773,7 @@
 
     .sub-spots-list li {
       margin-left: 16px;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       color: var(--text);
     }
 
@@ -628,6 +808,11 @@
     .btn-map.secondary {
       background: var(--secondary-light);
       color: var(--secondary);
+    }
+
+    .btn-map.gold-btn {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      color: #fff;
     }
 
     /* Section Header */
@@ -767,89 +952,25 @@
       font-size: 0.88rem;
     }
 
-    /* Budget Styles */
-    .budget-summary-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .budget-hero-card {
-      background: linear-gradient(135deg, #2c6e63 0%, #3d8b7d 100%);
-      color: #fff;
-      padding: 16px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .budget-hero-card.alt {
-      background: linear-gradient(135deg, #c85a32 0%, #e07a47 100%);
-    }
-
-    .budget-hero-label {
-      font-size: 0.78rem;
-      opacity: 0.9;
-      margin-bottom: 4px;
-    }
-
-    .budget-hero-val {
-      font-size: 1.3rem;
-      font-weight: 900;
-      line-height: 1.25;
-      margin-bottom: 4px;
-    }
-
-    .budget-hero-sub {
-      font-size: 0.74rem;
-      opacity: 0.88;
-    }
-
-    .budget-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
-      margin-top: 8px;
-    }
-
-    .budget-table th,
-    .budget-table td {
-      padding: 10px 8px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .budget-table th {
-      color: var(--text-muted);
-      font-weight: 700;
-      font-size: 0.78rem;
-      background: #f7f3ed;
-    }
-
-    .budget-table td.amount {
-      font-weight: 700;
-      color: var(--primary-dark);
-      white-space: nowrap;
-      text-align: right;
-    }
-
-    /* Calculator Box */
+    /* Calculator Box (TWD <-> JPY) */
     .calc-box {
       background: var(--secondary-light);
-      border: 1px solid #cde3df;
+      border: 1.5px solid #b8dcd6;
       border-radius: var(--radius);
-      padding: 16px;
+      padding: 14px 16px;
       margin-bottom: 16px;
     }
 
     .calc-title {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 900;
       color: var(--secondary);
       margin-bottom: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
     }
 
     .calc-row {
@@ -884,7 +1005,7 @@
       margin-top: 2px;
     }
 
-    /* Friend Wallet / Balance Tracker Styles */
+    /* Friend Wallet / My Ledger Hero Styles */
     .wallet-hero {
       background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #3b82f6 100%);
       color: #fff;
@@ -894,6 +1015,11 @@
       box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
       position: relative;
       overflow: hidden;
+    }
+
+    .wallet-hero.my-ledger-hero {
+      background: linear-gradient(135deg, #9e3f1d 0%, #c85a32 55%, #e07a47 100%);
+      box-shadow: 0 8px 24px rgba(200, 90, 50, 0.25);
     }
 
     .wallet-hero::after {
@@ -907,6 +1033,10 @@
       pointer-events: none;
     }
 
+    .wallet-hero.my-ledger-hero::after {
+      content: "📒";
+    }
+
     .wallet-top-bar {
       display: flex;
       justify-content: space-between;
@@ -917,7 +1047,7 @@
     }
 
     .wallet-badge {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.22);
       padding: 4px 10px;
       border-radius: 999px;
       font-size: 0.76rem;
@@ -962,7 +1092,7 @@
 
     .wallet-main-sub {
       font-size: 0.78rem;
-      opacity: 0.9;
+      opacity: 0.92;
       margin-top: 6px;
     }
 
@@ -1002,6 +1132,33 @@
       background: #fde047;
       width: 100%;
       transition: width 0.3s ease, background 0.3s ease;
+    }
+
+    /* Category Breakdown Grid in My Ledger */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      margin-top: 10px;
+    }
+
+    .cat-box {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 9px;
+      padding: 7px 8px;
+      text-align: center;
+      font-size: 0.73rem;
+    }
+
+    .cat-box span {
+      display: block;
+      opacity: 0.9;
+      margin-bottom: 2px;
+    }
+
+    .cat-box strong {
+      font-size: 0.88rem;
+      color: #fde047;
     }
 
     /* Form styles */
@@ -1055,6 +1212,11 @@
       background: var(--blue-light);
     }
 
+    .mode-option.my-active {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+
     .mode-option-left {
       display: flex;
       align-items: center;
@@ -1085,6 +1247,32 @@
     .mode-option.active .mode-preview-pill {
       background: var(--blue);
       color: #fff;
+    }
+
+    .mode-option.my-active .mode-preview-pill {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .sync-check-box {
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-size: 0.8rem;
+      color: #14532d;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .sync-check-box input {
+      width: 17px;
+      height: 17px;
+      accent-color: #16a34a;
+      cursor: pointer;
     }
 
     .quick-Presets {
@@ -1293,15 +1481,15 @@
     <div class="hero-inner">
       <div class="hero-badge">🛵 台南機車自由行・IG版 ＆ 在地私房版雙行程</div>
       <h1>11/21 – 11/23 台南三天兩夜美食＆KTV之旅</h1>
-      <p>佰渡租車(活力125)出發・入住路徒行旅台南成大館・11/23 傍晚搭高鐵賦歸</p>
+      <p>佰渡租車(活力125)出發・入住路徒行旅台南成大館・KTV已改為白天安心場</p>
       <div class="hero-chips">
         <span class="chip">📅 11/21(六) - 11/23(一)</span>
         <span class="chip">🏨 路徒行旅成大館 ($8,372)</span>
-        <span class="chip">🛵 佰渡租車 (12:00取/16:00還)</span>
-        <span class="chip">💰 朋友預放台幣 $4,050</span>
+        <span class="chip">🛡️ KTV 週日下午白天場</span>
+        <span class="chip">💰 朋友預放 $4,050 ＋ 我的記帳本</span>
       </div>
       <div class="progress-wrap">
-        <div class="progress-label" id="progress-text">打卡進度：0 / 32</div>
+        <div class="progress-label" id="progress-text">總打卡進度：0 / 33</div>
         <div class="progress-bar-bg">
           <div class="progress-bar-fill" id="progress-fill"></div>
         </div>
@@ -1318,9 +1506,22 @@
       <div class="version-banner">
         <div class="version-banner-text">
           <h3>📸 目前檢視：香港朋友 Instagram 收藏版行程</h3>
-          <p>小鹿家可頌・樺哥牛肉湯・AIC冰淇淋・碳饅堡・裁縫師會館・88嫩仙草 ＋ 武聖夜市＆KTV</p>
+          <p>小鹿家可頌・牛肉湯(含三大免久排備案)・AIC冰淇淋・碳饅堡・裁縫師會館・88嫩仙草 ＋ 武聖＆白天KTV</p>
         </div>
         <button type="button" class="btn-switch-ver" onclick="switchTab('local', document.querySelectorAll('.nav-btn')[1])">👉 切換看「🗺️ 在地朋友版」</button>
+      </div>
+
+      <!-- 雙清單重疊高價值圖例卡 -->
+      <div class="overlap-legend-box">
+        <div class="overlap-legend-title">
+          <span>👑 IG 清單 × 在地朋友推薦「高價值重疊記號」一目了然：</span>
+          <span style="font-size:0.74rem; color:#166534; font-weight:800;">🛡️ KTV 已改至週日下午白天場！</span>
+        </div>
+        <div class="overlap-chips-row">
+          <span class="overlap-chip-gold">👑 100% 同店雙重認證：百珍泡芙(百珍西點麵包廠)、武聖夜市、KTV</span>
+          <span class="overlap-chip-zone">💎 同巷隔壁交集：開山路151巷 (裁縫師會館 ⇄ 順天冰棒)</span>
+          <span class="overlap-chip-zone">💎 同商圈交集：國華街/西市場 ＆ 蝸牛巷口(邱惠美 ⇄ 洋蔥咖哩)</span>
+        </div>
       </div>
 
       <div class="day-switcher">
@@ -1330,18 +1531,18 @@
         </button>
         <button class="day-btn" onclick="switchDay(2)">
           Day 2 (11/22 日)
-          <span>牛肉湯・KTV・酒吧</span>
+          <span>牛肉湯・白天KTV・酒吧</span>
         </button>
         <button class="day-btn" onclick="switchDay(3)">
           Day 3 (11/23 一)
-          <span>蔥油餅・仙草・賦歸</span>
+          <span>👑百珍・蔥油餅・仙草</span>
         </button>
       </div>
 
       <!-- IG DAY 1 -->
       <div id="day-1" class="day-content active">
         <div class="alert-box">
-          <strong>📌 Day 1 (IG版) 排程重點：</strong>12:00 佰渡取車後騎 2 分鐘到<strong>路徒行旅成大館</strong>放行李，直接衝永康<strong>小鹿家可頌</strong>！晚上逛週六限定<strong>武聖夜市</strong>＋吃週日公休的<strong>碳饅堡</strong>。
+          <strong>📌 Day 1 (IG版) 排程重點：</strong>12:00 佰渡取車後騎 2 分鐘到<strong>路徒行旅成大館</strong>放行李，直接衝永康<strong>小鹿家可頌</strong>！下午逛<mark class="overlap-zone">💎 雙清單重疊的國華街商圈</mark>，晚上逛<mark class="overlap-store">👑 武聖夜市</mark>＋週日公休的<strong>碳饅堡</strong>。
         </div>
 
         <div class="timeline">
@@ -1405,10 +1606,11 @@
             </p>
           </div>
 
-          <div class="spot-card" data-spot="ig-d1-4">
+          <div class="spot-card overlap-zone-card" data-spot="ig-d1-4">
             <div class="spot-top">
               <div>
                 <span class="time-badge">16:00 – 16:45</span>
+                <span class="badge-zone-value">💎 雙清單黃金交集商圈（國華街／西市場）</span>
                 <div class="spot-title">🍩 亞米甜甜圈專賣店（國華街三段）</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d1-4', this.checked)"> 已完成</label>
@@ -1418,17 +1620,19 @@
               <span class="tag tag-ride">成大館出發約 9 分鐘</span>
             </div>
             <p class="spot-desc">
-              國華街超人氣銅板點心！脆皮鮮奶甜甜圈外酥內軟、奶香濃郁，還有原味糖粉、巧克力、草莓等口味，每個只要 $25–$30。
+              國華街超人氣銅板點心！脆皮鮮奶甜甜圈每個只要 $25–$30。<br>
+              💡 <mark class="overlap-zone">💎 雙清單重疊高價值提示</mark>：這裡同時也是<strong>台南在地朋友力推的「四、西市場／國華街商圈」</strong>，走幾步路就能順便吃到在地朋友推薦的 <strong>江水號八寶冰、奉口冰室、茶經紅茶</strong>！
             </p>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=亞米甜甜圈專賣店+台南市中西區國華街三段6號" target="_blank" rel="noopener">📍 Google Maps 導航</a>
             </div>
           </div>
 
-          <div class="spot-card" data-spot="ig-d1-5">
+          <div class="spot-card overlap-zone-card" data-spot="ig-d1-5">
             <div class="spot-top">
               <div>
                 <span class="time-badge">16:50 – 17:45</span>
+                <span class="badge-zone-value">💎 雙清單黃金交集商圈（國華街口）</span>
                 <div class="spot-title">🍚 水仙宮粽葉米糕（民權路三段）</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d1-5', this.checked)"> 已完成</label>
@@ -1445,23 +1649,24 @@
             </div>
           </div>
 
-          <div class="spot-card must-visit" data-spot="ig-d1-6">
+          <div class="spot-card overlap-gold-card" data-spot="ig-d1-6">
             <div class="spot-top">
               <div>
                 <span class="time-badge">18:15 – 21:15</span>
-                <div class="spot-title">🎡 【必去】武聖夜市（週六限定！）</div>
+                <span class="badge-high-value">👑 IG＋在地雙清單共同指定・最高價值必去</span>
+                <div class="spot-title">🎡 <mark class="overlap-store">👑 武聖夜市（週六限定！）</mark></div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d1-6', this.checked)"> 已完成</label>
             </div>
             <div class="tags-row">
-              <span class="tag tag-must">★ 指定必去行程</span>
+              <span class="tag tag-must">★ 兩版行程共同必去</span>
               <span class="tag tag-warn">僅週三、五、六營業 (17:30–00:30)</span>
             </div>
             <p class="spot-desc">
-              台南歷史最悠久的夜市！好逛又有大型停車場。推薦必吃：<strong>阿三哥蚵仔煎、三輪車大腸香腸、速立邁沙威瑪、陳家阿嬤拔絲地瓜、大上海香酥雞、木瓜牛奶</strong>。
+              台南歷史最悠久的傳奇夜市！好逛又有大型停車場。推薦必吃：<strong>阿三哥蚵仔煎、三輪車大腸香腸、速立邁沙威瑪、陳家阿嬤拔絲地瓜、大上海香酥雞、木瓜牛奶</strong>。
             </p>
             <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=武聖夜市+台南市中西區武聖路69巷" target="_blank" rel="noopener">📍 Google Maps 導航</a>
+              <a class="btn-map gold-btn" href="https://www.google.com/maps/search/?api=1&query=武聖夜市+台南市中西區武聖路69巷" target="_blank" rel="noopener">📍 Google Maps 導航</a>
             </div>
           </div>
 
@@ -1479,7 +1684,7 @@
               <span class="tag tag-ride">吃完回成大館約 10 分鐘</span>
             </div>
             <p class="spot-desc">
-              炭火直烤的手工饅頭，外皮微焦酥脆！甜鹹皆有，人氣必點「<strong>冰火煉乳起司饅頭</strong>」與「<strong>花生培根起司蛋</strong>」。吃完騎車約 10 分鐘回「路徒行旅台南成大館」休息！
+              炭火直烤的手工饅頭，外皮微焦酥脆！甜鹹皆有，人氣必點「<strong>冰火煉乳起司饅頭</strong>」與「<strong>花生培根起司蛋</strong>」。吃完約 22:30 騎車回「路徒行旅台南成大館」安心休息！
             </p>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=碳饅堡+台南市中西區金華新路57號" target="_blank" rel="noopener">📍 Google Maps 導航</a>
@@ -1492,7 +1697,7 @@
       <!-- IG DAY 2 -->
       <div id="day-2" class="day-content">
         <div class="alert-box">
-          <strong>📌 Day 2 (IG版) 排程重點：</strong>「<strong>樺哥土產牛肉湯</strong>」週一公休且 09:30 就賣完，務必週日一早去吃！晚上唱完 KTV 去延平郡王祠旁「<strong>裁縫師森參會館</strong>」，結束騎車回成大館只要 5 分鐘！
+          <strong>🛡️ Day 2 (IG版) 牛肉湯備案＆白天 KTV：</strong>早上「<strong>樺哥牛肉湯</strong>」若排隊太長或提早賣完，已幫妳準備 <strong>3 間離路徒行旅成大館只要 4 分鐘的免撲空神級牛肉湯備案</strong>！下午 <strong>13:00–17:00 唱 KTV 白天場（安全又避暑）</strong>！
         </div>
 
         <div class="timeline">
@@ -1500,28 +1705,54 @@
           <div class="spot-card" data-spot="ig-d2-1">
             <div class="spot-top">
               <div>
-                <span class="time-badge">08:00 – 09:15</span>
-                <div class="spot-title">🥩 體育場樺哥土產牛肉湯（溫體牛肉湯早餐）</div>
+                <span class="time-badge">08:00 – 09:30</span>
+                <div class="spot-title">🥩 體育場樺哥土產牛肉湯（＋三大免撲空／免久排牛肉湯備案！）</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d2-1', this.checked)"> 已完成</label>
             </div>
             <div class="tags-row">
-              <span class="tag tag-hours">營業 02:30 – 09:30 (售完提早收)</span>
-              <span class="tag tag-warn">週一、二公休</span>
-              <span class="tag tag-ride">成大館出發約 12 分鐘</span>
+              <span class="tag tag-hours">樺哥 02:30–09:30 (常提早售完)</span>
+              <span class="tag tag-warn">已備妥離成大館 4 分鐘的必吃備案！</span>
             </div>
             <p class="spot-desc">
-              台南人最道地的溫體牛早餐！湯頭清甜醇厚、現切溫體牛肉粉嫩軟嫩，<strong>點牛肉湯還送肉燥飯（或白飯）</strong>，再加點一盤芥蘭炒牛肉超滿足！
+              <strong>原案｜體育場樺哥土產牛肉湯</strong>（南區體育路21號）：點牛肉湯送肉燥飯，但假日早上 8 點後很容易大排長龍或提早賣完！
             </p>
+
+            <!-- 三大牛肉湯備案盒 -->
+            <div class="backup-box">
+              <div class="backup-box-title">💡 怕樺哥排不到或起不來？直接改去這 3 間在地人激推備案（離成大館超近！）：</div>
+              <ul class="backup-list">
+                <li>
+                  <strong>🏆 備案 1｜西羅殿牛肉湯（離成大館騎車僅 4 分鐘・米其林必比登推介）</strong><br>
+                  📍 北區公園南路98號｜🕒 <strong>04:30 – 13:00</strong>（週一二休，<strong>早上 8–10 點去都還喝得到！</strong>）<br>
+                  ✨ 點牛肉湯<strong>免費送一碗超香肉燥飯</strong>，湯頭清甜、翻桌快，記得請老闆加一點銷魂特製辣醬！
+                </li>
+                <li>
+                  <strong>🥣 備案 2｜開元路無名牛肉湯／新鮮牛肉湯（離成大館騎車僅 4 分鐘・北區在地早餐王）</strong><br>
+                  📍 北區開元路323號｜🕒 <strong>04:00 – 10:30</strong>（週二休，<strong>早上 8–9 點正值最佳賞味期！</strong>）<br>
+                  ✨ 就在成大北側開元路上，點牛肉湯<strong>免費送肉燥飯＋一塊滷油豆腐</strong>，完全不用像觀光名店苦排！
+                </li>
+                <li>
+                  <strong>😴 備案 3｜阿蓮牛肉湯公園店（11:00開） 或 阿財牛肉湯西門店（12:00開・睡到自然醒救星！）</strong><br>
+                  • <strong>阿蓮牛肉湯（公園店）</strong>：中西區公園路57號（<strong>11:00–00:00</strong>，離成大館 4 分鐘，有冷氣、點湯享<strong>牛肉燥飯無限吃到飽</strong>！）<br>
+                  • <strong>阿財牛肉湯（西門保安店）</strong>：中西區西門路一段708號（<strong>12:00–22:00</strong>，睡太晚起不來直接當早午餐吃，完全免早起！）
+                </li>
+              </ul>
+            </div>
+
             <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=體育場樺哥土產牛肉湯+台南市南區體育路21號" target="_blank" rel="noopener">📍 Google Maps 導航</a>
+              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=體育場樺哥土產牛肉湯+台南市南區體育路21號" target="_blank" rel="noopener">📍 原案：樺哥牛肉湯</a>
+              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=西羅殿牛肉湯+台南市北區公園南路98號" target="_blank" rel="noopener">🏆 備案1：西羅殿牛肉湯(4分)</a>
+              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=開元路無名牛肉湯+台南市北區開元路323號" target="_blank" rel="noopener">🥣 備案2：開元路牛肉湯(4分)</a>
+              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=阿蓮牛肉湯+台南市中西區公園路57號" target="_blank" rel="noopener">😴 備案3：阿蓮牛肉湯(11點開)</a>
             </div>
           </div>
 
-          <div class="spot-card" data-spot="ig-d2-2">
+          <div class="spot-card overlap-zone-card" data-spot="ig-d2-2">
             <div class="spot-top">
               <div>
-                <span class="time-badge">11:30 – 12:30</span>
+                <span class="time-badge">11:45 – 12:45</span>
+                <span class="badge-zone-value">💎 雙清單對街交集（蝸牛巷＆洋蔥咖哩正對面）</span>
                 <div class="spot-title">🍍 邱惠美鳳梨酥（民生路老字號伴手禮）</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d2-2', this.checked)"> 已完成</label>
@@ -1531,68 +1762,76 @@
               <span class="tag tag-ride">成大館出發約 8 分鐘</span>
             </div>
             <p class="spot-desc">
-              吃完牛肉湯回成大館補眠洗漱後再出門！這家是在地人私藏的傳統餅店（原名阿美鳳梨酥），外皮酥香奶味濃、內餡微甜不膩，鳳梨酥、蛋黃酥與古早味烤布丁都超受歡迎。
+              在地人私藏的傳統餅店（原名阿美鳳梨酥），鳳梨酥、蛋黃酥與古早味烤布丁都超受歡迎。<br>
+              💡 <mark class="overlap-zone">💎 雙清單重疊高價值提示</mark>：邱惠美（民生路一段156號）馬路正對面就是<strong>在地朋友推薦的「蝸牛巷（民生路一段157巷）」與愛店「洋蔥咖哩工房」</strong>，順路可一起逛！
             </p>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=邱惠美鳳梨酥+台南市中西區民生路一段156號" target="_blank" rel="noopener">📍 Google Maps 導航</a>
             </div>
           </div>
 
-          <div class="spot-card" data-spot="ig-d2-3">
+          <div class="spot-card overlap-gold-card" data-spot="ig-d2-3">
             <div class="spot-top">
               <div>
-                <span class="time-badge">14:00 – 15:30</span>
-                <div class="spot-title">🍨 AIC Gelato 義式冰淇淋（中正路）</div>
+                <span class="time-badge">13:00 – 17:00</span>
+                <span class="badge-high-value">👑 雙清單共同必去</span>
+                <span class="badge-safe-daytime">🛡️ 白天下午場・治安安心</span>
+                <div class="spot-title">🎤 <mark class="overlap-store">👑 台南 KTV 白天安心歡唱（賓士 KTV / 享溫馨 KTV）</mark></div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d2-3', this.checked)"> 已完成</label>
             </div>
             <div class="tags-row">
-              <span class="tag tag-hours">營業 13:00 – 21:00</span>
-              <span class="tag tag-ride">離邱惠美騎車 3 分鐘</span>
+              <span class="tag tag-must">★ 已改為白天下午時段 (13:00–17:00)</span>
+              <span class="tag tag-hours">出入單純安全・避開正午大太陽</span>
             </div>
             <p class="spot-desc">
-              質感極佳的義式手工冰淇淋店！每日更換新鮮口味，常見人氣款有<strong>西西里開心果、台灣茶韻（鐵觀音/紅玉）、季節水果雪酪</strong>，店面超好拍照。
+              <strong>為什麼排下午 13:00–17:00 最棒？</strong><br>
+              1. 🛡️ <strong>治安安全第一</strong>：完全避開深夜複雜酒客，白天時段環境單純安心。<br>
+              2. ☀️ <strong>躲避正午烈日＋包廂吃午餐</strong>：下午最熱的時候在冷氣包廂嗨唱 4 小時，直接點「<strong>賓士 KTV 南門店</strong>」最出名的熱炒、滷味拼盤與鍋燒意麵當午餐，而且白天歡唱費比晚上便宜很多！
+            </p>
+            <div class="spot-actions">
+              <a class="btn-map gold-btn" href="https://www.google.com/maps/search/?api=1&query=賓士KTV南門店+台南市中西區南門路121號" target="_blank" rel="noopener">📍 賓士 KTV (南門店)</a>
+              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=享溫馨KTV台南中華店" target="_blank" rel="noopener">📍 享溫馨 KTV (中華店)</a>
+            </div>
+          </div>
+
+          <div class="spot-card overlap-zone-card" data-spot="ig-d2-4">
+            <div class="spot-top">
+              <div>
+                <span class="time-badge">17:15 – 18:30</span>
+                <span class="badge-zone-value">💎 雙清單黃金交集商圈（中正路／西市場旁）</span>
+                <div class="spot-title">🍨 AIC Gelato 義式冰淇淋（中正路）</div>
+              </div>
+              <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d2-4', this.checked)"> 已完成</label>
+            </div>
+            <div class="tags-row">
+              <span class="tag tag-hours">營業 13:00 – 21:00</span>
+              <span class="tag tag-ride">唱完 KTV 出來吃冰潤喉</span>
+            </div>
+            <p class="spot-desc">
+              17:00 唱完 KTV 天還亮著，騎車 4 分鐘到中正路吃義式手工冰淇淋潤喉！人氣必點<strong>西西里開心果、鐵觀音、季節水果雪酪</strong>（旁邊就是在地朋友推薦的<strong>西市場與銀月書店</strong>）。
             </p>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=AIC+Gelato+台南市中西區中正路312號" target="_blank" rel="noopener">📍 Google Maps 導航</a>
             </div>
           </div>
 
-          <div class="spot-card must-visit" data-spot="ig-d2-4">
+          <div class="spot-card overlap-zone-card" data-spot="ig-d2-5">
             <div class="spot-top">
               <div>
-                <span class="time-badge">16:00 – 20:00</span>
-                <div class="spot-title">🎤 【必去】台南 KTV 歡唱時光（賓士 KTV / 享溫馨 KTV）</div>
-              </div>
-              <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d2-4', this.checked)"> 已完成</label>
-            </div>
-            <div class="tags-row">
-              <span class="tag tag-must">★ 指定必去行程</span>
-              <span class="tag tag-hours">24 小時營業 (建議提前訂位)</span>
-            </div>
-            <p class="spot-desc">
-              來台南必體驗的南霸天 KTV！首推「<strong>賓士 KTV 南門店</strong>」（南門路121號，離下一站裁縫師會館騎車只要 2 分鐘，熱炒滷味超強）或「<strong>享溫馨 KTV 中華店</strong>」（離成大館近）。
-            </p>
-            <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=賓士KTV南門店+台南市中西區南門路121號" target="_blank" rel="noopener">📍 賓士 KTV (南門店)</a>
-              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=享溫馨KTV台南中華店" target="_blank" rel="noopener">📍 享溫馨 KTV (中華店)</a>
-            </div>
-          </div>
-
-          <div class="spot-card" data-spot="ig-d2-5">
-            <div class="spot-top">
-              <div>
-                <span class="time-badge">20:15 – 22:30</span>
-                <div class="spot-title">🍸 裁縫師森參會館（老宅深夜咖啡・微醺小酌・滷味甜點）</div>
+                <span class="time-badge">19:00 – 21:15</span>
+                <span class="badge-zone-value">💎 雙清單同巷隔壁交集（開山路151巷・王爺廟旁）</span>
+                <div class="spot-title">🍸 裁縫師森參會館（老宅咖啡・微醺特調・滷味甜點）</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d2-5', this.checked)"> 已完成</label>
             </div>
             <div class="tags-row">
-              <span class="tag tag-hours">營業 19:00 – 02:00</span>
-              <span class="tag tag-ride">結束回成大館僅 5–6 分鐘！</span>
+              <span class="tag tag-hours">19:00 一開門即入場（免熬夜！）</span>
+              <span class="tag tag-ride">21:15 結束騎回成大館僅 5 分鐘</span>
             </div>
             <p class="spot-desc">
-              藏在延平郡王祠（開山路151巷）旁的老宅秘境！結合古董氛圍、精品手沖咖啡、微醺調酒、拼盤滷味與深夜提拉米蘇。結束後順著前鋒路騎回「路徒行旅台南成大館」只要 5 分鐘！
+              💡 <mark class="overlap-zone">💎 雙清單同巷重疊亮點</mark>：裁縫師會館位於<strong>開山路151巷1號（延平郡王祠／王爺廟對面巷口）</strong>，跟<strong>台南在地朋友推薦的「順天冰棒（開山路151巷7-1號）」竟然在同一條巷子隔壁（相距不到 20 公尺）</strong>！<br>
+              19:00 一開門就進去吃老宅滷味拼盤、提拉米蘇與特調，約 21:15 結束，騎車 5 分鐘就能早早安全回「路徒行旅台南成大館」！
             </p>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=裁縫師森參會館+台南市中西區開山路151巷1號" target="_blank" rel="noopener">📍 Google Maps 導航</a>
@@ -1605,7 +1844,7 @@
       <!-- IG DAY 3 -->
       <div id="day-3" class="day-content">
         <div class="alert-box">
-          <strong>📌 Day 3 (IG版) 排程重點：</strong>換到「<strong>路徒行旅台南成大館</strong>」後，Day 3 動線神順！下午在東區吃完<strong>府東街蔥油餅</strong>與成大旁的<strong>88嫩仙草光明店</strong>，騎 3 分鐘回成大館拿行李、再騎 2 分鐘去<strong>佰渡租車（16:00 還車）</strong>！
+          <strong>📌 Day 3 (IG版) 排程重點：</strong>早上先買<strong>IG 與在地朋友 100% 同時點名</strong>的最高價值名店 <mark class="overlap-store">👑 百珍泡芙（百珍西點麵包廠）</mark>，下午在東區吃完<strong>府東街蔥油餅</strong>與成大旁的<strong>88嫩仙草光明店</strong>，騎 3 分鐘回成大館拿行李、16:00 佰渡還車！
         </div>
 
         <div class="timeline">
@@ -1623,27 +1862,29 @@
               <span class="tag tag-ride">行李寄放成大館櫃檯</span>
             </div>
             <p class="spot-desc">
-              11:00 前辦理退房並把大件行李寄放在「路徒行旅成大館」一樓櫃檯，輕裝騎車去買泡芙與吃蔥油餅、嫩仙草！
+              11:00 前辦理退房並把大件行李寄放在「路徒行旅成大館」一樓櫃檯，輕裝騎車出發！
             </p>
           </div>
 
-          <div class="spot-card" data-spot="ig-d3-2">
+          <div class="spot-card overlap-gold-card" data-spot="ig-d3-2">
             <div class="spot-top">
               <div>
                 <span class="time-badge">11:15 – 12:15</span>
-                <div class="spot-title">🧁 百珍西點麵包廠（巨無霸古早味奶油泡芙）</div>
+                <span class="badge-high-value">👑 IG＋在地朋友 100% 同店點名・含金量最高！</span>
+                <div class="spot-title">🧁 <mark class="overlap-store">👑 百珍西點麵包廠（百珍泡芙）</mark></div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('ig-d3-2', this.checked)"> 已完成</label>
             </div>
             <div class="tags-row">
+              <span class="tag tag-must">👑 兩份清單唯一 100% 完全同名店家</span>
               <span class="tag tag-hours">營業 10:00 – 22:00</span>
               <span class="tag tag-ride">成大館出發約 8 分鐘</span>
             </div>
             <p class="spot-desc">
-              開業超過一甲子的台式西點老店！必買比拳頭還大的「<strong>台式古早味克林姆奶油泡芙 / 巧克力泡芙</strong>」與復古檸檬蛋糕，銅板價就能買一盒帶上高鐵吃。
+              🔥 <strong>最高價值必訪認證</strong>：香港朋友 IG 清單的「<strong>百珍西點麵包廠</strong>」與台南在地朋友清單的「<strong>百珍泡芙</strong>」指的就是同一家西門路老字號！必買比拳頭還大的銅板價「<strong>台式古早味克林姆奶油泡芙 / 巧克力泡芙</strong>」與檸檬蛋糕，隔壁幾步路還有在地朋友推的「<strong>茶經紅茶</strong>」可以順便買！
             </p>
             <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=百珍西點麵包廠+台南市中西區西門路二段135號" target="_blank" rel="noopener">📍 Google Maps 導航</a>
+              <a class="btn-map gold-btn" href="https://www.google.com/maps/search/?api=1&query=百珍西點麵包廠+台南市中西區西門路二段135號" target="_blank" rel="noopener">📍 導航百珍西點麵包廠 (百珍泡芙)</a>
             </div>
           </div>
 
@@ -1713,15 +1954,28 @@
 
     </section>
 
-    <!-- ==================== TAB 2: 台南在地朋友推薦版行程 (新增獨立分頁) ==================== -->
+    <!-- ==================== TAB 2: 台南在地朋友推薦版行程 (獨立分頁) ==================== -->
     <section id="sec-local" class="tab-section">
 
       <div class="version-banner local-ver">
         <div class="version-banner-text">
           <h3>🗺️ 目前檢視：台南在地朋友私房推薦版行程</h3>
-          <p>南美館1&2館・文學館三古蹟・林百貨＆勸業銀行・西市場＆洋蔥咖哩工房・保安路 ＋ 武聖夜市＆KTV</p>
+          <p>南美館1&2館・文學館三古蹟・林百貨＆勸業銀行・西市場＆洋蔥咖哩工房・保安路 ＋ 武聖夜市＆白天KTV</p>
         </div>
         <button type="button" class="btn-switch-ver" onclick="switchTab('itinerary', document.querySelectorAll('.nav-btn')[0])">👈 切換看「📸 香港朋友 IG 版」</button>
+      </div>
+
+      <!-- 雙清單重疊高價值圖例卡 -->
+      <div class="overlap-legend-box">
+        <div class="overlap-legend-title">
+          <span>👑 在地朋友推薦 × IG 清單「高價值重疊記號」一目了然：</span>
+          <span style="font-size:0.74rem; color:#166534; font-weight:800;">🛡️ KTV 已改至週日下午白天場！</span>
+        </div>
+        <div class="overlap-chips-row">
+          <span class="overlap-chip-gold">👑 100% 同店雙重認證：百珍泡芙(百珍西點麵包廠)、武聖夜市、KTV</span>
+          <span class="overlap-chip-zone">💎 同巷隔壁交集：開山路151巷 (順天冰棒 ⇄ IG裁縫師會館)</span>
+          <span class="overlap-chip-zone">💎 同商圈交集：西市場/國華街 ＆ 蝸牛巷口(洋蔥咖哩 ⇄ IG邱惠美)</span>
+        </div>
       </div>
 
       <!-- 台南朋友五大分區總覽卡 -->
@@ -1736,7 +1990,7 @@
               <span>一、南美館 ➔ 孔廟/開山路</span>
               <span class="cluster-day-badge">Day 1 下午 & Day 2 早</span>
             </div>
-            南美館1&2館、永記虱目魚丸、開春排骨飯、茶與果、綠町、順天冰店、福吉雅、EVA泡芙、小轉角、悠閒食堂
+            南美館1&2館、永記虱目魚丸、開春排骨飯、茶與果、綠町、<mark class="overlap-zone">💎順天冰店(與IG裁縫師同巷)</mark>、福吉雅、EVA泡芙、小轉角、悠閒食堂
           </div>
           <div class="cluster-card">
             <div class="cluster-card-head">
@@ -1752,27 +2006,27 @@
             </div>
             搭電梯上頂樓看對面土地銀行（日治「日本勸業銀行」，台灣唯二，另一棟是台北古生物館）
           </div>
-          <div class="cluster-card">
+          <div class="cluster-card" style="background:#fffdf0; border-color:#f59e0b;">
             <div class="cluster-card-head">
               <span>四、西市場／國華街／永福路</span>
               <span class="cluster-day-badge">Day 2 午 & Day 3 午</span>
             </div>
-            西市場、洋蔥咖哩工房(愛店!)、百珍泡芙、茶經紅茶、江水號、奉口冰室、銀月書店、蝸牛巷
+            <mark class="overlap-store">👑百珍泡芙(雙清單同店!)</mark>、西市場、洋蔥咖哩工房(愛店!)、茶經紅茶、江水號、奉口冰室、銀月書店、蝸牛巷
           </div>
           <div class="cluster-card">
             <div class="cluster-card-head">
               <span>五、海安／友愛／尊王／保安路</span>
-              <span class="cluster-day-badge">Day 1 夜 & Day 2 晚</span>
+              <span class="cluster-day-badge">Day 1 夜 & Day 2 傍晚</span>
             </div>
-            晚上散步美食區：王宮口軟骨飯、醇涎坊鍋燒意麵、無名炒陽春麵、小雨咖啡、小南人烤肉
+            傍晚散步美食區：王宮口軟骨飯、醇涎坊鍋燒意麵、無名炒陽春麵、小雨咖啡、小南人烤肉
           </div>
-          <div class="cluster-card" style="background:#fff5f2; border-color:#f5d0c5;">
+          <div class="cluster-card" style="background:#fffdf0; border-color:#f59e0b;">
             <div class="cluster-card-head">
-              <span>★ 指定必去：武聖夜市＆KTV</span>
-              <span class="cluster-day-badge">Day 1 夜 & Day 2 夜</span>
+              <span>★ 指定必去：武聖夜市＆白天KTV</span>
+              <span class="cluster-day-badge">Day 1 夜 & Day 2 下午</span>
             </div>
-            🎡 <strong>武聖夜市</strong>（週六限定 17:30–00:30）<br>
-            🎤 <strong>KTV 歡唱</strong>（週日晚上賓士/享溫馨）
+            <mark class="overlap-store">👑 武聖夜市</mark>（週六限定 17:30–00:30）<br>
+            <mark class="overlap-store">👑 KTV 白天場</mark>（週日 13:30–17:30 安心唱）
           </div>
         </div>
       </div>
@@ -1784,18 +2038,18 @@
         </button>
         <button class="local-day-btn" onclick="switchLocalDay(2)">
           Day 2 (11/22 日)
-          <span>永記・西市場・保安路KTV</span>
+          <span>永記・👑百珍・白天KTV</span>
         </button>
         <button class="local-day-btn" onclick="switchLocalDay(3)">
           Day 3 (11/23 一)
-          <span>林百貨・洋蔥咖哩・賦歸</span>
+          <span>林百貨・洋蔥咖哩・👑百珍</span>
         </button>
       </div>
 
       <!-- LOCAL DAY 1 -->
       <div id="local-day-1" class="local-day-content active">
         <div class="alert-box">
-          <strong>📌 Day 1 (在地版) 排程重點：</strong>週一休館的「<strong>台灣文學館、中西區圖書館、消防史料館、南美館1&2館</strong>」以及週一公休的「<strong>福吉雅布丁、順天冰棒</strong>」全部趁週六下午一次逛齊！晚上去週六限定的<strong>武聖夜市</strong>＋海安路<strong>小雨咖啡/小南人</strong>。
+          <strong>📌 Day 1 (在地版) 排程重點：</strong>週一休館的「<strong>台灣文學館、中西區圖書館、消防史料館、南美館1&2館</strong>」以及週一公休的「<strong>福吉雅布丁、<mark class="overlap-zone">💎順天冰棒</mark></strong>」全部趁週六下午一次逛齊！晚上逛<mark class="overlap-store">👑 武聖夜市</mark>＋海安路<strong>小雨咖啡/小南人</strong>。
         </div>
 
         <div class="timeline">
@@ -1895,11 +2149,12 @@
             </div>
           </div>
 
-          <div class="spot-card" data-spot="loc-d1-5">
+          <div class="spot-card overlap-zone-card" data-spot="loc-d1-5">
             <div class="spot-top">
               <div>
                 <span class="time-badge">16:30 – 18:10</span>
-                <div class="spot-title">🍮 孔廟・府中街・延平郡王祠（王爺廟）甜點散步：福吉雅・綠町・順天冰店・EVA泡芙・小轉角</div>
+                <span class="badge-zone-value">💎 雙清單同巷交集（開山路151巷・王爺廟對面）</span>
+                <div class="spot-title">🍮 孔廟・府中街・延平郡王祠（王爺廟）甜點散步：福吉雅・綠町・<mark class="overlap-zone">💎順天冰店</mark>・EVA泡芙・小轉角</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d1-5', this.checked)"> 已完成</label>
             </div>
@@ -1908,48 +2163,49 @@
               <span class="tag tag-warn">福吉雅 17:00 打烊・順天冰棒 18:00 打烊（兩家皆週一休！）</span>
             </div>
             <p class="spot-desc">
-              從南美館順著<strong>孔廟、府中街一路散步延伸到開山路與延平郡王祠（王爺廟）</strong>，沿途把在地朋友清單上的甜點冰品一網打盡：
+              從南美館順著<strong>孔廟、府中街一路散步延伸到開山路與延平郡王祠（王爺廟）</strong>，沿途把甜點冰品一網打盡：
             </p>
             <ul class="sub-spots-list">
               <li>🍮 <strong>福吉雅手工焦糖布丁</strong>（南門路209巷12號｜假日13:00–17:00，週一二休）：孔廟對面巷內，手工玻璃杯布丁建議 17:00 前先買！</li>
               <li>🍵 <strong>綠町抹茶專門店</strong>（府中街58號｜11:30–19:00，週二休）：孔廟商圈府中街內，必吃抹茶千層與霜淇淋。</li>
-              <li>🍧 <strong>順天冰棒</strong>（開山路151巷7-1號｜10:00–18:00，週一休）：延平郡王祠對面巷內六十多年古早味枝仔冰（花生、芋頭、米糕必吃）。</li>
+              <li>🍧 <mark class="overlap-zone">💎 順天冰棒（開山路151巷7-1號｜與IG清單「裁縫師森參會館(151巷1號)」在同一條巷子隔壁！）</mark>：六十多年古早味枝仔冰（花生、芋頭、米糕必吃，18:00打烊）。</li>
               <li>🍨 <strong>EVA 伊娃日式泡芙</strong>（大埔街47號｜11:00–19:30，週二休）：延平郡王祠後方，比拳頭還大的脆皮冰淇淋泡芙。</li>
               <li>🏡 <strong>小轉角 ArtDe Corner</strong>（開山路235巷13號）：順遊開山路巷弄內的百年老屋美學空間。</li>
             </ul>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=福吉雅手工焦糖布丁+台南" target="_blank" rel="noopener">🍮 福吉雅布丁</a>
               <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=綠町抹茶專門店+台南" target="_blank" rel="noopener">🍵 綠町抹茶</a>
-              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=順天冰棒+台南" target="_blank" rel="noopener">🍧 順天冰棒</a>
+              <a class="btn-map gold-btn" href="https://www.google.com/maps/search/?api=1&query=順天冰棒+台南" target="_blank" rel="noopener">💎 順天冰棒 (151巷)</a>
               <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=EVA伊娃日式泡芙專賣店+台南" target="_blank" rel="noopener">🍨 EVA泡芙</a>
             </div>
           </div>
 
-          <div class="spot-card must-visit" data-spot="loc-d1-6">
+          <div class="spot-card overlap-gold-card" data-spot="loc-d1-6">
             <div class="spot-top">
               <div>
-                <span class="time-badge">18:45 – 21:30</span>
-                <div class="spot-title">🎡 【必去】武聖夜市（先回成大館 Check-in 再出發）</div>
+                <span class="time-badge">18:45 – 21:15</span>
+                <span class="badge-high-value">👑 在地＋IG雙清單共同指定・最高價值必去</span>
+                <div class="spot-title">🎡 <mark class="overlap-store">👑 武聖夜市（先回成大館 Check-in 再出發）</mark></div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d1-6', this.checked)"> 已完成</label>
             </div>
             <div class="tags-row">
-              <span class="tag tag-must">★ 指定必去行程</span>
+              <span class="tag tag-must">★ 兩版行程共同必去</span>
               <span class="tag tag-warn">僅週三、五、六營業 (17:30–00:30)</span>
             </div>
             <p class="spot-desc">
               18:10 先騎回「<strong>路徒行旅台南成大館</strong>」辦理 Check-in 放東西，再騎車約 10 分鐘去週六限定的<strong>武聖夜市</strong>！
             </p>
             <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=武聖夜市+台南市中西區武聖路69巷" target="_blank" rel="noopener">📍 Google Maps 導航</a>
+              <a class="btn-map gold-btn" href="https://www.google.com/maps/search/?api=1&query=武聖夜市+台南市中西區武聖路69巷" target="_blank" rel="noopener">📍 Google Maps 導航</a>
             </div>
           </div>
 
           <div class="spot-card" data-spot="loc-d1-7">
             <div class="spot-top">
               <div>
-                <span class="time-badge">21:40 – 23:15</span>
-                <div class="spot-title">☕ 海安路／西門路夜貓散步：小雨咖啡 ／ 小南人烤肉廚房</div>
+                <span class="time-badge">21:25 – 22:30</span>
+                <div class="spot-title">☕ 海安路／西門路夜間散步：小雨咖啡 ／ 小南人烤肉廚房</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d1-7', this.checked)"> 已完成</label>
             </div>
@@ -1959,7 +2215,7 @@
               <span class="tag tag-ride">武聖夜市騎車 6 分鐘</span>
             </div>
             <p class="spot-desc">
-              逛完夜市騎車 6 分鐘到海安路一段，可坐「<strong>小雨咖啡 Café Drizzle</strong>」喝深夜咖啡甜點，或去西門路一段「<strong>小南人烤肉廚房</strong>」吃炭火烤肉串燒，結束後騎車 8 分鐘回成大館休息。
+              逛完夜市騎車 6 分鐘到海安路一段，可坐「<strong>小雨咖啡 Café Drizzle</strong>」喝咖啡甜點，或去西門路一段「<strong>小南人烤肉廚房</strong>」吃炭火烤肉串燒，約 22:30 騎車 8 分鐘回成大館安心休息。
             </p>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=小雨咖啡+台南市中西區海安路一段133號" target="_blank" rel="noopener">☕ 小雨咖啡</a>
@@ -1973,7 +2229,7 @@
       <!-- LOCAL DAY 2 -->
       <div id="local-day-2" class="local-day-content">
         <div class="alert-box">
-          <strong>📌 Day 2 (在地版) 排程重點：</strong>早上吃週一公休的排隊神店「<strong>永記虱目魚丸</strong>」，中午慢逛「<strong>西市場、國華街、江水號、奉口冰室、銀月書店</strong>」，傍晚進攻「<strong>海安路／友愛街／尊王路／保安路</strong>」晚餐小吃，晚上壓軸去唱 <strong>KTV</strong>！
+          <strong>🛡️ Day 2 (在地版) 治安與順路雙贏排法：</strong>早上吃週一公休的「<strong>永記虱目魚丸</strong>」，中午逛西市場＆買雙清單共同點名的 <mark class="overlap-store">👑 百珍泡芙</mark>；<strong>下午 13:30–17:30 唱 KTV 白天場（安全又避暑！）</strong>，17:45 唱完剛好接保安路吃 <strong>醇涎坊＆王宮口軟骨飯（皆 20:00 打烊）</strong>，20:30 就能早早回成大館！
         </div>
 
         <div class="timeline">
@@ -1981,7 +2237,7 @@
           <div class="spot-card" data-spot="loc-d2-1">
             <div class="spot-top">
               <div>
-                <span class="time-badge">09:30 – 10:45</span>
+                <span class="time-badge">09:00 – 10:15</span>
                 <div class="spot-title">🥣 開山路傳奇早餐：永記虱目魚丸</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d2-1', this.checked)"> 已完成</label>
@@ -1999,63 +2255,68 @@
             </div>
           </div>
 
-          <div class="spot-card" data-spot="loc-d2-2">
+          <div class="spot-card overlap-gold-card" data-spot="loc-d2-2">
             <div class="spot-top">
               <div>
-                <span class="time-badge">11:00 – 14:00</span>
-                <div class="spot-title">🍧 西市場（大菜市）＆ 國華街冰品茶飲：江水號・奉口冰室・茶經紅茶・百珍泡芙</div>
+                <span class="time-badge">10:30 – 13:15</span>
+                <span class="badge-high-value">👑 含雙清單 100% 同店推薦（百珍泡芙）＆ 國華街黃金商圈</span>
+                <div class="spot-title">🍧 西市場（大菜市）・<mark class="overlap-store">👑 百珍泡芙</mark>・茶經紅茶・江水號・奉口冰室・銀月書店</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d2-2', this.checked)"> 已完成</label>
             </div>
             <div class="tags-row">
+              <span class="tag tag-must">👑 百珍泡芙＝IG清單「百珍西點麵包廠」雙重認證！</span>
               <span class="tag tag-Cluster">📍 四、西市場／國華街一帶</span>
-              <span class="tag tag-hours">11:00 – 20:30</span>
-              <span class="tag tag-ride">開山路騎車 4 分鐘</span>
             </div>
             <p class="spot-desc">
-              走進翻修後超美的日治古蹟「<strong>西市場（大菜市）</strong>」與淺草新天地、正興街巷弄，照著在地朋友推薦名單一路吃甜點喝好茶：
+              走進翻修後超美的日治古蹟「<strong>西市場（大菜市）</strong>」與國華街、西門路，這區同時也是 <mark class="overlap-zone">💎 IG 清單與在地朋友清單重疊度最高的黃金街區</mark>：
             </p>
             <ul class="sub-spots-list">
+              <li>🧁 <mark class="overlap-store">👑 百珍泡芙（百珍西點麵包廠｜西門路二段135號）</mark>：<strong>IG 清單與在地朋友清單 100% 同時點名！</strong>必買銅板價巨無霸古早味克林姆奶油泡芙！</li>
+              <li>🧋 <strong>茶經異國紅茶</strong>（西門路二段179號，正興街口｜09:30–20:30）：就在百珍泡芙往北走 1 分鐘，現萃莊園紅茶。</li>
               <li>🍧 <strong>江水號</strong>（國華街三段26號B12｜12:00–20:40）：百年八寶冰老店，招牌芋泥綿密即化、米糕粥超香。</li>
               <li>🍨 <strong>奉口冰室</strong>（正興街61巷20號｜假日12:00–20:30）：正興街老屋冰室，必吃水果刨冰與手工布丁。</li>
-              <li>🧋 <strong>茶經異國紅茶</strong>（西門路二段179號，正興街口｜09:30–20:30）：現萃異國莊園紅茶專門店。</li>
-              <li>🧁 <strong>百珍泡芙（百珍西點麵包廠）</strong>（西門路二段135號｜10:00–22:00）：六十多年老字號，銅板價巨無霸古早味奶油泡芙！</li>
+              <li>📖 <strong>銀月書店</strong>（中正路124、126號2樓｜11:30–20:00）：五福商店古蹟二樓獨立書店（隔壁就是 IG 推的 <strong>AIC Gelato</strong> 與 <strong>亞米甜甜圈</strong>）。</li>
             </ul>
             <div class="spot-actions">
+              <a class="btn-map gold-btn" href="https://www.google.com/maps/search/?api=1&query=百珍西點麵包廠+台南市中西區西門路二段135號" target="_blank" rel="noopener">👑 百珍泡芙(雙清單必買)</a>
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=台南西市場+國華街" target="_blank" rel="noopener">🏛️ 西市場</a>
               <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=江水號+台南市中西區國華街三段26號" target="_blank" rel="noopener">🍧 江水號</a>
               <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=奉口冰室+台南市中西區正興街61巷20號" target="_blank" rel="noopener">🍨 奉口冰室</a>
               <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=茶經異國紅茶+台南市中西區西門路二段179號" target="_blank" rel="noopener">🧋 茶經紅茶</a>
-              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=百珍西點麵包廠+台南市中西區西門路二段135號" target="_blank" rel="noopener">🧁 百珍泡芙</a>
+              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=銀月書店+台南市中西區中正路124號" target="_blank" rel="noopener">📖 銀月書店</a>
             </div>
           </div>
 
-          <div class="spot-card" data-spot="loc-d2-3">
+          <div class="spot-card overlap-gold-card" data-spot="loc-d2-3">
             <div class="spot-top">
               <div>
-                <span class="time-badge">14:10 – 15:50</span>
-                <div class="spot-title">📖 文青老城慢逛：銀月書店 ＆ 蝸牛巷</div>
+                <span class="time-badge">13:30 – 17:30</span>
+                <span class="badge-high-value">👑 雙清單共同必去</span>
+                <span class="badge-safe-daytime">🛡️ 白天下午場・治安安心</span>
+                <div class="spot-title">🎤 <mark class="overlap-store">👑 台南 KTV 白天安心歡唱（賓士 KTV 南門店 / 享溫馨 KTV）</mark></div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d2-3', this.checked)"> 已完成</label>
             </div>
             <div class="tags-row">
-              <span class="tag tag-Cluster">📍 四、西市場周邊順逛</span>
-              <span class="tag tag-hours">銀月書店 11:30 – 20:00</span>
-              <span class="tag tag-ride">從西市場步行 4 分鐘</span>
+              <span class="tag tag-must">★ 已改為下午白天時段 (13:30–17:30)</span>
+              <span class="tag tag-hours">出入單純安全・躲避午後大太陽</span>
             </div>
             <p class="spot-desc">
-              走上中正路日治洋樓古蹟「五福商店」二樓的獨立書店「<strong>銀月書店</strong>」（中正路124、126號2樓）看書吹冷氣，接著穿入民生路與永福路之間的靜謐文學巷弄「<strong>蝸牛巷</strong>」散步拍照。
+              <strong>為什麼在地版把 KTV 移到下午 13:30–17:30 更神？</strong><br>
+              1. 🛡️ <strong>治安安全</strong>：白天時段出入單純，完全不必擔心深夜治安問題。<br>
+              2. 🍜 <strong>完美銜接保安路晚餐營業時間</strong>：保安路的<strong>醇涎坊鍋燒意麵</strong>與<strong>王宮口軟骨飯</strong>都是 <strong>20:00 就打烊</strong>！下午 17:30 唱完歌過去吃晚餐時間超充裕，完全不用趕！
             </p>
             <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=銀月書店+台南市中西區中正路124號" target="_blank" rel="noopener">📖 銀月書店</a>
-              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=蝸牛巷+台南市中西區永福路二段97巷" target="_blank" rel="noopener">🐌 蝸牛巷</a>
+              <a class="btn-map gold-btn" href="https://www.google.com/maps/search/?api=1&query=賓士KTV南門店+台南市中西區南門路121號" target="_blank" rel="noopener">📍 賓士 KTV (南門店)</a>
+              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=享溫馨KTV台南中華店" target="_blank" rel="noopener">📍 享溫馨 KTV (中華店)</a>
             </div>
           </div>
 
           <div class="spot-card" data-spot="loc-d2-4">
             <div class="spot-top">
               <div>
-                <span class="time-badge">16:30 – 19:30</span>
+                <span class="time-badge">17:45 – 20:30</span>
                 <div class="spot-title">🍜 海安路／友愛街／尊王路／保安路 傍晚美食巡禮：醇涎坊・王宮口軟骨飯・無名炒陽春麵</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d2-4', this.checked)"> 已完成</label>
@@ -2063,9 +2324,10 @@
             <div class="tags-row">
               <span class="tag tag-Cluster">📍 五、海安／友愛／尊王／保安路</span>
               <span class="tag tag-hours">醇涎坊至20:00｜軟骨飯至20:00｜炒陽春麵至20:00</span>
+              <span class="tag tag-ride">20:30 吃完早早回成大館</span>
             </div>
             <p class="spot-desc">
-              傍晚到晚上最適合走<strong>海安路、友愛街、尊王路與保安路</strong>這區！唱 KTV 前先把在地朋友推薦的三家鹹食名店吃起來：
+              17:30 唱完 KTV 出來天色剛暗、氣溫最舒服！騎車 4 分鐘到<strong>保安路、尊王路與海安路</strong>把在地朋友推薦的鹹食名店一次吃齊，約 20:30 就能安全回成大館休息：
             </p>
             <ul class="sub-spots-list">
               <li>🍜 <strong>醇涎坊古早味鍋燒意麵</strong>（保安路53號｜06:00–20:00，週三休）：井字木蓋裝盛、古早味炸魚片配柴魚高湯鍋燒意麵。</li>
@@ -2079,35 +2341,13 @@
             </div>
           </div>
 
-          <div class="spot-card must-visit" data-spot="loc-d2-5">
-            <div class="spot-top">
-              <div>
-                <span class="time-badge">19:45 – 23:45</span>
-                <div class="spot-title">🎤 【必去】台南 KTV 歡唱夜（賓士 KTV 南門店 / 享溫馨 KTV）</div>
-              </div>
-              <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d2-5', this.checked)"> 已完成</label>
-            </div>
-            <div class="tags-row">
-              <span class="tag tag-must">★ 指定必去行程</span>
-              <span class="tag tag-hours">24 小時營業（建議先電話訂位）</span>
-              <span class="tag tag-ride">唱完回成大館約 6–8 分鐘</span>
-            </div>
-            <p class="spot-desc">
-              吃飽喝足去唱 KTV！首推台南傳奇「<strong>賓士 KTV 南門店</strong>」（從保安路騎車僅 4 分鐘）或「<strong>享溫馨 KTV 中華店</strong>」。歡唱後騎車回「路徒行旅台南成大館」休息！
-            </p>
-            <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=賓士KTV南門店+台南市中西區南門路121號" target="_blank" rel="noopener">📍 賓士 KTV (南門店)</a>
-              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=享溫馨KTV台南中華店" target="_blank" rel="noopener">📍 享溫馨 KTV (中華店)</a>
-            </div>
-          </div>
-
         </div>
       </div>
 
       <!-- LOCAL DAY 3 -->
       <div id="local-day-3" class="local-day-content">
         <div class="alert-box">
-          <strong>📌 Day 3 (在地版) 週一完美排法：</strong>週一雖然美術館與文學館休館，但「<strong>林百貨（搭電梯看對面日本勸業銀行）</strong>」與在地朋友特別標註的愛店「<strong>永福路洋蔥咖哩工房</strong>」週一全部照常營業！
+          <strong>📌 Day 3 (在地版) 週一完美排法：</strong>週一雖然美術館與文學館休館，但「<strong>林百貨（搭電梯看對面日本勸業銀行）</strong>」、在地朋友愛店「<strong>永福路洋蔥咖哩工房</strong>」與雙清單共同點名的 <mark class="overlap-store">👑 百珍泡芙</mark> 全部照常營業！
         </div>
 
         <div class="timeline">
@@ -2152,11 +2392,12 @@
             </div>
           </div>
 
-          <div class="spot-card love-stop" data-spot="loc-d3-3">
+          <div class="spot-card overlap-zone-card" data-spot="loc-d3-3">
             <div class="spot-top">
               <div>
                 <span class="time-badge">12:35 – 14:05</span>
-                <div class="spot-title">🍛 【在地朋友愛店】永福路「洋蔥咖哩工房」＋ 蝸牛巷散步</div>
+                <span class="badge-zone-value">💎 雙清單對街交集（正對面即IG推薦邱惠美鳳梨酥）</span>
+                <div class="spot-title">🍛 【❤️ 在地朋友愛店】永福路「洋蔥咖哩工房」＋ 蝸牛巷散步</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d3-3', this.checked)"> 已完成</label>
             </div>
@@ -2167,30 +2408,33 @@
               <span class="tag tag-ride">林百貨走路 3 分鐘 / 騎車 1 分鐘</span>
             </div>
             <p class="spot-desc">
-              從林百貨轉進永福路二段67號就到！這是台南朋友特別標註「<strong>(是愛店)</strong>」的<strong>洋蔥咖哩工房</strong>，以大量炒至焦糖化的洋蔥慢火熬製濃厚日式咖哩，搭配厚切炸豬排、唐揚雞或歐姆蛋都超級銷魂！店門旁就是<strong>蝸牛巷</strong>入口，吃飽正好散步消化。
+              從林百貨轉進永福路二段67號就到！這是台南朋友特別標註「<strong>(是愛店)</strong>」的<strong>洋蔥咖哩工房</strong>，以大量焦糖化洋蔥慢火熬製濃厚日式咖哩，厚切炸豬排與唐揚雞超銷魂！<br>
+              💡 <mark class="overlap-zone">💎 雙清單重疊高價值提示</mark>：店門旁就是<strong>蝸牛巷</strong>，穿出蝸牛巷到民生路一段，正對面就是<strong>香港朋友 IG 清單的「邱惠美鳳梨酥（民生路一段156號）」</strong>！
             </p>
             <div class="spot-actions">
               <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=洋蔥咖哩工房+台南市中西區永福路二段67號" target="_blank" rel="noopener">📍 導航洋蔥咖哩工房</a>
+              <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=蝸牛巷+台南市中西區永福路二段97巷" target="_blank" rel="noopener">🐌 蝸牛巷</a>
             </div>
           </div>
 
-          <div class="spot-card" data-spot="loc-d3-4">
+          <div class="spot-card overlap-gold-card" data-spot="loc-d3-4">
             <div class="spot-top">
               <div>
                 <span class="time-badge">14:10 – 15:25</span>
-                <div class="spot-title">🧁 賦歸前最後甜點伴手禮：百珍泡芙・茶經紅茶・奉口冰室・江水號</div>
+                <span class="badge-high-value">👑 IG＋在地朋友 100% 同店點名・含金量最高！</span>
+                <div class="spot-title">🧁 賦歸前最後甜點伴手禮：<mark class="overlap-store">👑 百珍泡芙（百珍西點麵包廠）</mark>・茶經紅茶・江水號</div>
               </div>
               <label class="check-label"><input type="checkbox" onchange="toggleSpot('loc-d3-4', this.checked)"> 已完成</label>
             </div>
             <div class="tags-row">
-              <span class="tag tag-Cluster">📍 四、西市場／國華街／西門路</span>
+              <span class="tag tag-must">👑 兩份清單唯一 100% 完全同名店家</span>
               <span class="tag tag-hours">週一皆正常營業</span>
             </div>
             <p class="spot-desc">
-              還車前的最後悠閒時光！去西門路「<strong>百珍西點麵包廠</strong>」買幾顆巨無霸古早味泡芙帶上高鐵吃、去「<strong>茶經紅茶</strong>」外帶冰紅茶，或再去「<strong>江水號 / 奉口冰室</strong>」吃碗冰。
+              還車前一定要去買<strong>香港 IG 與台南在地朋友同時點名</strong>的 <mark class="overlap-store">👑 百珍泡芙（百珍西點麵包廠）</mark> 帶上高鐵吃！再順手去隔壁買杯「<strong>茶經紅茶</strong>」或吃碗「<strong>江水號 / 奉口冰室</strong>」。
             </p>
             <div class="spot-actions">
-              <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=百珍西點麵包廠+台南市中西區西門路二段135號" target="_blank" rel="noopener">🧁 百珍泡芙</a>
+              <a class="btn-map gold-btn" href="https://www.google.com/maps/search/?api=1&query=百珍西點麵包廠+台南市中西區西門路二段135號" target="_blank" rel="noopener">👑 百珍泡芙 (百珍西點麵包廠)</a>
               <a class="btn-map secondary" href="https://www.google.com/maps/search/?api=1&query=茶經異國紅茶+台南市中西區西門路二段179號" target="_blank" rel="noopener">🧋 茶經紅茶</a>
             </div>
           </div>
@@ -2238,7 +2482,7 @@
         <p>距離「佰渡機車出租」騎車僅 2 分鐘！鄰近台南火車站後站與成大商圈，取還車寄放行李超順路</p>
         <div class="confirmed-price-row">
           <div>兩人兩晚總費用：<strong>NT$ 8,372</strong></div>
-          <div>平均一人：<strong>NT$ 4,186 台幣</strong>（約 $2,093/人/晚）</div>
+          <div>平均一人：<strong>NT$ 4,186 台幣</strong>（約 ¥20,300 日幣）</div>
         </div>
       </div>
 
@@ -2281,11 +2525,11 @@
             <strong>騎車約 2 分鐘 (550m)</strong>
           </div>
           <div class="dist-item">
-            <span>🥣 88嫩仙草光明店（東區）</span>
-            <strong>騎車約 3 分鐘 (1km)</strong>
+            <span>🥩 西羅殿／開元路牛肉湯備案</span>
+            <strong>騎車約 4 分鐘</strong>
           </div>
           <div class="dist-item">
-            <span>🏛️ 文學館／南美館／裁縫師</span>
+            <span>🏛️ 文學館／南美館／開山路151巷</span>
             <strong>騎車約 6–8 分鐘</strong>
           </div>
           <div class="dist-item">
@@ -2321,114 +2565,36 @@
       </div>
     </section>
 
-    <!-- ==================== TAB 4: 開銷預算 ==================== -->
-    <section id="sec-budget" class="tab-section">
+    <!-- ==================== TAB 4: 朋友台幣餘額記帳本 ==================== -->
+    <section id="sec-ledger" class="tab-section">
       <div class="section-header">
-        <h2>💰 3天2夜台南開銷預算試算</h2>
-        <p>已帶入「路徒行旅台南成大館（$8,372）」與「佰渡租車（$1,000）」實際費用</p>
+        <h2>🧾 朋友台幣餘額（預放 NT$ 4,050 扣款本）</h2>
+        <p>記錄朋友寄放的 <strong>NT$ 4,050 台幣</strong> 扣款與即時剩餘台幣（兩人平分項目可自動同步記進「📒 我的記帳」！）</p>
       </div>
 
-      <div class="budget-summary-grid">
-        <div class="budget-hero-card">
-          <div class="budget-hero-label">🎯 不含高鐵（當地總花費/人）</div>
-          <div class="budget-hero-val">NT$ 6,800 – 7,650</div>
-          <div class="budget-hero-sub">已含住宿 $4,186 ＋ 租車油資 $560 ＋ 吃喝門票KTV</div>
-        </div>
-        <div class="budget-hero-card alt">
-          <div class="budget-hero-label">💵 朋友寄放 $4,050 預估結餘</div>
-          <div class="budget-hero-val">約剩 $600 – $1,400</div>
-          <div class="budget-hero-sub">扣除租車油資($560)＋3天吃喝KTV($2,100~$2,850)後</div>
-        </div>
-      </div>
-
-      <!-- 汇率换算小工具 -->
+      <!-- 台幣 (TWD) ⇄ 日幣 (JPY) 即時換算機 -->
       <div class="calc-box">
         <div class="calc-title">
-          <span>🔄 台幣 (TWD) ⇄ 港幣 (HKD) 即時換算機</span>
-          <span style="font-size: 0.75rem; font-weight: 500;">預設匯率 1 HKD ≈ 4.05 TWD</span>
+          <span>🔄 台幣 (TWD) ⇄ 日幣 (JPY) 即時換算機</span>
+          <button type="button" onclick="editJpyRate()" style="border:1px solid var(--secondary); background:#fff; color:var(--secondary); border-radius:6px; padding:2px 8px; font-size:0.74rem; font-weight:800; cursor:pointer;">✏️ 匯率 1 TWD = <span id="jpy-rate-display">4.85</span> JPY</button>
         </div>
         <div class="calc-row">
           <div class="calc-input-group">
             <label>🇹🇼 新台幣 (TWD)</label>
-            <input type="number" id="twd-input" value="4050" oninput="convertFromTWD(this.value)" />
+            <input type="number" id="twd-input" value="1000" oninput="convertFromTWD(this.value)" />
           </div>
           <div style="font-weight: 900; color: var(--secondary);">⇄</div>
           <div class="calc-input-group">
-            <label>🇭🇰 港幣 (HKD)</label>
-            <input type="number" id="hkd-input" value="1000" oninput="convertFromHKD(this.value)" />
+            <label>🇯🇵 日幣 (JPY ¥)</label>
+            <input type="number" id="jpy-input" value="4850" oninput="convertFromJPY(this.value)" />
           </div>
         </div>
-      </div>
-
-      <!-- 明細表 -->
-      <div class="info-card">
-        <div class="info-card-title" style="margin-bottom: 6px;">📊 每人開銷明細表（IG版 / 在地版皆適用）</div>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">住宿費已另計，其餘項目皆可直接從香港朋友寄放的 <strong>NT$ 4,050</strong> 扣除：</p>
-        <table class="budget-table">
-          <thead>
-            <tr>
-              <th>項目類別</th>
-              <th>內容說明（兩人分攤或個人）</th>
-              <th style="text-align:right;">每人預估 (TWD)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="background: #eef8f6;">
-              <td><strong>🏨 兩晚住宿 (已訂)</strong></td>
-              <td><strong>路徒行旅 台南成大館</strong><br>兩晚總計 NT$ 8,372 ÷ 2 人（已另結）</td>
-              <td class="amount" style="color: var(--secondary);">$4,186</td>
-            </tr>
-            <tr style="background: #fff6f2;">
-              <td><strong>🛵 租車＋油資 (已訂)</strong></td>
-              <td><strong>佰渡租車 (活力 VIVO 125)</strong><br>2.5天 $1,000 ÷ 2人 = $500 ＋ 汽油/停車約 $60/人</td>
-              <td class="amount">$560</td>
-            </tr>
-            <tr>
-              <td><strong>🍛 正餐＆傳統小吃</strong></td>
-              <td>• IG版：樺哥牛肉湯、水仙宮米糕、碳饅堡、府東街蔥油餅<br>• 在地版：開春排骨飯、永記魚丸、洋蔥咖哩工房、醇涎坊、軟骨飯</td>
-              <td class="amount">$650 – $950</td>
-            </tr>
-            <tr>
-              <td><strong>🍧 甜點冰品＆門票</strong></td>
-              <td>• IG版：小鹿家可頌、亞米甜甜圈、AIC冰淇淋、88嫩仙草<br>• 在地版：南美館($100)、綠町、福吉雅、順天、EVA、江水號、奉口</td>
-              <td class="amount">$550 – $800</td>
-            </tr>
-            <tr>
-              <td><strong>🎡 武聖夜市</strong></td>
-              <td>兩人共食 5–6 攤夜市小吃＋飲品</td>
-              <td class="amount">$250 – $350</td>
-            </tr>
-            <tr>
-              <td><strong>🎤 KTV 歡唱＋夜貓</strong></td>
-              <td>賓士 KTV / 享溫馨 KTV ＋ 裁縫師會館 / 小雨咖啡 / 小南人</td>
-              <td class="amount">$650 – $950</td>
-            </tr>
-            <tr>
-              <td><strong>🧁 伴手禮採買</strong></td>
-              <td>邱惠美鳳梨酥、百珍泡芙、林百貨點心等</td>
-              <td class="amount">$250 – $450</td>
-            </tr>
-            <tr style="background: #fdf1ec; font-weight: 900;">
-              <td><strong>📌 當地吃喝玩樂小計</strong></td>
-              <td><strong>不含住宿費之當地總開銷（從朋友 $4,050 扣）</strong></td>
-              <td class="amount" style="font-size: 0.96rem;">$2,910 – $4,060</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ==================== TAB 5: 朋友台幣餘額記帳本 ==================== -->
-    <section id="sec-ledger" class="tab-section">
-      <div class="section-header">
-        <h2>🧾 香港朋友台幣餘額 ＆ 隨手記帳本</h2>
-        <p>朋友除住宿費外寄放了 <strong>NT$ 4,050 台幣</strong> 在妳這邊！每次幫她付錢（或兩人合買平分），點一下就能自動從 4,050 元扣款並即時顯示她的剩餘台幣：</p>
       </div>
 
       <!-- WALLET HERO CARD -->
       <div class="wallet-hero">
         <div class="wallet-top-bar">
-          <span class="wallet-badge">🇭🇰 <span id="w-friend-title">香港朋友</span> 的台幣小金庫</span>
+          <span class="wallet-badge">💵 <span id="w-friend-title">香港朋友</span> 的台幣小金庫</span>
           <button class="wallet-edit-btn" onclick="editInitialDeposit()">✏️ 修改本金/名字</button>
         </div>
 
@@ -2447,7 +2613,7 @@
           <div class="wallet-stat-box">
             <span>💸 朋友累計已花費台幣</span>
             <strong id="w-spent-val" style="color:#fca5a5;">NT$ 0</strong>
-            <span id="w-spent-hkd" style="font-size:0.68rem; margin-top:2px;">約合港幣 HK$ 0</span>
+            <span id="w-spent-jpy" style="font-size:0.68rem; margin-top:2px;">折合日幣約 ¥ 0</span>
           </div>
         </div>
 
@@ -2458,29 +2624,29 @@
 
       <!-- ADD EXPENSE FORM -->
       <div class="info-card">
-        <div class="info-card-title" style="margin-bottom: 8px;">➕ 新增一筆花費（自動從朋友餘額扣款）</div>
+        <div class="info-card-title" style="margin-bottom: 8px;">➕ 新增朋友花費（自動從 $4,050 扣款）</div>
 
-        <div style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 700;">⚡ 點擊快速帶入（IG版＆在地版景點通用）：</div>
+        <div style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 700;">⚡ 點擊快速帶入（👑雙清單重疊必去 ＆ 熱門景點）：</div>
         <div class="quick-Presets">
-          <button type="button" class="preset-chip" onclick="fillPreset('🛵 佰渡租車 2.5天', 1000, 'split50')" style="background:#fff0eb; border-color:var(--primary); color:var(--primary-dark);">⚡ 一鍵帶入：租車平分 (-$500)</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('⛽ 機車加油', 120, 'split50')">⛽ 加油平分</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🎡 武聖夜市小吃', '', 'split50')">🎡 武聖夜市</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🎤 KTV 歡唱費', '', 'split50')">🎤 KTV 歡唱</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🥐 小鹿家可頌', '', 'split50')">🥐 小鹿家可頌</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🥩 樺哥牛肉湯', '', 'split50')">🥩 樺哥牛肉湯</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🍨 AIC 義式冰淇淋', '', 'split50')">🍨 AIC 冰淇淋</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🍸 裁縫師會館', '', 'split50')">🍸 裁縫師會館</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🥣 88嫩仙草＋府東街蔥油餅', '', 'split50')">🥣 88嫩仙草/蔥油餅</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🎨 南美館門票', 100, 'full100')">🎨 南美館門票</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🥣 永記虱目魚丸／開春排骨飯', '', 'split50')">🥣 永記魚丸/開春排骨</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🍛 洋蔥咖哩工房 (愛店)', '', 'split50')">🍛 洋蔥咖哩工房</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🍜 醇涎坊＋王宮口軟骨飯', '', 'split50')">🍜 保安路晚餐</button>
-          <button type="button" class="preset-chip" onclick="fillPreset('🍍 伴手禮 (邱惠美/百珍泡芙)', '', 'full100')">🍍 朋友個人買伴手禮</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🛵 佰渡租車 2.5天', 1000, 'split50', '交通租車')" style="background:#fff0eb; border-color:var(--primary); color:var(--primary-dark);">⚡ 租車平分 (-$500)</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('⛽ 機車加油', 120, 'split50', '交通租車')">⛽ 加油平分</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('👑 百珍泡芙 (百珍西點麵包廠)', '', 'split50', '甜點飲料')" style="background:#fef3c7; border-color:#d97706; color:#92400e;">👑 百珍泡芙</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('👑 武聖夜市小吃', '', 'split50', '美食小吃')" style="background:#fef3c7; border-color:#d97706; color:#92400e;">👑 武聖夜市</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('👑 KTV 白天場歡唱費', '', 'split50', '娛樂門票')" style="background:#fef3c7; border-color:#d97706; color:#92400e;">👑 KTV 白天場</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🥐 小鹿家可頌', '', 'split50', '甜點飲料')">🥐 小鹿家可頌</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🥩 牛肉湯 (樺哥/西羅殿/開元)', '', 'split50', '美食小吃')">🥩 牛肉湯早餐</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🍨 AIC 冰淇淋／江水號／奉口', '', 'split50', '甜點飲料')">🍨 國華街吃冰</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🍸 裁縫師會館／順天冰棒', '', 'split50', '甜點飲料')">🍸 開山路151巷</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🥣 88嫩仙草＋府東街蔥油餅', '', 'split50', '甜點飲料')">🥣 88嫩仙草/蔥油餅</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🎨 南美館門票', 100, 'full100', '娛樂門票')">🎨 南美館門票</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🥣 永記虱目魚丸／開春排骨飯', '', 'split50', '美食小吃')">🥣 永記魚丸/開春排骨</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🍛 洋蔥咖哩工房 (愛店)', '', 'split50', '美食小吃')">🍛 洋蔥咖哩工房</button>
+          <button type="button" class="preset-chip" onclick="fillPreset('🍜 醇涎坊＋王宮口軟骨飯', '', 'split50', '美食小吃')">🍜 保安路晚餐</button>
         </div>
 
         <div class="ledger-form-grid">
           <div class="form-field">
-            <label>品項名稱（例如：樺哥牛肉湯、洋蔥咖哩工房、買飲料）</label>
+            <label>品項名稱（例如：百珍泡芙、西羅殿牛肉湯、洋蔥咖哩工房）</label>
             <input type="text" id="exp-title" class="form-input" placeholder="輸入消費項目..." />
           </div>
 
@@ -2527,6 +2693,11 @@
             </div>
           </div>
 
+          <label class="sync-check-box" id="sync-to-my-wrap">
+            <input type="checkbox" id="sync-to-my-cb" checked />
+            <span>🔗 若為「兩人合買平分」，同時自動把「我自己的一半 (50%)」記進【📒 我的記帳】！（免重複輸入）</span>
+          </label>
+
           <button type="button" class="btn-add-expense" onclick="addExpense()">✍️ 記上一筆（更新朋友台幣餘額）</button>
         </div>
       </div>
@@ -2534,16 +2705,156 @@
       <!-- EXPENSE LIST -->
       <div class="info-card">
         <div class="info-card-header">
-          <div class="info-card-title">📋 扣款與消費明細紀錄</div>
+          <div class="info-card-title">📋 朋友扣款與消費明細紀錄</div>
           <span class="price-pill" id="exp-count-pill">共 0 筆</span>
         </div>
 
         <div id="expense-list-container"></div>
 
         <div class="ledger-action-bar">
-          <button type="button" class="btn-tool primary" onclick="copyLedgerSummary()">💬 複製餘額明細 (傳 LINE / WhatsApp)</button>
+          <button type="button" class="btn-tool primary" onclick="copyLedgerSummary()">💬 複製朋友餘額明細 (傳 LINE / WhatsApp)</button>
           <button type="button" class="btn-tool" onclick="shareLedgerLink()">🔗 產生同步連結 (傳給朋友看)</button>
-          <button type="button" class="btn-tool" onclick="clearAllExpenses()" style="color:var(--danger);">🗑️ 清空重算</button>
+          <button type="button" class="btn-tool" onclick="clearAllExpenses()" style="color:var(--danger);">🗑️ 清空朋友帳本</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 5: 我的記帳 (新增！記錄我自己的台南總花費) ==================== -->
+    <section id="sec-my-ledger" class="tab-section">
+      <div class="section-header">
+        <h2>📒 我的台南之旅個人記帳本</h2>
+        <p>專屬於妳自己的台南開銷紀錄！自動統計各分類花費，並換算日幣 (JPY) 金額：</p>
+      </div>
+
+      <!-- MY LEDGER HERO CARD -->
+      <div class="wallet-hero my-ledger-hero">
+        <div class="wallet-top-bar">
+          <span class="wallet-badge">🙋‍♀️ 我這趟台南之旅的總花費</span>
+          <span style="font-size: 0.74rem; opacity: 0.9;">匯率：1 TWD = <span class="jpy-rate-text">4.85</span> JPY</span>
+        </div>
+
+        <div class="wallet-main-balance">
+          <div class="wallet-main-label">💸 目前累積個人總花費 (台幣)</div>
+          <div class="wallet-main-val" id="my-total-twd">NT$ 0</div>
+          <div class="wallet-main-sub" id="my-total-jpy">🇯🇵 折合日幣約：¥ 0</div>
+        </div>
+
+        <!-- 6大分類統計小卡 -->
+        <div class="cat-grid">
+          <div class="cat-box">
+            <span>🏨 住宿</span>
+            <strong id="cat-sum-住宿">$0</strong>
+          </div>
+          <div class="cat-box">
+            <span>🛵 交通租車</span>
+            <strong id="cat-sum-交通租車">$0</strong>
+          </div>
+          <div class="cat-box">
+            <span>🍛 美食小吃</span>
+            <strong id="cat-sum-美食小吃">$0</strong>
+          </div>
+          <div class="cat-box">
+            <span>🍧 甜點飲料</span>
+            <strong id="cat-sum-甜點飲料">$0</strong>
+          </div>
+          <div class="cat-box">
+            <span>🎤 娛樂門票</span>
+            <strong id="cat-sum-娛樂門票">$0</strong>
+          </div>
+          <div class="cat-box">
+            <span>🧁 伴手禮/其他</span>
+            <strong id="cat-sum-伴手禮其他">$0</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADD MY EXPENSE FORM -->
+      <div class="info-card">
+        <div class="info-card-title" style="margin-bottom: 8px;">➕ 新增我的一筆花費</div>
+
+        <div style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 700;">⚡ 點擊一鍵帶入我的固定開銷＆常買項目：</div>
+        <div class="quick-Presets">
+          <button type="button" class="preset-chip" onclick="fillMyPreset('🏨 路徒行旅台南成大館 (我的一半)', 4186, '住宿', 'my100')" style="background:#eef8f6; border-color:var(--secondary); color:var(--secondary);">🏨 住宿我的一半 ($4,186)</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('🛵 佰渡租車 2.5天 (我的一半)', 500, '交通租車', 'my100')" style="background:#fff0eb; border-color:var(--primary); color:var(--primary-dark);">🛵 租車我的一半 ($500)</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('🚄 高鐵車票＋沙崙線', '', '交通租車', 'my100')">🚄 我的高鐵票</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('⛽ 機車加油 (我的一半)', 60, '交通租車', 'my100')">⛽ 加油 ($60)</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('👑 百珍泡芙 (百珍西點麵包廠)', '', '甜點飲料', 'my100')" style="background:#fef3c7; border-color:#d97706; color:#92400e;">👑 百珍泡芙</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('👑 武聖夜市小吃', '', '美食小吃', 'my100')" style="background:#fef3c7; border-color:#d97706; color:#92400e;">👑 武聖夜市</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('👑 KTV 白天場歡唱費', '', '娛樂門票', 'my100')" style="background:#fef3c7; border-color:#d97706; color:#92400e;">👑 KTV 白天場</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('🥩 牛肉湯早餐 (樺哥/西羅殿/開元)', '', '美食小吃', 'my100')">🥩 牛肉湯早餐</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('🥐 小鹿家可頌', '', '甜點飲料', 'my100')">🥐 小鹿家可頌</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('🍛 洋蔥咖哩工房', '', '美食小吃', 'my100')">🍛 洋蔥咖哩工房</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('🎨 南美館門票', 100, '娛樂門票', 'my100')">🎨 南美館門票 ($100)</button>
+          <button type="button" class="preset-chip" onclick="fillMyPreset('🧁 我買的伴手禮 (鳳梨酥/泡芙)', '', '伴手禮其他', 'my100')">🧁 我買的伴手禮</button>
+        </div>
+
+        <div class="ledger-form-grid">
+          <div class="form-field">
+            <label>品項名稱</label>
+            <input type="text" id="my-exp-title" class="form-input" placeholder="例如：住宿費我的一半、高鐵票、買飲料..." />
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="form-field">
+              <label>金額 (台幣 NT$)</label>
+              <input type="number" id="my-exp-amount" class="form-input" placeholder="例如：4186" inputmode="decimal" oninput="updateMyModePreview()" />
+            </div>
+            <div class="form-field">
+              <label>消費分類</label>
+              <select id="my-exp-cat" class="form-select">
+                <option value="美食小吃">🍛 美食小吃</option>
+                <option value="甜點飲料">🍧 甜點飲料</option>
+                <option value="住宿">🏨 住宿</option>
+                <option value="交通租車">🛵 交通租車</option>
+                <option value="娛樂門票">🎤 娛樂門票</option>
+                <option value="伴手禮其他">🧁 伴手禮/其他</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>記帳方式</label>
+            <div class="mode-selector">
+              <button type="button" class="mode-option my-active" id="mymode-my100" onclick="selectMyMode('my100')">
+                <div class="mode-option-left">
+                  <span style="font-size:1.2rem;">🙋‍♀️</span>
+                  <div>
+                    <div class="mode-option-title">我自己的花費（全額 100% 記進我的帳本）</div>
+                    <div class="mode-option-desc">屬於我個人的開銷（或已經算好我那一份的金額），不影響朋友餘額</div>
+                  </div>
+                </div>
+                <span class="mode-preview-pill" id="mypreview-my100">記 $0</span>
+              </button>
+
+              <button type="button" class="mode-option" id="mymode-split50" onclick="selectMyMode('split50')">
+                <div class="mode-option-left">
+                  <span style="font-size:1.2rem;">✌️</span>
+                  <div>
+                    <div class="mode-option-title">兩人合買平分（記我一半 50% ＋ 同步扣朋友一半 50%）</div>
+                    <div class="mode-option-desc">輸入兩人總價，自動除以 2 記進我的帳本，並同步從朋友 $4,050 扣一半！</div>
+                  </div>
+                </div>
+                <span class="mode-preview-pill" id="mypreview-split50">各記 $0</span>
+              </button>
+            </div>
+          </div>
+
+          <button type="button" class="btn-add-expense" onclick="addMyExpense()">✍️ 記進我的帳本</button>
+        </div>
+      </div>
+
+      <!-- MY EXPENSE LIST -->
+      <div class="info-card">
+        <div class="info-card-header">
+          <div class="info-card-title">📋 我的個人花費明細紀錄</div>
+          <span class="price-pill" id="my-exp-count-pill">共 0 筆</span>
+        </div>
+
+        <div id="my-expense-list-container"></div>
+
+        <div class="ledger-action-bar">
+          <button type="button" class="btn-tool primary" onclick="copyMyLedgerSummary()">📋 複製我的總花費明細 (含日幣換算)</button>
+          <button type="button" class="btn-tool" onclick="clearMyExpenses()" style="color:var(--danger);">🗑️ 清空我的帳本</button>
         </div>
       </div>
     </section>
@@ -2551,18 +2862,19 @@
     <!-- ==================== TAB 6: 現金＆高鐵 ==================== -->
     <section id="sec-tips" class="tab-section">
       <div class="section-header">
-        <h2>🇭🇰 香港朋友來台南：現金支付＆高鐵指南</h2>
+        <h2>🚄 台南現金支付 ＆ 高鐵回程指南</h2>
         <p>台南老店、市場、夜市多為現金交易，出發前必看貼心提醒</p>
       </div>
 
       <div class="info-card">
         <div class="info-card-header">
           <div class="info-card-title">💵 1. 台南小吃與夜市「現金為王」</div>
-          <span class="price-pill">預放 $4,050 超方便</span>
+          <span class="price-pill">雙帳本超方便</span>
         </div>
         <ul class="info-list">
-          <li><strong>為什麼寄放 NT$ 4,050 在妳這邊最聰明？</strong>無論走「📸 IG版」或「🗺️ 在地版」，台南名店（如<strong>樺哥牛肉湯、永記虱目魚丸、水仙宮米糕、醇涎坊鍋燒意麵、府東街蔥油餅、武聖夜市</strong>）幾乎<strong>只收新台幣現金</strong>！由妳統一拿台幣付帳，再用「<strong>🧾 朋友餘額</strong>」分頁隨手點一下扣款，在攤位前完全不用手忙腳亂找零錢！</li>
-          <li><strong>一卡通 / 悠遊卡：</strong>超商（7-11、全家）、搭台鐵沙崙線區間車（台南火車站 ⇄ 高鐵台南站）皆可直接逼卡進出站，免排隊買票。</li>
+          <li><strong>怎麼用「🧾 朋友餘額」＋「📒 我的記帳」最省事？</strong><br>
+            1. 兩人一起吃小吃、租車、加油時：在「<strong>🧾 朋友餘額</strong>」選「<strong>✌️ 兩人合買平分</strong>」，系統會<strong>自動扣朋友一半，同時把妳自己的一半記進「📒 我的記帳」</strong>，完全不用記兩次！<br>
+            2. 妳自己單獨買飲料、買伴手禮、付自己的住宿費（$4,186）與高鐵票時：直接在「<strong>📒 我的記帳</strong>」記上一筆，就能清楚看到這趟台南之旅妳總共花了多少台幣與折合多少日幣！</li>
         </ul>
       </div>
 
@@ -2595,27 +2907,60 @@
       <span class="icon">🏨</span>
       <span>住宿＆租車</span>
     </button>
-    <button class="nav-btn" onclick="switchTab('budget', this)">
-      <span class="icon">💰</span>
-      <span>開銷預算</span>
-    </button>
     <button class="nav-btn" onclick="switchTab('ledger', this)">
       <span class="icon">🧾</span>
       <span>朋友餘額</span>
     </button>
+    <button class="nav-btn" onclick="switchTab('my-ledger', this)">
+      <span class="icon">📒</span>
+      <span>我的記帳</span>
+    </button>
     <button class="nav-btn" onclick="switchTab('tips', this)">
-      <span class="icon">🇭🇰</span>
+      <span class="icon">🚄</span>
       <span>現金＆高鐵</span>
     </button>
   </nav>
 
   <script>
-    const STORAGE_KEY_CHECKS = 'tainan_trip_2026_dual_checks_v1';
+    const STORAGE_KEY_CHECKS = 'tainan_trip_2026_dual_checks_v2';
     const STORAGE_KEY_WALLET = 'tainan_trip_2026_friend_wallet_v2';
-    const TOTAL_SPOTS = 34;
-    const RATE_HKD_TO_TWD = 4.05;
+    const STORAGE_KEY_MY_LEDGER = 'tainan_trip_2026_my_ledger_v1';
+    const STORAGE_KEY_JPY_RATE = 'tainan_trip_2026_jpy_rate_v1';
+    const TOTAL_SPOTS = 33;
 
     let currentMode = 'split50';
+    let currentMyMode = 'my100';
+    let pendingCategoryForSync = '美食小吃';
+
+    function getJpyRate() {
+      const saved = parseFloat(localStorage.getItem(STORAGE_KEY_JPY_RATE));
+      return (!isNaN(saved) && saved > 0) ? saved : 4.85;
+    }
+
+    function editJpyRate() {
+      const current = getJpyRate();
+      const input = prompt('請輸入「1 台幣 (TWD) 等於多少日幣 (JPY)」：\n（例如：輸入 4.85 代表 1 台幣 ≈ 4.85 日幣，或約 0.206 台幣/日幣）', current);
+      if (input === null) return;
+      const val = parseFloat(input);
+      if (isNaN(val) || val <= 0) {
+        alert('請輸入有效的匯率數字！');
+        return;
+      }
+      localStorage.setItem(STORAGE_KEY_JPY_RATE, String(val));
+      updateJpyRateUI();
+      convertFromTWD(document.getElementById('twd-input').value);
+      renderWallet();
+      renderMyLedger();
+    }
+
+    function updateJpyRateUI() {
+      const r = getJpyRate();
+      const el = document.getElementById('jpy-rate-display');
+      if (el) el.textContent = r;
+      document.querySelectorAll('.jpy-rate-text').forEach(node => {
+        node.textContent = r;
+      });
+    }
 
     // Switch Bottom Tabs
     function switchTab(tabName, btnEl) {
@@ -2686,19 +3031,19 @@
       document.getElementById('progress-fill').style.width = pct + '%';
     }
 
-    // Currency Converter
+    // Currency Converter (TWD <-> JPY)
     function convertFromTWD(twdVal) {
       const twd = parseFloat(twdVal);
-      const hkdInput = document.getElementById('hkd-input');
-      if (isNaN(twd)) { hkdInput.value = ''; return; }
-      hkdInput.value = Math.round(twd / RATE_HKD_TO_TWD);
+      const jpyInput = document.getElementById('jpy-input');
+      if (isNaN(twd)) { jpyInput.value = ''; return; }
+      jpyInput.value = Math.round(twd * getJpyRate());
     }
 
-    function convertFromHKD(hkdVal) {
-      const hkd = parseFloat(hkdVal);
+    function convertFromJPY(jpyVal) {
+      const jpy = parseFloat(jpyVal);
       const twdInput = document.getElementById('twd-input');
-      if (isNaN(hkd)) { twdInput.value = ''; return; }
-      twdInput.value = Math.round(hkd * RATE_HKD_TO_TWD);
+      if (isNaN(jpy)) { twdInput.value = ''; return; }
+      twdInput.value = Math.round(jpy / getJpyRate());
     }
 
     // ==================== FRIEND TWD WALLET / BALANCE TRACKER ====================
@@ -2719,7 +3064,7 @@
             localStorage.setItem(STORAGE_KEY_WALLET, JSON.stringify(decoded));
             history.replaceState(null, '', window.location.pathname + window.location.search);
             setTimeout(() => {
-              const ledgerBtn = document.querySelectorAll('.nav-btn')[4];
+              const ledgerBtn = document.querySelectorAll('.nav-btn')[3];
               switchTab('ledger', ledgerBtn);
             }, 100);
             return decoded;
@@ -2768,6 +3113,10 @@
         const btn = document.getElementById('mode-' + m);
         if (btn) btn.classList.toggle('active', m === mode);
       });
+      const syncWrap = document.getElementById('sync-to-my-wrap');
+      if (syncWrap) {
+        syncWrap.style.display = mode === 'split50' ? 'flex' : 'none';
+      }
       updateModePreview();
     }
 
@@ -2780,8 +3129,9 @@
       document.getElementById('preview-topup').textContent = `加 NT$ ${amt.toLocaleString()}`;
     }
 
-    function fillPreset(title, amount, mode) {
+    function fillPreset(title, amount, mode, cat) {
       document.getElementById('exp-title').value = title;
+      if (cat) pendingCategoryForSync = cat;
       if (amount !== '') {
         document.getElementById('exp-amount').value = amount;
       } else {
@@ -2792,6 +3142,15 @@
       updateModePreview();
     }
 
+    function guessCategory(title) {
+      if (/租車|加油|高鐵|火車|停車|計程車/.test(title)) return '交通租車';
+      if (/住宿|行旅|飯店|旅館/.test(title)) return '住宿';
+      if (/KTV|門票|南美館|美術館/.test(title)) return '娛樂門票';
+      if (/伴手禮|鳳梨酥|禮盒/.test(title)) return '伴手禮其他';
+      if (/泡芙|可頌|甜甜圈|冰淇淋|仙草|冰|紅茶|咖啡|綠町|福吉雅|順天|江水號|奉口|茶與果|裁縫師/.test(title)) return '甜點飲料';
+      return '美食小吃';
+    }
+
     function addExpense() {
       const titleEl = document.getElementById('exp-title');
       const amountEl = document.getElementById('exp-amount');
@@ -2800,7 +3159,7 @@
       const rawAmount = parseFloat(amountEl.value);
 
       if (!title) {
-        alert('請輸入品項名稱（例如：樺哥牛肉湯、洋蔥咖哩工房）！');
+        alert('請輸入品項名稱（例如：百珍泡芙、西羅殿牛肉湯）！');
         titleEl.focus();
         return;
       }
@@ -2822,16 +3181,35 @@
 
       const now = new Date();
       const timeStr = `${now.getMonth() + 1}/${now.getDate()} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+      const sharedId = Date.now();
 
       const data = loadWallet();
       data.items.unshift({
-        id: Date.now(),
+        id: sharedId,
         title,
         totalBill,
         mode: currentMode,
         friendDelta,
         time: timeStr
       });
+
+      // Check if we should also auto-sync to My Ledger
+      const syncCb = document.getElementById('sync-to-my-cb');
+      if (currentMode === 'split50' && syncCb && syncCb.checked) {
+        const myShare = Math.round(totalBill / 2);
+        const myData = loadMyLedger();
+        const cat = guessCategory(title);
+        myData.items.unshift({
+          id: sharedId,
+          title: `${title} (兩人平分)`,
+          amount: myShare,
+          totalBill,
+          category: cat,
+          syncedFromFriend: true,
+          time: timeStr
+        });
+        saveMyLedger(myData);
+      }
 
       titleEl.value = '';
       amountEl.value = '';
@@ -2846,7 +3224,7 @@
     }
 
     function clearAllExpenses() {
-      if (!confirm('確定要清空所有扣款紀錄，讓朋友餘額回到初始本金嗎？')) return;
+      if (!confirm('確定要清空朋友的扣款紀錄，讓朋友餘額回到初始本金嗎？')) return;
       const data = loadWallet();
       data.items = [];
       saveWallet(data);
@@ -2868,12 +3246,13 @@
     function renderWallet() {
       const data = loadWallet();
       const summary = computeWalletSummary(data);
+      const jpyRate = getJpyRate();
 
       document.getElementById('w-friend-title').textContent = data.friendName;
       document.getElementById('w-deposit-val').textContent = `NT$ ${summary.initialDeposit.toLocaleString()}`;
       document.getElementById('w-spent-val').textContent = `NT$ ${summary.netSpent.toLocaleString()}`;
-      const spentHkd = Math.round(summary.netSpent / RATE_HKD_TO_TWD);
-      document.getElementById('w-spent-hkd').textContent = `約合港幣 HK$ ${spentHkd.toLocaleString()}`;
+      const spentJpy = Math.round(summary.netSpent * jpyRate);
+      document.getElementById('w-spent-jpy').textContent = `折合日幣約 ¥ ${spentJpy.toLocaleString()}`;
 
       const remEl = document.getElementById('w-remaining-val');
       const subEl = document.getElementById('w-status-sub');
@@ -2882,14 +3261,14 @@
       if (summary.remaining >= 0) {
         remEl.textContent = `NT$ ${summary.remaining.toLocaleString()}`;
         remEl.style.color = '#fde047';
-        const remHkd = Math.round(summary.remaining / RATE_HKD_TO_TWD);
-        subEl.textContent = `✅ 餘額充足（旅程結束若不再花費，退還給${data.friendName} NT$ ${summary.remaining.toLocaleString()} / 約 HK$ ${remHkd}）`;
+        const remJpy = Math.round(summary.remaining * jpyRate);
+        subEl.textContent = `✅ 餘額充足（旅程結束若不再花費，退還給${data.friendName} NT$ ${summary.remaining.toLocaleString()} / 約 ¥ ${remJpy.toLocaleString()}）`;
       } else {
         const oweAmt = Math.abs(summary.remaining);
-        const oweHkd = Math.round(oweAmt / RATE_HKD_TO_TWD);
+        const oweJpy = Math.round(oweAmt * jpyRate);
         remEl.textContent = `-NT$ ${oweAmt.toLocaleString()}`;
         remEl.style.color = '#fca5a5';
-        subEl.textContent = `⚠️ 已超過預放本金！${data.friendName}需再補貼給妳 NT$ ${oweAmt.toLocaleString()}（約 HK$ ${oweHkd}）`;
+        subEl.textContent = `⚠️ 已超過預放本金！${data.friendName}需再補貼給妳 NT$ ${oweAmt.toLocaleString()}（約 ¥ ${oweJpy.toLocaleString()}）`;
       }
 
       const pct = summary.initialDeposit > 0
@@ -2905,7 +3284,7 @@
         listContainer.innerHTML = `
           <div style="text-align:center; padding: 20px 10px; color: var(--text-muted); font-size: 0.85rem;">
             目前還沒有扣款紀錄，餘額為完整的 <strong>NT$ ${summary.initialDeposit.toLocaleString()}</strong>！<br>
-            💡 可先點上方「<strong>⚡ 一鍵帶入：租車平分 (-$500)</strong>」把佰渡租車扣掉喔！
+            💡 可先點上方「<strong>⚡ 租車平分 (-$500)</strong>」把佰渡租車扣掉喔！
           </div>
         `;
         return;
@@ -2953,22 +3332,15 @@
       }).join('');
     }
 
-    function escapeHtml(str) {
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
-    }
-
     function copyLedgerSummary() {
       const data = loadWallet();
       const s = computeWalletSummary(data);
+      const jpyRate = getJpyRate();
       const lines = [
         `🧾 【台南三天兩夜・${data.friendName}台幣餘額明細】`,
         `📥 初始寄放台幣：NT$ ${s.initialDeposit.toLocaleString()}（住宿費 $4,186/人 已另計）`,
-        `💸 累計已扣花費：NT$ ${s.netSpent.toLocaleString()}`,
-        `💰 目前剩餘台幣：NT$ ${s.remaining.toLocaleString()}（約 HK$ ${Math.round(s.remaining / RATE_HKD_TO_TWD)}）`,
+        `💸 累計已扣花費：NT$ ${s.netSpent.toLocaleString()}（約 ¥ ${Math.round(s.netSpent * jpyRate).toLocaleString()}）`,
+        `💰 目前剩餘台幣：NT$ ${s.remaining.toLocaleString()}（約 ¥ ${Math.round(s.remaining * jpyRate).toLocaleString()}）`,
         `------------------------`
       ];
       if (data.items.length > 0) {
@@ -2984,7 +3356,7 @@
       }
       const text = lines.join('\n');
       navigator.clipboard.writeText(text).then(() => {
-        alert('✅ 已複製台幣餘額明細！可直接貼到 LINE 或 WhatsApp 傳給朋友看。');
+        alert('✅ 已複製朋友台幣餘額明細！可直接貼到 LINE 或 WhatsApp。');
       }).catch(() => {
         prompt('請複製以下明細：', text);
       });
@@ -2995,16 +3367,246 @@
       const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(data))));
       const shareUrl = `${window.location.origin}${window.location.pathname}#wallet=${encoded}`;
       navigator.clipboard.writeText(shareUrl).then(() => {
-        alert('🔗 已複製「朋友餘額同步連結」！\n把連結傳給香港朋友，她點開就能在自己手機看到目前的台幣餘額與每一筆明細！');
+        alert('🔗 已複製「朋友餘額同步連結」！\n把連結傳給朋友，她點開就能在自己手機看到目前的台幣餘額與每一筆明細！');
       }).catch(() => {
         prompt('請複製以下同步連結傳給朋友：', shareUrl);
       });
     }
 
+    // ==================== MY PERSONAL EXPENSE LEDGER (📒 我的記帳) ====================
+    function loadMyLedger() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY_MY_LEDGER);
+        if (!raw) return { items: [] };
+        const parsed = JSON.parse(raw);
+        return {
+          items: Array.isArray(parsed.items) ? parsed.items : []
+        };
+      } catch (e) {
+        return { items: [] };
+      }
+    }
+
+    function saveMyLedger(data) {
+      try {
+        localStorage.setItem(STORAGE_KEY_MY_LEDGER, JSON.stringify(data));
+      } catch (e) {}
+      renderMyLedger();
+    }
+
+    function selectMyMode(mode) {
+      currentMyMode = mode;
+      ['my100', 'split50'].forEach(m => {
+        const btn = document.getElementById('mymode-' + m);
+        if (btn) btn.classList.toggle('my-active', m === mode);
+      });
+      updateMyModePreview();
+    }
+
+    function updateMyModePreview() {
+      const val = parseFloat(document.getElementById('my-exp-amount').value);
+      const amt = isNaN(val) || val <= 0 ? 0 : Math.round(val);
+      const half = Math.round(amt / 2);
+      document.getElementById('mypreview-my100').textContent = `記 NT$ ${amt.toLocaleString()}`;
+      document.getElementById('mypreview-split50').textContent = `各記 NT$ ${half.toLocaleString()}`;
+    }
+
+    function fillMyPreset(title, amount, category, mode) {
+      document.getElementById('my-exp-title').value = title;
+      if (category) {
+        document.getElementById('my-exp-cat').value = category;
+      }
+      if (amount !== '') {
+        document.getElementById('my-exp-amount').value = amount;
+      } else {
+        document.getElementById('my-exp-amount').value = '';
+        document.getElementById('my-exp-amount').focus();
+      }
+      if (mode) selectMyMode(mode);
+      updateMyModePreview();
+    }
+
+    function addMyExpense() {
+      const titleEl = document.getElementById('my-exp-title');
+      const amountEl = document.getElementById('my-exp-amount');
+      const catEl = document.getElementById('my-exp-cat');
+
+      const title = titleEl.value.trim();
+      const rawAmount = parseFloat(amountEl.value);
+      const category = catEl.value || '美食小吃';
+
+      if (!title) {
+        alert('請輸入品項名稱（例如：住宿我的一半、高鐵票）！');
+        titleEl.focus();
+        return;
+      }
+      if (isNaN(rawAmount) || rawAmount <= 0) {
+        alert('請輸入大於 0 的台幣金額！');
+        amountEl.focus();
+        return;
+      }
+
+      const inputAmt = Math.round(rawAmount);
+      const myAmount = currentMyMode === 'split50' ? Math.round(inputAmt / 2) : inputAmt;
+
+      const now = new Date();
+      const timeStr = `${now.getMonth() + 1}/${now.getDate()} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+      const itemId = Date.now();
+
+      const myData = loadMyLedger();
+      myData.items.unshift({
+        id: itemId,
+        title: currentMyMode === 'split50' ? `${title} (兩人平分)` : title,
+        amount: myAmount,
+        totalBill: inputAmt,
+        category,
+        time: timeStr
+      });
+      saveMyLedger(myData);
+
+      // If split50 selected in My Ledger, also deduct 50% from Friend's Wallet!
+      if (currentMyMode === 'split50') {
+        const wData = loadWallet();
+        wData.items.unshift({
+          id: itemId,
+          title,
+          totalBill: inputAmt,
+          mode: 'split50',
+          friendDelta: -myAmount,
+          time: timeStr
+        });
+        saveWallet(wData);
+      }
+
+      titleEl.value = '';
+      amountEl.value = '';
+      updateMyModePreview();
+    }
+
+    function deleteMyExpense(id) {
+      const myData = loadMyLedger();
+      myData.items = myData.items.filter(item => item.id !== id);
+      saveMyLedger(myData);
+    }
+
+    function clearMyExpenses() {
+      if (!confirm('確定要清空「我的記帳本」所有個人花費紀錄嗎？')) return;
+      saveMyLedger({ items: [] });
+    }
+
+    function renderMyLedger() {
+      const myData = loadMyLedger();
+      const jpyRate = getJpyRate();
+
+      const categories = ['住宿', '交通租車', '美食小吃', '甜點飲料', '娛樂門票', '伴手禮其他'];
+      const catSums = {};
+      categories.forEach(c => { catSums[c] = 0; });
+
+      let totalTwd = 0;
+      myData.items.forEach(it => {
+        const amt = Number(it.amount) || 0;
+        totalTwd += amt;
+        const c = categories.includes(it.category) ? it.category : '美食小吃';
+        catSums[c] += amt;
+      });
+
+      const totalJpy = Math.round(totalTwd * jpyRate);
+      document.getElementById('my-total-twd').textContent = `NT$ ${totalTwd.toLocaleString()}`;
+      document.getElementById('my-total-jpy').textContent = `🇯🇵 折合日幣約：¥ ${totalJpy.toLocaleString()}`;
+
+      categories.forEach(c => {
+        const el = document.getElementById('cat-sum-' + c);
+        if (el) el.textContent = `$${catSums[c].toLocaleString()}`;
+      });
+
+      document.getElementById('my-exp-count-pill').textContent = `共 ${myData.items.length} 筆`;
+
+      const listEl = document.getElementById('my-expense-list-container');
+      if (myData.items.length === 0) {
+        listEl.innerHTML = `
+          <div style="text-align:center; padding: 20px 10px; color: var(--text-muted); font-size: 0.85rem;">
+            目前還沒有個人花費紀錄！<br>
+            💡 可點上方「<strong>🏨 住宿我的一半 ($4,186)</strong>」或「<strong>🛵 租車我的一半 ($500)</strong>」快速帶入，<br>
+            或是在「🧾 朋友餘額」記兩人平分帳時，也會自動幫妳同步記進來喔！
+          </div>
+        `;
+        return;
+      }
+
+      const catIcons = {
+        '住宿': '🏨 住宿',
+        '交通租車': '🛵 交通租車',
+        '美食小吃': '🍛 美食小吃',
+        '甜點飲料': '🍧 甜點飲料',
+        '娛樂門票': '🎤 娛樂門票',
+        '伴手禮其他': '🧁 伴手禮/其他'
+      };
+
+      listEl.innerHTML = myData.items.map(item => {
+        const itemJpy = Math.round(item.amount * jpyRate);
+        const badgeLabel = catIcons[item.category] || '🍛 美食小吃';
+        return `
+          <div class="expense-item">
+            <div class="expense-left">
+              <div class="expense-title">
+                <span>${escapeHtml(item.title)}</span>
+                <span style="background:var(--secondary-light); color:var(--secondary); padding:2px 7px; border-radius:6px; font-size:0.71rem; font-weight:800;">${badgeLabel}</span>
+              </div>
+              <div class="expense-meta">${item.time} ・ 折合日幣約 <strong>¥ ${itemJpy.toLocaleString()}</strong></div>
+            </div>
+            <div class="expense-right">
+              <div class="expense-amount" style="color:var(--primary-dark);">NT$ ${item.amount.toLocaleString()}</div>
+              <button type="button" class="btn-del-expense" title="刪除此筆" onclick="deleteMyExpense(${item.id})">✕</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function copyMyLedgerSummary() {
+      const myData = loadMyLedger();
+      const jpyRate = getJpyRate();
+      let totalTwd = 0;
+      myData.items.forEach(it => { totalTwd += (Number(it.amount) || 0); });
+      const totalJpy = Math.round(totalTwd * jpyRate);
+
+      const lines = [
+        `📒 【我的台南三天兩夜個人花費總帳本】`,
+        `💸 累積總花費：NT$ ${totalTwd.toLocaleString()} 台幣`,
+        `🇯🇵 折合日幣約：¥ ${totalJpy.toLocaleString()} 日幣 (匯率 1 TWD = ${jpyRate} JPY)`,
+        `------------------------`
+      ];
+      if (myData.items.length > 0) {
+        lines.push(`📋 花費明細（共 ${myData.items.length} 筆，由舊到新）：`);
+        const chronological = [...myData.items].reverse();
+        chronological.forEach((it, idx) => {
+          const jpy = Math.round(it.amount * jpyRate);
+          lines.push(`${idx + 1}. [${it.category}] ${it.title}：NT$ ${it.amount.toLocaleString()} (約 ¥${jpy.toLocaleString()})`);
+        });
+      }
+      const text = lines.join('\n');
+      navigator.clipboard.writeText(text).then(() => {
+        alert('✅ 已複製「我的個人花費明細（含日幣換算）」！');
+      }).catch(() => {
+        prompt('請複製以下明細：', text);
+      });
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
+      updateJpyRateUI();
       loadChecks();
       updateModePreview();
+      updateMyModePreview();
       renderWallet();
+      renderMyLedger();
     });
   </script>
 </body>
